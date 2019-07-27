@@ -1,0 +1,24 @@
+Package: htmlmeta
+Title: Create HTML Metadata Tags with Ease
+Version: 0.0.0.9000
+Authors@R: 
+    person(given = "Garrick",
+           family = "Aden-Buie",
+           role = c("aut", "cre"),
+           email = "garrick@adenbuie.com",
+           comment = c(ORCID = "0000-0002-7111-0077"))
+Description: Creates metadata tags for use in R Markdown HTML
+    documents and Shiny applications.
+License: MIT + file LICENSE
+URL: https://github.com/gadenbuie/htmlmeta
+BugReports: https://github.com/gadenbuie/htmlmeta/issues
+Imports: 
+    htmltools,
+    magrittr,
+    purrr
+Suggests: 
+    testthat (>= 2.1.0)
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 6.1.1

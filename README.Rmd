@@ -1,0 +1,60 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+# htmlmeta
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+[rmarkdown]: https://rmarkdown.rstudio.com
+[blogdown]: https://bookdown.org/yihui/blogdown
+[Shiny]: https://shiny.rstudio.com
+[r4ds]: https://r4ds.had.co.nz/
+
+htmlmeta makes it easy to add HTML `<meta>` tags to your [R Markdown][rmarkdown] or [blogdown] pages and [Shiny] apps.
+
+## Installation
+
+You can install the released version of htmlmeta from [Github](https://github.com/gadenbuie/htmlmeta) with:
+
+``` r
+devtools::install_github("gadenbuie/htmlmeta")
+```
+
+## Example
+
+This is a basic example that re-creates the metadata tags for the [R for Data Science][r4ds] book. 
+
+```{r example}
+library(htmlmeta)
+
+meta() %>%
+  meta_general(
+    description = "This book will teach you how to do data science with R...",
+    generator = "bookdown and GitBook 2.6.7"
+  ) %>% 
+  meta_name("github-repo" = "hadley/r4ds") %>% 
+  meta_viewport() %>% 
+  meta_social(
+    title = "R for Data Science",
+    url = "https://r4ds.had.co.nz",
+    image = "https://r4ds.had.co.nz/cover.png",
+    image_alt = "The cover of the R4DS book",
+    og_type = "book",
+    og_author = c("Garrett Grolemund", "Hadley Wickham"),
+    twitter_card_type = "summary",
+    twitter_creator = "@hadley"
+  ) %>% 
+  print()
+```
