@@ -79,13 +79,6 @@ meta_viewport <- function(
 
   # viewport tag has to come first in list of meta tags
   meta_new <- tag_meta(name = "viewport", content = content)
-  if (rlang::has_length(.meta$children)) {
-    meta_old <- .meta$children
-    .meta <- htmltools::tagSetChildren(.meta, meta_new)
-    .meta <- htmltools::tagAppendChildren(.meta, list = meta_old)
-  } else {
-    .meta <- htmltools::tagAppendChild(.meta, meta_new)
-  }
 
-  .meta
+  prepend_to_meta(.meta, list(meta_new))
 }

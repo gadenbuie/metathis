@@ -49,7 +49,8 @@ Create or add a viewport meta tag.
 \href{https://drafts.csswg.org/css-device-adapt/#viewport-meta}{W3C Viewport Meta Element Specification}
 }
 \seealso{
-Other meta: \code{\link{meta_general}},
-  \code{\link{meta_geo}}, \code{\link{meta_social}}
+Other meta: \code{\link{include_meta}},
+  \code{\link{meta_general}}, \code{\link{meta_geo}},
+  \code{\link{meta_social}}
 }
 \concept{meta}

@@ -79,7 +79,6 @@ meta_social <- function(
     has_description <- has_meta_with_property(.meta, value = "description")
     if (any(has_description)) {
       desc_existing <- .meta %>%
-        purrr::pluck("children") %>%
         purrr::keep(has_description) %>%
         purrr::map_chr(~ .$attribs$content) %>%
         unique()
@@ -122,18 +121,16 @@ meta_social <- function(
     collapse_single_string() %>%
     tag_meta_list()
 
-  .meta <- append_to_meta(.meta, list = meta_social)
-
-  if (!disable_pinterest) {
-    return(.meta)
-  } else {
-    append_to_meta(
-      .meta,
-      tag_meta(
+  if (disable_pinterest) {
+    meta_social <- c(
+      meta_social,
+      list(tag_meta(
         name = "pinterest",
         content = "nopin",
         description = "Sorry, pins from this website are disabled."
-      )
+      ))
     )
   }
+
+  append_to_meta(.meta, list = meta_social)
 }

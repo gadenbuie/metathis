@@ -57,5 +57,5 @@ meta_geo <- function(
     collapse_single_string() %>%
     tag_meta_list()
 
-  append_to_meta(.meta, list = meta_geo)
+  append_to_meta(.meta, meta_geo)
 }

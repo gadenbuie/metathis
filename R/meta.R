@@ -5,6 +5,17 @@ meta <- function() {
   as_meta(list())
 }
 
+#' Include Metadata Tags in HTML Document
+#'
+#' Use `include_meta()` to explicitly declare the [meta()] tags as an HTML
+#' dependency. In general, this is not required when knitting to an HTML
+#' document. In some non-standard cases, such as with \pkg{xaringan} slides
+#' this is necessary.
+#'
+#' @template describe-meta
+#' @return An [htmltools::htmlDependecy()] containing the metadata tags to be
+#'   included in the `<head>` of the HTML document.
+#' @export
 include_meta <- function(.meta) {
   assert_is_meta(.meta)
 
@@ -33,7 +44,7 @@ meta_name <- function(.meta = meta(), ...) {
     collapse_single_string() %>%
     tag_meta_list()
 
-  append_to_meta(.meta, list = name_meta)
+  append_to_meta(.meta, name_meta)
 }
 
 #' @export
@@ -78,28 +89,43 @@ as_meta.data.frame <- function(x) {
 
 #' @export
 print.meta <- function(.meta) {
-  purrr::map_chr(.meta, paste, collapse = "\n")
+   as.character(.meta) %>% cat()
 }
 
 #' @export
-knit_print.meta <- function(.meta) {
+knit_print.meta <- function(.meta, ...) {
   assert_is_meta(.meta)
+
+  if (!grepl("html", knitr::opts_knit$get("out.format"))) {
+    warning(
+      "knitr output format is not HTML. Use `include_meta()` to ensure ",
+      "that the <meta> tags are properly included in the <head> output ",
+      "(if possible).",
+      call. = FALSE
+    )
+  }
 
   htmltools::tagList(
     htmltools::htmlDependency(
       "htmlmeta",
       version = htmlmeta_version,
       src = system.file(package = "htmlmeta"),
-      head = .meta %>% as.character() %>% htmltools::HTML()
+      head = .meta %>% as.character()
     )
   )
 }
 
 #' @export
 as.character.meta <- function(.meta) {
-  paste(htmltools::renderTags(.meta)$head)
+  .meta %>% purrr::map_chr(paste) %>% collapse("\n")
 }
 
-append_to_meta <- function(.meta, ..., list = NULL) {
-  htmltools::tagAppendChildren(.meta, ..., list = list)
+append_to_meta <- function(.meta, list = NULL) {
+  assert_is_meta(.meta)
+  as_meta(append(.meta, list))
+}
+
+prepend_to_meta <- function(.meta, list = NULL) {
+  assert_is_meta(.meta)
+  as_meta(purrr::prepend(.meta, list))
 }

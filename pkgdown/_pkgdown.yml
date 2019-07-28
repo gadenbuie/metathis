@@ -46,6 +46,7 @@ reference:
   desc: ~
   contents:
   - '`meta`'
+  - '`include_meta`'
   - '`meta_general`'
   - '`meta_social`'
   - '`meta_viewport`'
