@@ -1,4 +1,4 @@
-url: https://pkg.garrickadenbuie.com/htmlmeta/
+url: https://pkg.garrickadenbuie.com/metathis/
 
 authors:
   Garrick Aden-Buie:
@@ -32,7 +32,7 @@ navbar:
       title: "Changelog"
     github:
       icon: fa-github fa-lg
-      href: https://github.com/gadenbuie/htmlmeta
+      href: https://github.com/gadenbuie/metathis
     garrick:
       icon: fa-home fa-lg
       href: https://garrickadenbuie.com

@@ -1,4 +1,4 @@
 library(testthat)
-library(htmlmeta)
+library(metathis)
 
-test_check("htmlmeta")
+test_check("metathis")

@@ -12,7 +12,7 @@ knitr::opts_chunk$set(
   out.width = "100%"
 )
 ```
-# htmlmeta
+# metathis
 
 <!-- badges: start -->
 <!-- badges: end -->
@@ -22,14 +22,14 @@ knitr::opts_chunk$set(
 [Shiny]: https://shiny.rstudio.com
 [r4ds]: https://r4ds.had.co.nz/
 
-htmlmeta makes it easy to add HTML `<meta>` tags to your [R Markdown][rmarkdown] or [blogdown] pages and [Shiny] apps.
+metathis makes it easy to add HTML `<meta>` tags to your [R Markdown][rmarkdown] or [blogdown] pages and [Shiny] apps.
 
 ## Installation
 
-You can install the released version of htmlmeta from [Github](https://github.com/gadenbuie/htmlmeta) with:
+You can install the released version of metathis from [Github](https://github.com/gadenbuie/metathis) with:
 
 ``` r
-devtools::install_github("gadenbuie/htmlmeta")
+devtools::install_github("gadenbuie/metathis")
 ```
 
 ## Example
@@ -37,7 +37,7 @@ devtools::install_github("gadenbuie/htmlmeta")
 This is a basic example that re-creates the metadata tags for the [R for Data Science][r4ds] book. 
 
 ```{r example}
-library(htmlmeta)
+library(metathis)
 
 meta() %>%
   meta_general(

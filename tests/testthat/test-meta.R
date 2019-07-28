@@ -2,7 +2,7 @@ describe("meta class", {
 
   it("has class meta", {
     expect_s3_class(meta(), "meta")
-    expect_s3_class(meta(), "shiny.tag")
+    expect_s3_class(meta(), "shiny.tag.list")
   })
 
   it("is_meta()", {

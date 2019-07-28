@@ -21,9 +21,9 @@ include_meta <- function(.meta) {
 
   htmltools::tagList(
     htmltools::htmlDependency(
-      "htmlmeta",
-      version = htmlmeta_version,
-      src = system.file(package = "htmlmeta"),
+      "metathis",
+      version = metathis_version,
+      src = system.file(package = "metathis"),
       head = .meta %>% as.character() %>% htmltools::HTML()
     )
   )
@@ -107,9 +107,9 @@ knit_print.meta <- function(.meta, ...) {
 
   htmltools::tagList(
     htmltools::htmlDependency(
-      "htmlmeta",
-      version = htmlmeta_version,
-      src = system.file(package = "htmlmeta"),
+      "metathis",
+      version = metathis_version,
+      src = system.file(package = "metathis"),
       head = .meta %>% as.character()
     )
   )

@@ -1,7 +1,7 @@
 #' @keywords internal
 "_PACKAGE"
 
-htmlmeta_version <- "0.0.0.9000"
+metathis_version <- "0.0.0.9000"
 
 # The following block is used by usethis to automatically manage
 # roxygen namespace tags. Modify with care!

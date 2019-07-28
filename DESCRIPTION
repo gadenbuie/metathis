@@ -1,4 +1,4 @@
-Package: htmlmeta
+Package: metathis
 Title: Create HTML Metadata Tags with Ease
 Version: 0.0.0.9000
 Authors@R: 
@@ -10,8 +10,8 @@ Authors@R:
 Description: Creates metadata tags for use in R Markdown HTML
     documents and Shiny applications.
 License: MIT + file LICENSE
-URL: https://github.com/gadenbuie/htmlmeta
-BugReports: https://github.com/gadenbuie/htmlmeta/issues
+URL: https://github.com/gadenbuie/metathis
+BugReports: https://github.com/gadenbuie/metathis/issues
 Imports: 
     htmltools,
     magrittr,
