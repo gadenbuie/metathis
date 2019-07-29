@@ -57,3 +57,12 @@ meta() %>%
   ) %>% 
   print()
 ```
+
+## Thanks
+
+Thanks to [Josh Buchea](https://github.com/joshbuchea) for providing an excellent and indispensible resource on `<meta>` tags and other things that go in the HTML `<head>` tags.
+
+And thanks also to [Malcolm Barret](https://github.com/malcolmbarrett). 
+Watching over his shoulder as he developed [ymlthis](https://r-lib.github.io/ymlthis) made putting this package together so much easier.
+
+Finally, thanks to the [RStudio team](https://github.com/rstudio) and others who developed [htmltools](https://github.com/rstudio/htmltools) for making HTML in R a breeze.
