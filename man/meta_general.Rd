@@ -2,11 +2,26 @@
 % Please edit documentation in R/general.R
 \name{meta_general}
 \alias{meta_general}
+\alias{meta_description}
+\alias{meta_subject}
+\alias{meta_referrer}
+\alias{meta_robots}
+\alias{meta_theme_color}
 \title{General Metadata Tags}
 \usage{
 meta_general(.meta = meta(), application_name = NULL,
   theme_color = NULL, description = NULL, robots = NULL,
   generator = NULL, subject = NULL, rating = NULL, referrer = NULL)
+
+meta_description(.meta = meta(), description)
+
+meta_subject(.meta = meta(), subject)
+
+meta_referrer(.meta = meta(), referrer)
+
+meta_robots(.meta = meta(), robots)
+
+meta_theme_color(.meta = meta(), theme_color)
 }
 \arguments{
 \item{.meta}{A \code{meta} object created by \code{\link[=meta]{meta()}} or \code{\link[=as_meta]{as_meta()}}, or returned
@@ -66,7 +81,8 @@ meta() \%>\%
 }
 \seealso{
 Other meta: \code{\link{include_meta}},
-  \code{\link{meta_geo}}, \code{\link{meta_social}},
+  \code{\link{meta_geo}}, \code{\link{meta_name}},
+  \code{\link{meta_social}}, \code{\link{meta_tag}},
   \code{\link{meta_viewport}}
 }
 \concept{meta}

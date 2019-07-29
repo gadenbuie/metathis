@@ -6,9 +6,9 @@
 \usage{
 meta_viewport(.meta = meta(), width = "device-width",
   initial_scale = "1", orientation = c("auto", "portrait",
-  "landscape"), minimum_scale = NULL, maximum_scale = NULL,
-  user_scalable = NULL, min_width = NULL, max_width = NULL,
-  height = NULL, min_height = NULL, max_height = NULL, ...)
+  "landscape"), min_width = NULL, max_width = NULL, height = NULL,
+  min_height = NULL, max_height = NULL, minimum_scale = NULL,
+  maximum_scale = NULL, user_scalable = NULL, ...)
 }
 \arguments{
 \item{.meta}{A \code{meta} object created by \code{\link[=meta]{meta()}} or \code{\link[=as_meta]{as_meta()}}, or returned
@@ -24,17 +24,18 @@ if no units are provided.}
 
 \item{orientation}{One of \code{"auto"}, \code{"portrait"}, \code{"landscape"}.}
 
+\item{min_width, max_width}{Minimum and maximum initial viewport width. See
+\code{width} for more information. \code{width} is ignored if \code{min_width} or
+\code{max_width} are set.}
+
+\item{height, min_height, max_height}{Sets height of initial viewport. Follows
+the same conventions as \code{width}, \code{min_width}, and \code{max_width}.}
+
 \item{minimum_scale}{DESCRIPTION.}
 
 \item{maximum_scale}{DESCRIPTION.}
 
 \item{user_scalable}{DESCRIPTION.}
-
-\item{min_width, max_width}{Minimum and maximum initial viewport width. See
-\code{width} for more information. \code{width} is ignored if \code{min_width} or
-\code{max_width} are set.
-@param height,min_height,max_height Sets height of initial viewport. Follows
-the same conventions as \code{width}.}
 }
 \value{
 A \code{meta} object, or a set of \code{<metadata>} HTML tags inside an HTML
@@ -51,6 +52,7 @@ Create or add a viewport meta tag.
 \seealso{
 Other meta: \code{\link{include_meta}},
   \code{\link{meta_general}}, \code{\link{meta_geo}},
-  \code{\link{meta_social}}
+  \code{\link{meta_name}}, \code{\link{meta_social}},
+  \code{\link{meta_tag}}
 }
 \concept{meta}

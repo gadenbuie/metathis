@@ -15,8 +15,8 @@
 #' @param min_width,max_width Minimum and maximum initial viewport width. See
 #'   `width` for more information. `width` is ignored if `min_width` or
 #'   `max_width` are set.
-#'  @param height,min_height,max_height Sets height of initial viewport. Follows
-#'    the same conventions as `width`.
+#' @param height,min_height,max_height Sets height of initial viewport. Follows
+#'   the same conventions as `width`, `min_width`, and `max_width`.
 #' @param initial_scale DESCRIPTION.
 #' @param orientation One of `"auto"`, `"portrait"`, `"landscape"`.
 #' @param minimum_scale DESCRIPTION.
@@ -30,14 +30,14 @@ meta_viewport <- function(
   width = "device-width",
   initial_scale = "1",
   orientation = c("auto", "portrait", "landscape"),
-  minimum_scale = NULL,
-  maximum_scale = NULL,
-  user_scalable = NULL,
   min_width = NULL,
   max_width = NULL,
   height = NULL,
   min_height = NULL,
   max_height = NULL,
+  minimum_scale = NULL,
+  maximum_scale = NULL,
+  user_scalable = NULL,
   ...
 ) {
 

@@ -28,6 +28,7 @@
 #' @param format_detection Disable automatic detection and formatting of
 #'   possible phone numbers in Safari and iOS. Set to `FALSE` to disable
 meta_apple <- function(
+  .meta = meta(),
   format_detection = NULL
 ) {
   # format_detection = if (!is.null(format_detection) && !format_detection) {

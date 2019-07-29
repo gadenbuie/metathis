@@ -74,3 +74,35 @@ meta_general <- function(
 
   append_to_meta(.meta, list = meta_general)
 }
+
+
+#' @rdname meta_general
+#' @export
+meta_description <- function(.meta = meta(), description) {
+  meta_general(.meta, description = description)
+}
+
+#' @rdname meta_general
+#' @export
+meta_subject <- function(.meta = meta(), subject) {
+  meta_general(.meta, subject = subject)
+}
+
+
+#' @rdname meta_general
+#' @export
+meta_referrer <- function(.meta = meta(), referrer) {
+  meta_general(.meta, referrer = referrer)
+}
+
+#' @rdname meta_general
+#' @export
+meta_robots <- function(.meta = meta(), robots) {
+  meta_general(.meta, robots = robots)
+}
+
+#' @rdname meta_general
+#' @export
+meta_theme_color <- function(.meta = meta(), theme_color) {
+  meta_general(.meta, theme_color = theme_color)
+}

@@ -30,12 +30,18 @@ include_meta <- function(.meta) {
 }
 
 
-#' Create name/content metadata tag pairs.
+#' Create name/content metadata tag pairs
 #'
 #' Creates metadata tag pairs where the arguments are the name values and their
 #' values are content values.
 #'
+#' @template describe-meta
 #' @param ... Name (argument names) and content (argument value) pairs.
+#' @examples
+#' meta() %>%
+#'   meta_name("github-repo" = "hadley/r4ds")
+#'
+#' @template describe-meta-return
 #' @export
 meta_name <- function(.meta = meta(), ...) {
   assert_is_meta(.meta)
@@ -45,6 +51,39 @@ meta_name <- function(.meta = meta(), ...) {
     tag_meta_list()
 
   append_to_meta(.meta, name_meta)
+}
+
+#' Create a metadata tag for attribute/value pairs
+#'
+#' Creates a `<meta>` tag for attribute value pairs, where argument names
+#' correspond to attribute names.
+#'
+#' @template describe-meta
+#' @param ... Attribute names and values as `attribute = value`. Values must be
+#'   a single character string.
+#' @examples
+#' meta() %>%
+#'   meta_tag(
+#'     "http-equiv" = "Content-Security-Policy",
+#'     content = "default-src 'self'"
+#'   )
+#'
+#' @template describe-meta-return
+#' @export
+meta_tag <- function(.meta = meta(), ...) {
+  assert_is_meta(.meta)
+  attrs <- list(...)
+
+  len_gt_1 <- purrr::keep(attrs, ~ length(.) > 1)
+  if (length(len_gt_1)) {
+    stop(
+      "All values must be length 1: '",
+      paste0(names(len_gt_1), collapse = "', '"),
+      "'"
+    )
+  }
+
+  append_to_meta(.meta, list(tag_meta(...)))
 }
 
 #' @export

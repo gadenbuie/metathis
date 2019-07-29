@@ -40,9 +40,8 @@ This is a basic example that re-creates the metadata tags for the [R for Data Sc
 library(metathis)
 
 meta() %>%
-  meta_general(
-    description = "This book will teach you how to do data science with R...",
-    generator = "bookdown and GitBook 2.6.7"
+  meta_description(
+    "This book will teach you how to do data science with R..."
   ) %>% 
   meta_name("github-repo" = "hadley/r4ds") %>% 
   meta_viewport() %>% 

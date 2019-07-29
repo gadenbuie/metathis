@@ -30,9 +30,8 @@ Data Science](https://r4ds.had.co.nz/) book.
 library(metathis)
 
 meta() %>%
-  meta_general(
-    description = "This book will teach you how to do data science with R...",
-    generator = "bookdown and GitBook 2.6.7"
+  meta_description(
+    "This book will teach you how to do data science with R..."
   ) %>% 
   meta_name("github-repo" = "hadley/r4ds") %>% 
   meta_viewport() %>% 
@@ -49,7 +48,6 @@ meta() %>%
   print()
 #> <meta name="viewport" content="width=device-width, initial-scale=1, orientation=auto"/>
 #> <meta name="description" content="This book will teach you how to do data science with R..."/>
-#> <meta name="generator" content="bookdown and GitBook 2.6.7"/>
 #> <meta name="github-repo" content="hadley/r4ds"/>
 #> <meta name="twitter:title" content="R for Data Science"/>
 #> <meta name="twitter:description" content="This book will teach you how to do data science with R..."/>

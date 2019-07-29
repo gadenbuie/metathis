@@ -47,6 +47,8 @@ reference:
   contents:
   - '`meta`'
   - '`include_meta`'
+  - '`meta_name`'
+  - '`meta_tag`'
   - '`meta_general`'
   - '`meta_social`'
   - '`meta_viewport`'
