@@ -9,8 +9,8 @@ meta <- function() {
 #'
 #' Use `include_meta()` to explicitly declare the [meta()] tags as an HTML
 #' dependency. In general, this is not required when knitting to an HTML
-#' document. In some non-standard cases, such as with \pkg{xaringan} slides
-#' this is necessary.
+#' document. This function explicitly attaches an [htmltools::htmlDependency()]
+#' and may work in some unusual cases.
 #'
 #' @template describe-meta
 #' @return An [htmltools::htmlDependecy()] containing the metadata tags to be
@@ -19,14 +19,7 @@ meta <- function() {
 include_meta <- function(.meta) {
   assert_is_meta(.meta)
 
-  htmltools::tagList(
-    htmltools::htmlDependency(
-      "metathis",
-      version = metathis_version,
-      src = system.file(package = "metathis"),
-      head = .meta %>% as.character() %>% htmltools::HTML()
-    )
-  )
+  htmltools::tagList(metaDependency(.meta))
 }
 
 
@@ -105,10 +98,9 @@ as_meta <- function(x) UseMethod("as_meta", x)
 
 #' @export
 as_meta.list <- function(x) {
-  structure(
-    x,
-    class = c("meta", "shiny.tag.list", "list")
-  )
+  head <- htmltools::tags$head()
+  head$children <- x
+  structure(list(head), class = c("meta", "shiny.tag.list", "list"))
 }
 
 #' @export
@@ -127,15 +119,20 @@ as_meta.data.frame <- function(x) {
 }
 
 #' @export
+as.character.meta <- function(.meta) {
+  .meta[[1]]$children %>% purrr::map_chr(as.character)
+}
+
+#' @export
 print.meta <- function(.meta) {
-   as.character(.meta) %>% cat()
+  cat(collapse(.meta, "\n"))
 }
 
 #' @export
 knit_print.meta <- function(.meta, ...) {
   assert_is_meta(.meta)
 
-  if (!grepl("html", knitr::opts_knit$get("out.format"))) {
+  if (!grepl("html", knitr::opts_knit$get("rmarkdown.pandoc.to"))) {
     warning(
       "knitr output format is not HTML. Use `include_meta()` to ensure ",
       "that the <meta> tags are properly included in the <head> output ",
@@ -144,27 +141,35 @@ knit_print.meta <- function(.meta, ...) {
     )
   }
 
-  htmltools::tagList(
-    htmltools::htmlDependency(
-      "metathis",
-      version = metathis_version,
-      src = system.file(package = "metathis"),
-      head = .meta %>% as.character()
-    )
+  # Thank you: https://github.com/haozhu233/kableExtra/blob/master/R/print.R#L56
+  knitr::asis_output("", meta = list(metaDependency(.meta)))
+}
+
+append_to_meta <- function(.meta, .list = NULL) {
+  assert_is_meta(.meta)
+  .meta[[1]]$children <- append(.meta[[1]]$children, .list)
+  .meta
+}
+
+prepend_to_meta <- function(.meta, .list = NULL) {
+  assert_is_meta(.meta)
+  .meta[[1]]$children <- purrr::prepend(.meta[[1]]$children, .list)
+  .meta
+}
+
+metaDependency <- function(.meta) {
+  assert_is_meta(.meta)
+
+  htmltools::htmlDependency(
+    paste0("metathis", "-", random_id()),
+    version = metathis_version,
+    src = system.file(package = "metathis"),
+    head = .meta %>% paste()
   )
 }
 
-#' @export
-as.character.meta <- function(.meta) {
-  .meta %>% purrr::map_chr(paste) %>% collapse("\n")
-}
-
-append_to_meta <- function(.meta, list = NULL) {
-  assert_is_meta(.meta)
-  as_meta(append(.meta, list))
-}
-
-prepend_to_meta <- function(.meta, list = NULL) {
-  assert_is_meta(.meta)
-  as_meta(purrr::prepend(.meta, list))
+random_id <- function(n = 6) {
+  c(letters[1:6], 0:9) %>%
+    sample(8, replace = TRUE) %>%
+    collapse("")
 }

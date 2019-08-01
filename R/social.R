@@ -132,5 +132,5 @@ meta_social <- function(
     )
   }
 
-  append_to_meta(.meta, list = meta_social)
+  append_to_meta(.meta, meta_social)
 }

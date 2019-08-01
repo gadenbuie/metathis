@@ -17,8 +17,8 @@ included in the \code{<head>} of the HTML document.
 \description{
 Use \code{include_meta()} to explicitly declare the \code{\link[=meta]{meta()}} tags as an HTML
 dependency. In general, this is not required when knitting to an HTML
-document. In some non-standard cases, such as with \pkg{xaringan} slides
-this is necessary.
+document. This function explicitly attaches an \code{\link[htmltools:htmlDependency]{htmltools::htmlDependency()}}
+and may work in some unusual cases.
 }
 \seealso{
 Other meta: \code{\link{meta_general}},

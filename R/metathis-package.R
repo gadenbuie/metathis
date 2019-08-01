@@ -1,3 +1,4 @@
+#' @importFrom knitr knit_print
 #' @keywords internal
 "_PACKAGE"
 
