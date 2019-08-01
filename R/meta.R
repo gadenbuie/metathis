@@ -15,6 +15,9 @@ meta <- function() {
 #' @template describe-meta
 #' @return An [htmltools::htmlDependecy()] containing the metadata tags to be
 #'   included in the `<head>` of the HTML document.
+#'
+#' @family meta_actions
+#'
 #' @export
 include_meta <- function(.meta) {
   assert_is_meta(.meta)
@@ -145,9 +148,10 @@ knit_print.meta <- function(.meta, ...) {
     warning(
       "{metathis} can't directly include <meta> tags inside blogdown posts ",
       "because the mechanism for including tags in the <head> section of a ",
-      "page depends on the Hugo template. See ?meta for more information.\n\n",
+      "page depends on the Hugo template. ",
       "If you see this message but are not rendering a blogdown post, you can ",
-      "use metathis::include_meta() to avoid this check.",
+      "use metathis::include_meta() to avoid this check. ",
+      "See ?meta for more information.",
       call. = FALSE
     )
     return(collapse(.meta, "\n"))
@@ -194,7 +198,7 @@ guess_blogdown <- function() {
   config_files <- dir(blogdown_root, "config[.](yaml|toml|json)", full.names = TRUE)
   if (length(config_files)) {
     for (config in config_files) {
-      if (grepl("baseURL", collapse(readLines(config)))) {
+      if (grepl("baseURL", collapse(readLines(config, warn = FALSE)))) {
         return(TRUE)
       }
     }

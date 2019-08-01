@@ -21,9 +21,6 @@ document. This function explicitly attaches an \code{\link[htmltools:htmlDepende
 and may work in some unusual cases.
 }
 \seealso{
-Other meta: \code{\link{meta_general}},
-  \code{\link{meta_geo}}, \code{\link{meta_name}},
-  \code{\link{meta_social}}, \code{\link{meta_tag}},
-  \code{\link{meta_viewport}}
+Other meta_actions: \code{\link{write_meta}}
 }
-\concept{meta}
+\concept{meta_actions}

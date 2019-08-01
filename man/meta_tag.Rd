@@ -31,9 +31,8 @@ meta() \%>\%
 
 }
 \seealso{
-Other meta: \code{\link{include_meta}},
-  \code{\link{meta_general}}, \code{\link{meta_geo}},
-  \code{\link{meta_name}}, \code{\link{meta_social}},
-  \code{\link{meta_viewport}}
+Other meta: \code{\link{meta_general}},
+  \code{\link{meta_geo}}, \code{\link{meta_name}},
+  \code{\link{meta_social}}, \code{\link{meta_viewport}}
 }
 \concept{meta}
