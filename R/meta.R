@@ -141,6 +141,18 @@ knit_print.meta <- function(.meta, ...) {
     )
   }
 
+  if (guess_blogdown()) {
+    warning(
+      "{metathis} can't directly include <meta> tags inside blogdown posts ",
+      "because the mechanism for including tags in the <head> section of a ",
+      "page depends on the Hugo template. See ?meta for more information.\n\n",
+      "If you see this message but are not rendering a blogdown post, you can ",
+      "use metathis::include_meta() to avoid this check.",
+      call. = FALSE
+    )
+    return(collapse(.meta, "\n"))
+  }
+
   # Thank you: https://github.com/haozhu233/kableExtra/blob/master/R/print.R#L56
   knitr::asis_output("", meta = list(metaDependency(.meta)))
 }
@@ -172,4 +184,37 @@ random_id <- function(n = 6) {
   c(letters[1:6], 0:9) %>%
     sample(8, replace = TRUE) %>%
     collapse("")
+}
+
+guess_blogdown <- function() {
+  blogdown_root <- find_config(getwd())
+  if (is.null(blogdown_root)) return(FALSE)
+
+  # Check for blogdown config files and confirm if they contain "baseURL"
+  config_files <- dir(blogdown_root, "config[.](yaml|toml|json)", full.names = TRUE)
+  if (length(config_files)) {
+    for (config in config_files) {
+      if (grepl("baseURL", collapse(readLines(config)))) {
+        return(TRUE)
+      }
+    }
+  }
+
+  # Check if config file + "content" + "layouts" + "static"
+  blogdown_files <- dir(blogdown_root, "content|layouts|static")
+  if (length(blogdown_files) == 3 && length(config_files)) {
+    return(TRUE)
+  }
+
+  FALSE
+}
+
+find_config <- function(path) {
+  if (length(dir(path, "config[.](yaml|toml|json)"))) {
+    return(path)
+  }
+
+  path_up <- normalizePath(file.path(path, ".."))
+  if (path == path_up) return(NULL)
+  find_config(path_up)
 }
