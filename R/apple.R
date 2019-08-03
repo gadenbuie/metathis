@@ -1,5 +1,3 @@
-## <!-- Smart App Banner -->
-## <meta name="apple-itunes-app" content="app-id=APP_ID,affiliate-data=AFFILIATE_ID,app-argument=SOME_TEXT">
 ##
 ## <!-- Disable automatic detection and formatting of possible phone numbers -->
 ## <meta name="format-detection" content="telephone=no">
@@ -34,4 +32,45 @@ meta_apple <- function(
   # format_detection = if (!is.null(format_detection) && !format_detection) {
   #   "telephone:no"
   # }
+}
+
+
+#' Apple Smart Banner Meta Tag
+#'
+#' @template describe-meta
+#' @template describe-meta-return
+#' @param app_id Apple app ID
+#' @param affiliate_id Apple affiliate ID
+#' @param ... Additional name=value pairs.
+#'
+#' @section Example:
+#'
+#' ```
+#' # <!-- Smart App Banner -->
+#' <meta name="apple-itunes-app" content="app-id=APP_ID,affiliate-data=AFFILIATE_ID,app-argument=SOME_TEXT">
+#' ```
+#'
+#' @export
+meta_apple_itunes_app <- function(
+  .meta = meta(),
+  app_id = NULL,
+  affiliate_id = NULL,
+  ...
+) {
+  args <- c(
+    list(`app-id` = app_id, `affiliate-data` = affiliate_id),
+    list(...)
+  )
+  args <- purrr::compact(args)
+  if (!length(args)) {
+    return(.meta)
+  }
+
+  content <- args %>%
+    purrr::imap_chr(~ paste0(.y, "=", .x)) %>%
+    collapse(",")
+
+  meta_new <- tag_meta(name = "apple-itunes-app", content = content)
+
+  append_to_meta(.meta, list(meta_new))
 }

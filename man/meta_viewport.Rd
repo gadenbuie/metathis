@@ -50,8 +50,9 @@ Create or add a viewport meta tag.
 \href{https://drafts.csswg.org/css-device-adapt/#viewport-meta}{W3C Viewport Meta Element Specification}
 }
 \seealso{
-Other meta: \code{\link{meta_general}},
-  \code{\link{meta_geo}}, \code{\link{meta_name}},
-  \code{\link{meta_social}}, \code{\link{meta_tag}}
+Other meta: \code{\link{meta_apple_itunes_app}},
+  \code{\link{meta_general}}, \code{\link{meta_geo}},
+  \code{\link{meta_name}}, \code{\link{meta_social}},
+  \code{\link{meta_tag}}
 }
 \concept{meta}
