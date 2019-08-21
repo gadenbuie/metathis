@@ -14,12 +14,20 @@ Markdown](https://rmarkdown.rstudio.com) or
 
 ## Installation
 
-You can install the released version of metathis from
+You can install the latest version of metathis from
 [Github](https://github.com/gadenbuie/metathis) with:
 
 ``` r
 devtools::install_github("gadenbuie/metathis")
 ```
+
+## Works In
+
+✅ [R Markdown](https://rmarkdown.rstudio.com) HTML Documents  
+✅ [Shiny](https://shiny.rstudio.com) Apps  
+✅ [xaringan](https://slides.yihui.name/xaringan)  
+❌ [blogdown](https://bookdown.org/yihui/blogdown)  
+❓ [bookdown](https://bookdown.org/)
 
 ## Example
 
@@ -50,7 +58,6 @@ meta() %>%
 #> <meta name="description" content="This book will teach you how to do data science with R..."/>
 #> <meta name="github-repo" content="hadley/r4ds"/>
 #> <meta name="twitter:title" content="R for Data Science"/>
-#> <meta name="twitter:description" content="This book will teach you how to do data science with R..."/>
 #> <meta name="twitter:url" content="https://r4ds.had.co.nz"/>
 #> <meta name="twitter:image" content="https://r4ds.had.co.nz/cover.png"/>
 #> <meta name="twitter:image:alt" content="The cover of the R4DS book"/>
@@ -58,7 +65,6 @@ meta() %>%
 #> <meta name="twitter:creator" content="@hadley"/>
 #> <meta name="twitter:site" content="@hadley"/>
 #> <meta name="og:title" content="R for Data Science"/>
-#> <meta name="og:description" content="This book will teach you how to do data science with R..."/>
 #> <meta name="og:url" content="https://r4ds.had.co.nz"/>
 #> <meta name="og:image" content="https://r4ds.had.co.nz/cover.png"/>
 #> <meta name="og:image:alt" content="The cover of the R4DS book"/>
