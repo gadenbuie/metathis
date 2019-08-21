@@ -77,8 +77,9 @@ meta() %>%
 ## Thanks
 
 Thanks to [Josh Buchea](https://github.com/joshbuchea) for providing an
-excellent and indispensible resource on `<meta>` tags and other things
-that go in the HTML `<head>` tags.
+[excellent and indispensible
+resource](https://github.com/joshbuchea/HEAD) on `<meta>` tags and other
+things that go in the HTML `<head>` tags.
 
 And thanks also to [Malcolm Barret](https://github.com/malcolmbarrett).
 Watching over his shoulder as he developed
