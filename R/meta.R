@@ -135,6 +135,7 @@ print.meta <- function(.meta) {
 knit_print.meta <- function(.meta, ...) {
   assert_is_meta(.meta)
 
+  # nocov start
   if (!grepl("html", knitr::opts_knit$get("rmarkdown.pandoc.to"))) {
     warning(
       "knitr output format is not HTML. Use `include_meta()` to ensure ",
@@ -156,6 +157,7 @@ knit_print.meta <- function(.meta, ...) {
     )
     return(collapse(.meta, "\n"))
   }
+  #nocov end
 
   # Thank you: https://github.com/haozhu233/kableExtra/blob/master/R/print.R#L56
   knitr::asis_output("", meta = list(metaDependency(.meta)))
