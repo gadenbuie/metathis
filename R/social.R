@@ -78,7 +78,7 @@ meta_social <- function(
     # check existing metadata for description
     has_description <- has_meta_with_property(.meta, value = "description")
     if (any(has_description)) {
-      desc_existing <- .meta %>%
+      desc_existing <- .meta[[1]]$children %>%
         purrr::keep(has_description) %>%
         purrr::map_chr(~ .$attribs$content) %>%
         unique()

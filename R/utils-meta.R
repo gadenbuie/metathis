@@ -48,7 +48,7 @@ duplicate_vector_entries <- function(.list) {
 
 has_meta_with_property <- function(.meta, property = "name", value) {
   has_match <-
-    .meta %>%
+    .meta[[1]]$children %>%
     purrr::map("attribs") %>%
     purrr::map_lgl(~ {
       !is.null(.x[[property]]) && .x[[property]] == value
