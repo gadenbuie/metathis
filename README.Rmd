@@ -23,6 +23,7 @@ knitr::opts_chunk$set(
 [r4ds]: https://r4ds.had.co.nz/
 [xaringan]: https://slides.yihui.name/xaringan
 [bookdown]: https://bookdown.org/
+[pagedown]: https://github.com/rstudio/pagedown
 
 
 metathis makes it easy to add HTML `<meta>` tags to your [R Markdown][rmarkdown] or [blogdown] pages and [Shiny] apps.
@@ -41,7 +42,8 @@ devtools::install_github("gadenbuie/metathis")
 &#x2705; [Shiny] Apps  
 &#x2705; [xaringan]  
 &#x274C; [blogdown]  
-&#x2753; [bookdown]
+&#x2753; [bookdown]  
+&#x2753; [pagedown]
 
 ## Example
 

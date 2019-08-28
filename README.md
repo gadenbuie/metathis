@@ -27,7 +27,8 @@ devtools::install_github("gadenbuie/metathis")
 ✅ [Shiny](https://shiny.rstudio.com) Apps  
 ✅ [xaringan](https://slides.yihui.name/xaringan)  
 ❌ [blogdown](https://bookdown.org/yihui/blogdown)  
-❓ [bookdown](https://bookdown.org/)
+❓ [bookdown](https://bookdown.org/)  
+❓ [pagedown](https://github.com/rstudio/pagedown)
 
 ## Example
 
