@@ -11,7 +11,7 @@ include_meta(.meta)
 by a \code{meta_*()} object.}
 }
 \value{
-An \code{\link[htmltools:htmlDependecy]{htmltools::htmlDependecy()}} containing the metadata tags to be
+An \code{\link[htmltools:htmlDependency]{htmltools::htmlDependency()}} containing the metadata tags to be
 included in the \code{<head>} of the HTML document.
 }
 \description{

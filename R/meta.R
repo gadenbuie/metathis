@@ -13,7 +13,7 @@ meta <- function() {
 #' and may work in some unusual cases.
 #'
 #' @template describe-meta
-#' @return An [htmltools::htmlDependecy()] containing the metadata tags to be
+#' @return An [htmltools::htmlDependency()] containing the metadata tags to be
 #'   included in the `<head>` of the HTML document.
 #'
 #' @family meta_actions
@@ -82,6 +82,7 @@ meta_tag <- function(.meta = meta(), ...) {
   append_to_meta(.meta, list(tag_meta(...)))
 }
 
+#' @rdname as_meta
 #' @export
 is_meta <- function(x) {
   inherits(x, "meta")
@@ -95,7 +96,11 @@ assert_is_meta <- function(x, var = ".meta") {
   }
 }
 
-#' @title Convert a list to a `meta` obect.
+#' @title metathis Object Checks and Coercions
+#'
+#' @description Functions to check if an object is a \pkg{metathis} obect or to
+#'   coerce an object into a metathis object.
+#' @param x A list or metathis object
 #' @export
 as_meta <- function(x) UseMethod("as_meta", x)
 
@@ -122,13 +127,13 @@ as_meta.data.frame <- function(x) {
 }
 
 #' @export
-as.character.meta <- function(.meta) {
-  .meta[[1]]$children %>% purrr::map_chr(as.character)
+as.character.meta <- function(x, ...) {
+  x[[1]]$children %>% purrr::map_chr(as.character)
 }
 
 #' @export
-print.meta <- function(.meta) {
-  cat(collapse(.meta, "\n"))
+print.meta <- function(x, ...) {
+  cat(collapse(x, "\n"))
 }
 
 #' @export

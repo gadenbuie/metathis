@@ -20,7 +20,7 @@ equivalent: \code{"300px 500px"} or \code{c("300px", "500px")}). The values may 
 a number with units, a percentage, or \code{"device-width"}. Pixels are assumed
 if no units are provided.}
 
-\item{initial_scale}{DESCRIPTION.}
+\item{initial_scale}{Initial scale}
 
 \item{orientation}{One of \code{"auto"}, \code{"portrait"}, \code{"landscape"}.}
 
@@ -31,11 +31,13 @@ if no units are provided.}
 \item{height, min_height, max_height}{Sets height of initial viewport. Follows
 the same conventions as \code{width}, \code{min_width}, and \code{max_width}.}
 
-\item{minimum_scale}{DESCRIPTION.}
+\item{minimum_scale}{Minimum scale}
 
-\item{maximum_scale}{DESCRIPTION.}
+\item{maximum_scale}{Maximum scale}
 
-\item{user_scalable}{DESCRIPTION.}
+\item{user_scalable}{User scalable}
+
+\item{...}{Additional name/value pairs}
 }
 \value{
 A \code{meta} object, or a set of \code{<metadata>} HTML tags inside an HTML

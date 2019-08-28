@@ -35,6 +35,17 @@ automatically be used.}
 
 \item{twitter_site}{\code{@username`` for the website used in the card footer. }twitter_creator` is used by default.}
 
+\item{og_type}{Open Graph card type, default is \code{"website"}. Other common
+options include \code{"article"}, \code{"book"}, or \code{"profile"}. The full list of
+valid options can be referenced at \url{https://ogp.me/}}
+
+\item{og_locale}{The locale these tags are marked up in. Of the format \code{language_TERRITORY}. Default is \code{"en_US"}.}
+
+\item{og_author}{Writers of the article. Multiple authors may be specified in
+a vector of character strings.}
+
+\item{og_site_name}{The name of the site hosting the content}
+
 \item{facebook_app_id}{The Facebook app ID. See the
 \href{https://developers.facebook.com/docs/sharing/webmasters#markup}{Facebook Open Graph Markup}
 page for more information.}
@@ -43,17 +54,6 @@ page for more information.}
 your website. See the
 \href{https://help.pinterest.com/en/business/article/prevent-saves-to-pinterest-from-your-site}{Pinterest help center}
 for more information.}
-
-\item{site_name}{The name of the site hosting the content}
-
-\item{type}{Open Graph card type, default is \code{"website"}. Other common
-options include \code{"article"}, \code{"book"}, or \code{"profile"}. The full list of
-valid options can be referenced at \url{https://ogp.me/}}
-
-\item{locale}{The locale these tags are marked up in. Of the format \code{language_TERRITORY}. Default is \code{"en_US"}.}
-
-\item{author}{Writers of the article. Multiple authors may be specified in
-a vector of character strings.}
 }
 \value{
 A \code{meta} object, or a set of \code{<metadata>} HTML tags inside an HTML

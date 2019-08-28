@@ -17,11 +17,12 @@
 #'   `max_width` are set.
 #' @param height,min_height,max_height Sets height of initial viewport. Follows
 #'   the same conventions as `width`, `min_width`, and `max_width`.
-#' @param initial_scale DESCRIPTION.
+#' @param initial_scale Initial scale
 #' @param orientation One of `"auto"`, `"portrait"`, `"landscape"`.
-#' @param minimum_scale DESCRIPTION.
-#' @param maximum_scale DESCRIPTION.
-#' @param user_scalable DESCRIPTION.
+#' @param minimum_scale Minimum scale
+#' @param maximum_scale Maximum scale
+#' @param user_scalable User scalable
+#' @param ... Additional name/value pairs
 #'
 #' @template describe-meta-return
 #' @export

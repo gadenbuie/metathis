@@ -11,12 +11,12 @@
 #' @param url Content URL
 #' @param image Image url for card
 #' @param image_alt A description of what's in the image (not a caption)
-#' @param site_name The name of the site hosting the content
-#' @param type Open Graph card type, default is `"website"`. Other common
+#' @param og_site_name The name of the site hosting the content
+#' @param og_type Open Graph card type, default is `"website"`. Other common
 #'   options include `"article"`, `"book"`, or `"profile"`. The full list of
 #'   valid options can be referenced at <https://ogp.me/>
-#' @param locale The locale these tags are marked up in. Of the format `language_TERRITORY`. Default is `"en_US"`.
-#' @param author Writers of the article. Multiple authors may be specified in
+#' @param og_locale The locale these tags are marked up in. Of the format `language_TERRITORY`. Default is `"en_US"`.
+#' @param og_author Writers of the article. Multiple authors may be specified in
 #'   a vector of character strings.
 #' @param twitter_card_type One of `"summary"`, `"summary_large_image"`,
 #'   `"app"`, or `"player"`.
