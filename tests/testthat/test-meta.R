@@ -1,3 +1,5 @@
+test_that("test-meta", expect_true(TRUE))
+
 describe("meta class", {
 
   it("has class meta", {
@@ -32,28 +34,28 @@ describe("meta class", {
 describe("meta_name()", {
   it("creates <meta> tags with name/content pairs", {
     exp <- '<meta name="github-repo" content="hadley/r4ds"/>'
-    expect_equal(as.character(meta_name("github-repo" = "hadley/r4ds")), exp)
+    expect_equal_meta(meta_name("github-repo" = "hadley/r4ds"), exp)
 
     exp2 <- c(
       "<meta name=\"A\" content=\"a\"/>",
       "<meta name=\"B\" content=\"b\"/>"
     )
-    expect_equal(as.character(meta_name("A" = "a", "B" = "b")), exp2)
+    expect_equal_meta(meta_name("A" = "a", "B" = "b"), exp2)
   })
 
   it("concatenates if length(content) > 1", {
     exp <- '<meta name="value" content="a b"/>'
-    expect_equal(paste(meta_name(value = c("a", "b"))), exp)
+    expect_equal_meta(meta_name(value = c("a", "b")), exp)
   })
 })
 
 describe("meta_tag()", {
   it("creates <meta> tags with attribute = value pairs", {
     exp <- '<meta A="a" B="b"/>'
-    expect_equal(as.character(meta_tag(A = "a", B = "b")), exp)
+    expect_equal_meta(meta_tag(A = "a", B = "b"), exp)
   })
 
   it("errors if length(value) > 1", {
-    expect_error(as.character(meta_tag(A = c('a', 'b'))))
+    expect_error(meta_tag(A = c('a', 'b')))
   })
 })
