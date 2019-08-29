@@ -5,12 +5,12 @@
 \title{Social Media Metadata}
 \usage{
 meta_social(.meta = meta(), title = NULL, url = NULL, image = NULL,
-  image_alt = NULL, description = NULL,
-  twitter_card_type = c("summary", "summary_large_image", "app",
-  "player"), twitter_creator = NULL, twitter_site = twitter_creator,
-  og_type = "website", og_locale = "en_US", og_author = NULL,
-  og_site_name = NULL, facebook_app_id = NULL,
-  disable_pinterest = FALSE)
+  image_alt = NULL, image_width = NULL, image_height = NULL,
+  description = NULL, twitter_card_type = c("summary",
+  "summary_large_image", "app", "player"), twitter_creator = NULL,
+  twitter_site = twitter_creator, og_type = "website",
+  og_locale = "en_US", og_author = NULL, og_site_name = NULL,
+  facebook_app_id = NULL, disable_pinterest = FALSE)
 }
 \arguments{
 \item{.meta}{A \code{meta} object created by \code{\link[=meta]{meta()}} or \code{\link[=as_meta]{as_meta()}}, or returned
@@ -20,9 +20,13 @@ by a \code{meta_*()} object.}
 
 \item{url}{Content URL}
 
-\item{image}{Image url for card}
+\item{image}{Image url for card.}
 
 \item{image_alt}{A description of what's in the image (not a caption)}
+
+\item{image_width}{The width of the image in pixels}
+
+\item{image_height}{The height of the image in pixels}
 
 \item{description}{Content description. If you have already used
 \code{\link[=meta_general]{meta_general()}} to set the content's description, that description will

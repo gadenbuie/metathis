@@ -9,8 +9,10 @@
 #'   [meta_general()] to set the content's description, that description will
 #'   automatically be used.
 #' @param url Content URL
-#' @param image Image url for card
+#' @param image Image url for card.
 #' @param image_alt A description of what's in the image (not a caption)
+#' @param image_width The width of the image in pixels
+#' @param image_height The height of the image in pixels
 #' @param og_site_name The name of the site hosting the content
 #' @param og_type Open Graph card type, default is `"website"`. Other common
 #'   options include `"article"`, `"book"`, or `"profile"`. The full list of
@@ -60,6 +62,8 @@ meta_social <- function(
   url = NULL,
   image = NULL,
   image_alt = NULL,
+  image_width = NULL,
+  image_height = NULL,
   description = NULL,
   twitter_card_type = c("summary", "summary_large_image", "app", "player"),
   twitter_creator = NULL,
@@ -98,8 +102,10 @@ meta_social <- function(
     "twitter:title"       = title,
     "twitter:description" = description,
     "twitter:url"         = url,
-    "twitter:image"       = image,
+    "twitter:image:src"   = image,
     "twitter:image:alt"   = image_alt,
+    "twitter:image:width" = image_width,
+    "twitter:image:height"= image_height,
     "twitter:card"        = twitter_card_type,
     "twitter:creator"     = twitter_creator,
     "twitter:site"        = twitter_site,
@@ -108,6 +114,8 @@ meta_social <- function(
     "og:url"              = url,
     "og:image"            = image,
     "og:image:alt"        = image_alt,
+    "og:image:width"      = image_width,
+    "og:image:height"     = image_height,
     "og:type"             = og_type,
     "og:locale"           = og_locale,
     "og:site_name"        = og_site_name,

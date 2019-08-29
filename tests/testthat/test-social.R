@@ -48,4 +48,5 @@ describe("meta_social()", {
     expect_true(sum(grepl("Apple", .meta)) == 1)
     expect_true(sum(grepl("Banana", .meta)) == 1)
   })
+
 })
