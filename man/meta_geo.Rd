@@ -31,7 +31,7 @@ will be converted to periods, so you can also specify \code{geo_country} in
 place of \code{geo.country}.}
 }
 \value{
-A \code{meta} object, or a set of \code{<metadata>} HTML tags inside an HTML
+A \code{meta} object, or a set of \code{<meta>} HTML tags inside an HTML
 \code{<head>} tag. For use in \code{\link[rmarkdown:html_document]{rmarkdown::html_document()}}, \code{\link[shiny:runApp]{shiny::runApp()}},
 or other HTML locations.
 }

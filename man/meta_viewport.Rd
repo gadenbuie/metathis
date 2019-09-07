@@ -40,7 +40,7 @@ the same conventions as \code{width}, \code{min_width}, and \code{max_width}.}
 \item{...}{Additional name/value pairs}
 }
 \value{
-A \code{meta} object, or a set of \code{<metadata>} HTML tags inside an HTML
+A \code{meta} object, or a set of \code{<meta>} HTML tags inside an HTML
 \code{<head>} tag. For use in \code{\link[rmarkdown:html_document]{rmarkdown::html_document()}}, \code{\link[shiny:runApp]{shiny::runApp()}},
 or other HTML locations.
 }

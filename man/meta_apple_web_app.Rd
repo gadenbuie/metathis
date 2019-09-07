@@ -26,7 +26,7 @@ the web content is displayed on the entire screen, partially obscured by
 the status bar. The default value is default."}
 }
 \value{
-A \code{meta} object, or a set of \code{<metadata>} HTML tags inside an HTML
+A \code{meta} object, or a set of \code{<meta>} HTML tags inside an HTML
 \code{<head>} tag. For use in \code{\link[rmarkdown:html_document]{rmarkdown::html_document()}}, \code{\link[shiny:runApp]{shiny::runApp()}},
 or other HTML locations.
 }
