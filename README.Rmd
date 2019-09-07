@@ -74,6 +74,8 @@ meta() %>%
 
 ## Example
 
+### In R Markdown
+
 This is a basic example that re-creates the `<meta>` tags for the [R for Data Science][r4ds] book. 
 
 ```{r example}
@@ -96,6 +98,30 @@ meta() %>%
     twitter_creator = "@hadley"
   ) %>% 
   print()
+```
+
+### In Shiny Apps
+
+To use `metathis` in Shiny apps, simply call `meta()` and related tags anywhere inside your page UI, for example inside `fluidPage()`.
+
+```r
+ui <- fluidPage(
+  # Application title
+  titlePanel("metathis Example"),
+  
+  meta() %>%
+    meta_social(
+      title = "metathis",
+      description = "<meta> and social meda cards for you R-web things",
+      url = "https://pkg.garrickadenbuie.com/metathis",
+      image = "https://garrickadenbuie.com/apple-touch-icon-114x114.png",
+      image_alt = "An image for social meda cards",
+      twitter_creator = "@grrrck",
+      twitter_card_type = "summary",
+      twitter_site = "@grrrck"
+  )
+  # ... your UI ...
+)
 ```
 
 ## Thanks

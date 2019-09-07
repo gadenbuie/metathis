@@ -66,6 +66,8 @@ meta() %>%
 
 ## Example
 
+### In R Markdown
+
 This is a basic example that re-creates the `<meta>` tags for the [R for
 Data Science](https://r4ds.had.co.nz/) book.
 
@@ -95,7 +97,7 @@ meta() %>%
 #> <meta name="twitter:title" content="R for Data Science"/>
 #> <meta name="twitter:description" content="This book will teach you how to do data science with R..."/>
 #> <meta name="twitter:url" content="https://r4ds.had.co.nz"/>
-#> <meta name="twitter:image" content="https://r4ds.had.co.nz/cover.png"/>
+#> <meta name="twitter:image:src" content="https://r4ds.had.co.nz/cover.png"/>
 #> <meta name="twitter:image:alt" content="The cover of the R4DS book"/>
 #> <meta name="twitter:card" content="summary"/>
 #> <meta name="twitter:creator" content="@hadley"/>
@@ -109,6 +111,31 @@ meta() %>%
 #> <meta name="og:locale" content="en_US"/>
 #> <meta name="article:author" content="Garrett Grolemund"/>
 #> <meta name="article:author" content="Hadley Wickham"/>
+```
+
+### In Shiny Apps
+
+To use `metathis` in Shiny apps, simply call `meta()` and related tags
+anywhere inside your page UI, for example inside `fluidPage()`.
+
+``` r
+ui <- fluidPage(
+  # Application title
+  titlePanel("metathis Example"),
+  
+  meta() %>%
+    meta_social(
+      title = "metathis",
+      description = "<meta> and social meda cards for you R-web things",
+      url = "https://pkg.garrickadenbuie.com/metathis",
+      image = "https://garrickadenbuie.com/apple-touch-icon-114x114.png",
+      image_alt = "An image for social meda cards",
+      twitter_creator = "@grrrck",
+      twitter_card_type = "summary",
+      twitter_site = "@grrrck"
+  )
+  # ... your UI ...
+)
 ```
 
 ## Thanks
