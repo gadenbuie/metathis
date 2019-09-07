@@ -23,17 +23,58 @@
 ##
 ## [Configuring Web Applications](https://developer.apple.com/library/content/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html)
 
-#' @param format_detection Disable automatic detection and formatting of
-#'   possible phone numbers in Safari and iOS. Set to `FALSE` to disable
-meta_apple <- function(
-  .meta = meta(),
-  format_detection = NULL
-) {
-  # format_detection = if (!is.null(format_detection) && !format_detection) {
-  #   "telephone:no"
-  # }
-}
 
+#' Apple Web App Meta Tags
+#'
+#' @template describe-meta
+#' @template describe-meta-return
+#' @param app_title Launch Icon Title
+#' @param capable Enables standalone (full-screen) mode if TRUE
+#' @param status_bar_style Status bar appearance. has no effect unless
+#'   standalone more is enabled (see `capable`).
+#'
+#'   "If content is set to default, the status bar appears normal. If set to
+#'   black, the status bar has a black background. If set to black-translucent,
+#'   the status bar is black and translucent. If set to default or black, the
+#'   web content is displayed below the status bar. If set to black-translucent,
+#'   the web content is displayed on the entire screen, partially obscured by
+#'   the status bar. The default value is default."
+#'
+#' @references
+#' <https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/MetaTags.html>
+#'
+#' @examples
+#' meta() %>%
+#'   meta_apple_web_app(
+#'     title = "My Fancy App",
+#'     capable = TRUE,
+#'     status_bar_style = "black-translucent"
+#'   )
+#' @export
+meta_apple_web_app <- function(
+  .meta = meta(),
+  title = NULL,
+  capable = NULL,
+  status_bar_style = c("default", "black", "black-translucent")
+) {
+  assert_is_meta(.meta)
+
+  apple <- list(
+    title            = title,
+    capable          = capable %??% ifelse(capable[[1]], "yes", "no"),
+    status_bar_style = status_bar_style %??% match.arg(status_bar_style)
+  )
+
+  names(apple) <- paste0("apple-mobile-web-app-", names(apple))
+
+  meta_apple <-
+    apple %>%
+    names_replace_underscore("-") %>%
+    collapse_single_string() %>%
+    tag_meta_list()
+
+  append_to_meta(.meta, meta_apple)
+}
 
 #' Apple Smart Banner Meta Tag
 #'
@@ -57,6 +98,9 @@ meta_apple_itunes_app <- function(
   affiliate_id = NULL,
   ...
 ) {
+
+  assert_is_meta(.meta)
+
   args <- c(
     list(`app-id` = app_id, `affiliate-data` = affiliate_id),
     list(...)

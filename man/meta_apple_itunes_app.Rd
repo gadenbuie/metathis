@@ -32,9 +32,9 @@ Apple Smart Banner Meta Tag
 }
 
 \seealso{
-Other meta: \code{\link{meta_general}},
-  \code{\link{meta_geo}}, \code{\link{meta_name}},
-  \code{\link{meta_social}}, \code{\link{meta_tag}},
-  \code{\link{meta_viewport}}
+Other meta: \code{\link{meta_apple_web_app}},
+  \code{\link{meta_general}}, \code{\link{meta_geo}},
+  \code{\link{meta_name}}, \code{\link{meta_social}},
+  \code{\link{meta_tag}}, \code{\link{meta_viewport}}
 }
 \concept{meta}
