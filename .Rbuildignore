@@ -5,3 +5,6 @@
 ^man-roxygen$
 ^pkgdown$
 ^tests/manual$
+^\.travis\.yml$
+^appveyor\.yml$
+^tic\.R$
