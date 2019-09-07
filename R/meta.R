@@ -229,3 +229,25 @@ find_config <- function(path) {
   if (path == path_up) return(NULL)
   find_config(path_up)
 }
+
+meta_find_description <- function(.meta) {
+  # check existing metadata for description
+  has_description <- has_meta_with_property(.meta, value = "description")
+  if (!any(has_description)) {
+    return(NULL)
+  }
+
+  desc_existing <- .meta[[1]]$children %>%
+    purrr::keep(has_description) %>%
+    purrr::map_chr(~ .$attribs$content) %>%
+    unique()
+
+  if (length(desc_existing) > 1) {
+    warning(
+      "Multiple existing descriptions were found, using first for ",
+      "social cards:\n",
+      strwrap(desc_existing[1], indent = 4)
+    )
+  }
+  desc_existing[1]
+}

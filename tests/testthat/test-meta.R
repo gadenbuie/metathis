@@ -59,3 +59,19 @@ describe("meta_tag()", {
     expect_error(meta_tag(A = c('a', 'b')))
   })
 })
+
+describe("meta_find_description()", {
+  it("finds existing description", {
+    expect_equal(
+      meta() %>% meta_description("found me!") %>% meta_find_description(),
+      "found me!"
+    )
+  })
+
+  it("returns NULL if no description", {
+    expect_null(meta() %>% meta_find_description())
+
+    expect_null(meta() %>% meta_tag(a = '1') %>% meta_find_description())
+  })
+
+})
