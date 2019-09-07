@@ -25,5 +25,8 @@ test_that("blogdown is guessed correctly", {
   expect_null(find_config(tempdir()))
   with_dir(tempdir(), expect_false(guess_blogdown()))
 
+  cat("", file = file.path(tempdir(), "config.toml"))
+  with_dir(tempdir(), expect_false(guess_blogdown()))
+
   unlink(file.path(tempdir(), "blogdown"), recursive = TRUE)
 })
