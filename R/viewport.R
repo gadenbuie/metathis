@@ -44,8 +44,8 @@ meta_viewport <- function(
 
   assert_is_meta(.meta)
 
-  has_minmax_width <- !vapply(list(min_width, max_width), is.null, FALSE)
-  has_minmax_height <- !vapply(list(min_height, max_height), is.null, FALSE)
+  has_minmax_width <- !vapply(list(min_width, max_width), is.null, FALSE) %>% any()
+  has_minmax_height <- !vapply(list(min_height, max_height), is.null, FALSE) %>% any()
 
   if (has_minmax_width && !is.null(width)) {
     warning("Ignoring `width` because one of `min_width` or `max_width` was provided")
