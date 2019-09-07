@@ -11,6 +11,8 @@ meta_apple_web_app(.meta = meta(), title = NULL, capable = NULL,
 \item{.meta}{A \code{meta} object created by \code{\link[=meta]{meta()}} or \code{\link[=as_meta]{as_meta()}}, or returned
 by a \code{meta_*()} object.}
 
+\item{title}{Launch Icon Title}
+
 \item{capable}{Enables standalone (full-screen) mode if TRUE}
 
 \item{status_bar_style}{Status bar appearance. has no effect unless
@@ -22,8 +24,6 @@ the status bar is black and translucent. If set to default or black, the
 web content is displayed below the status bar. If set to black-translucent,
 the web content is displayed on the entire screen, partially obscured by
 the status bar. The default value is default."}
-
-\item{app_title}{Launch Icon Title}
 }
 \value{
 A \code{meta} object, or a set of \code{<metadata>} HTML tags inside an HTML

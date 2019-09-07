@@ -28,7 +28,7 @@
 #'
 #' @template describe-meta
 #' @template describe-meta-return
-#' @param app_title Launch Icon Title
+#' @param title Launch Icon Title
 #' @param capable Enables standalone (full-screen) mode if TRUE
 #' @param status_bar_style Status bar appearance. has no effect unless
 #'   standalone more is enabled (see `capable`).
