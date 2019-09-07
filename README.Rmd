@@ -24,9 +24,17 @@ knitr::opts_chunk$set(
 [xaringan]: https://slides.yihui.name/xaringan
 [bookdown]: https://bookdown.org/
 [pagedown]: https://github.com/rstudio/pagedown
+[htmltools]: https://github.com/rstudio/htmltools
 
+## Why metathis?
 
-metathis makes it easy to add HTML `<meta>` tags to your [R Markdown][rmarkdown] or [blogdown] pages and [Shiny] apps.
+The goal of **metathis** is to help you add HTML `<meta>` tags to your [R Markdown][rmarkdown] and [Shiny] apps.
+
+HTML `<meta>` tags provide browsers and social media with metadata about HTML pages.
+Using `<meta>` tags will help your users find your articles, Shiny apps, and presentations, and will help you make sure they look great in social media timelines.
+
+**metathis** makes the process of adding these tags to your R Markdown pages and Shiny apps easier by using the [htmltools] package to add `<meta>` tags as a dependency, added directly to the document in an R code chunk rather than requiring you to adjust templates or write additional files.
+
 
 ## Installation
 
@@ -41,13 +49,32 @@ devtools::install_github("gadenbuie/metathis")
 &#x2705; [R Markdown][rmarkdown] HTML Documents  
 &#x2705; [Shiny] Apps  
 &#x2705; [xaringan]  
+&#x2705; [pagedown]  
 &#x274C; [blogdown]  
 &#x2753; [bookdown]  
-&#x2753; [pagedown]
+
+`<meta>` tags can be added to &#x2705; packages with a standard R chunk
+
+````markdown
+```{r}`r ''`
+meta() %>% 
+  meta_description("My awesome presentation")
+```
+````
+
+For other packages or situations, use `write_meta()` to save the `<meta>` tags to an `.html` file that can be included via `includes: in_header`.
+
+````markdown
+```{r}`r ''`
+meta() %>% 
+  meta_description("A fantastic blog post") %>% 
+  write_meta("meta.html")
+```
+````
 
 ## Example
 
-This is a basic example that re-creates the metadata tags for the [R for Data Science][r4ds] book. 
+This is a basic example that re-creates the `<meta>` tags for the [R for Data Science][r4ds] book. 
 
 ```{r example}
 library(metathis)
@@ -75,7 +102,7 @@ meta() %>%
 
 Thanks to [Josh Buchea](https://github.com/joshbuchea) for providing an [excellent and indispensible resource](https://github.com/joshbuchea/HEAD) on `<meta>` tags and other things that go in the HTML `<head>` tags.
 
-And thanks also to [Malcolm Barret](https://github.com/malcolmbarrett). 
+Thanks also to [Malcolm Barret](https://github.com/malcolmbarrett). 
 Watching over his shoulder as he developed [ymlthis](https://r-lib.github.io/ymlthis) made putting this package together so much easier.
 
 Finally, thanks to the [RStudio team](https://github.com/rstudio) and others who developed [htmltools](https://github.com/rstudio/htmltools) for making HTML in R a breeze.

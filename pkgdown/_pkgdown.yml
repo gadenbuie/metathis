@@ -42,14 +42,29 @@ navbar:
       href: https://twitter.com/grrrck
 
 reference:
-- title: All functions
+- title: Add meta tags
   desc: ~
   contents:
   - '`meta`'
   - '`include_meta`'
+  - '`write_meta`'
+- title: Social media meta tags
+  desc: ~
+  contents:
+  - '`meta_social`'
+- title: General meta tags
+  desc: ~
+  contents:
   - '`meta_name`'
   - '`meta_tag`'
   - '`meta_general`'
-  - '`meta_social`'
   - '`meta_viewport`'
+- title: Geotagging meta tags
+  desc: ~
+  contents:
   - '`meta_geo`'
+- title: Apple meta tags
+  desc: ~
+  contents:
+  - '`meta_apple_web_app`'
+  - '`meta_apple_itunes_app`'

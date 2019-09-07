@@ -7,10 +7,23 @@
 
 <!-- badges: end -->
 
-metathis makes it easy to add HTML `<meta>` tags to your [R
-Markdown](https://rmarkdown.rstudio.com) or
-[blogdown](https://bookdown.org/yihui/blogdown) pages and
+## Why metathis?
+
+The goal of **metathis** is to help you add HTML `<meta>` tags to your
+[R Markdown](https://rmarkdown.rstudio.com) and
 [Shiny](https://shiny.rstudio.com) apps.
+
+HTML `<meta>` tags provide browsers and social media with metadata about
+HTML pages. Using `<meta>` tags will help your users find your articles,
+Shiny apps, and presentations, and will help you make sure they look
+great in social media timelines.
+
+**metathis** makes the process of adding these tags to your R Markdown
+pages and Shiny apps easier by using the
+[htmltools](https://github.com/rstudio/htmltools) package to add
+`<meta>` tags as a dependency, added directly to the document in an R
+code chunk rather than requiring you to adjust templates or write
+additional files.
 
 ## Installation
 
@@ -26,13 +39,34 @@ devtools::install_github("gadenbuie/metathis")
 ✅ [R Markdown](https://rmarkdown.rstudio.com) HTML Documents  
 ✅ [Shiny](https://shiny.rstudio.com) Apps  
 ✅ [xaringan](https://slides.yihui.name/xaringan)  
+✅ [pagedown](https://github.com/rstudio/pagedown)  
 ❌ [blogdown](https://bookdown.org/yihui/blogdown)  
-❓ [bookdown](https://bookdown.org/)  
-❓ [pagedown](https://github.com/rstudio/pagedown)
+❓ [bookdown](https://bookdown.org/)
+
+`<meta>` tags can be added to ✅ packages with a standard R chunk
+
+```` markdown
+```{r}
+meta() %>% 
+  meta_description("My awesome presentation")
+```
+````
+
+For other packages or situations, use `write_meta()` to save the
+`<meta>` tags to an `.html` file that can be included via `includes:
+in_header`.
+
+```` markdown
+```{r}
+meta() %>% 
+  meta_description("A fantastic blog post") %>% 
+  write_meta("meta.html")
+```
+````
 
 ## Example
 
-This is a basic example that re-creates the metadata tags for the [R for
+This is a basic example that re-creates the `<meta>` tags for the [R for
 Data Science](https://r4ds.had.co.nz/) book.
 
 ``` r
@@ -59,6 +93,7 @@ meta() %>%
 #> <meta name="description" content="This book will teach you how to do data science with R..."/>
 #> <meta name="github-repo" content="hadley/r4ds"/>
 #> <meta name="twitter:title" content="R for Data Science"/>
+#> <meta name="twitter:description" content="This book will teach you how to do data science with R..."/>
 #> <meta name="twitter:url" content="https://r4ds.had.co.nz"/>
 #> <meta name="twitter:image" content="https://r4ds.had.co.nz/cover.png"/>
 #> <meta name="twitter:image:alt" content="The cover of the R4DS book"/>
@@ -66,6 +101,7 @@ meta() %>%
 #> <meta name="twitter:creator" content="@hadley"/>
 #> <meta name="twitter:site" content="@hadley"/>
 #> <meta name="og:title" content="R for Data Science"/>
+#> <meta name="og:description" content="This book will teach you how to do data science with R..."/>
 #> <meta name="og:url" content="https://r4ds.had.co.nz"/>
 #> <meta name="og:image" content="https://r4ds.had.co.nz/cover.png"/>
 #> <meta name="og:image:alt" content="The cover of the R4DS book"/>
@@ -82,7 +118,7 @@ Thanks to [Josh Buchea](https://github.com/joshbuchea) for providing an
 resource](https://github.com/joshbuchea/HEAD) on `<meta>` tags and other
 things that go in the HTML `<head>` tags.
 
-And thanks also to [Malcolm Barret](https://github.com/malcolmbarrett).
+Thanks also to [Malcolm Barret](https://github.com/malcolmbarrett).
 Watching over his shoulder as he developed
 [ymlthis](https://r-lib.github.io/ymlthis) made putting this package
 together so much easier.
