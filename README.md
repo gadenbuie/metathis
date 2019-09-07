@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# metathis
+# metathis <a href='https://pkg.garrickadenbuie.com/metathis'><img src='man/figures/logo.png' align="right" height="120" /></a>
 
 <!-- badges: start -->
 
@@ -95,15 +95,13 @@ meta() %>%
 #> <meta name="description" content="This book will teach you how to do data science with R..."/>
 #> <meta name="github-repo" content="hadley/r4ds"/>
 #> <meta name="twitter:title" content="R for Data Science"/>
-#> <meta name="twitter:description" content="This book will teach you how to do data science with R..."/>
 #> <meta name="twitter:url" content="https://r4ds.had.co.nz"/>
-#> <meta name="twitter:image:src" content="https://r4ds.had.co.nz/cover.png"/>
+#> <meta name="twitter:image" content="https://r4ds.had.co.nz/cover.png"/>
 #> <meta name="twitter:image:alt" content="The cover of the R4DS book"/>
 #> <meta name="twitter:card" content="summary"/>
 #> <meta name="twitter:creator" content="@hadley"/>
 #> <meta name="twitter:site" content="@hadley"/>
 #> <meta name="og:title" content="R for Data Science"/>
-#> <meta name="og:description" content="This book will teach you how to do data science with R..."/>
 #> <meta name="og:url" content="https://r4ds.had.co.nz"/>
 #> <meta name="og:image" content="https://r4ds.had.co.nz/cover.png"/>
 #> <meta name="og:image:alt" content="The cover of the R4DS book"/>
