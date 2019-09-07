@@ -18,6 +18,7 @@ Imports:
     magrittr,
     purrr
 Suggests: 
+    rmarkdown,
     testthat (>= 2.1.0)
 Encoding: UTF-8
 LazyData: true
