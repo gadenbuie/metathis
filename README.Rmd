@@ -154,7 +154,7 @@ meta() %>%
   meta_social(
     title = "{metathis}",
     url = "https://pkg.garrickadenbuie.com/metathis",
-    image = "https://https://github.com/gadenbuie/metathis/raw/master/man/figures/card.png",
+    image = "https://pkg.garrickadenbuie.com/metathis/reference/figures/card.png",
     image_alt = "many <meta> tags and the name of the R package: <metathis>",
     og_author = c("Garrick Aden-Buie"),
     twitter_card_type = "summary",
