@@ -53,9 +53,9 @@ devtools::install_github("gadenbuie/metathis")
 &#x2705; [Shiny] Apps  
 &#x2705; [xaringan]  
 &#x2705; [pagedown]  
-&#x274C; [blogdown]  
 &#x2753; [bookdown]  
-&#x2753; [pkgdown]  
+&#x274C; [blogdown]  
+&#x274C; [pkgdown]  
 
 `<meta>` tags can be added to &#x2705; packages with a standard R chunk
 
@@ -137,7 +137,7 @@ Watching over his shoulder as he developed [ymlthis](https://r-lib.github.io/yml
 
 Finally, thanks to the [RStudio team](https://github.com/rstudio) and others who developed [htmltools](https://github.com/rstudio/htmltools) for making HTML in R a breeze.
 
-```{r, echo=FALSE, warning=FALSE}
+```{r, eval=FALSE, include=FALSE}
 meta() %>%
   meta_description(
     "<meta> and social media cards for web things inR"

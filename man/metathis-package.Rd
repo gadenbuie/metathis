@@ -6,6 +6,8 @@
 \alias{metathis-package}
 \title{metathis: Create HTML Metadata Tags with Ease}
 \description{
+\if{html}{\figure{logo.png}{options: align='right'}}
+
 Creates metadata tags for use in R Markdown HTML
     documents and Shiny applications.
 }

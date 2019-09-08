@@ -40,9 +40,9 @@ devtools::install_github("gadenbuie/metathis")
 ✅ [Shiny](https://shiny.rstudio.com) Apps  
 ✅ [xaringan](https://slides.yihui.name/xaringan)  
 ✅ [pagedown](https://github.com/rstudio/pagedown)  
-❌ [blogdown](https://bookdown.org/yihui/blogdown)  
 ❓ [bookdown](https://bookdown.org/)  
-❓ [pkgdown](https://pkgdown.r-lib.org)
+❌ [blogdown](https://bookdown.org/yihui/blogdown)  
+❌ [pkgdown](https://pkgdown.r-lib.org)
 
 `<meta>` tags can be added to ✅ packages with a standard R chunk
 
