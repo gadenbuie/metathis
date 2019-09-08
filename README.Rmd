@@ -1,5 +1,6 @@
 ---
 output: github_document
+always_allow_html: yes
 ---
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
@@ -26,6 +27,7 @@ knitr::opts_chunk$set(
 [bookdown]: https://bookdown.org/
 [pagedown]: https://github.com/rstudio/pagedown
 [htmltools]: https://github.com/rstudio/htmltools
+[pkgdown]: https://pkgdown.r-lib.org
 
 ## Why metathis?
 
@@ -53,6 +55,7 @@ devtools::install_github("gadenbuie/metathis")
 &#x2705; [pagedown]  
 &#x274C; [blogdown]  
 &#x2753; [bookdown]  
+&#x2753; [pkgdown]  
 
 `<meta>` tags can be added to &#x2705; packages with a standard R chunk
 
@@ -113,7 +116,7 @@ ui <- fluidPage(
   meta() %>%
     meta_social(
       title = "metathis",
-      description = "<meta> and social meda cards for you R-web things",
+      description = "<meta> and social media cards for web things in R",
       url = "https://pkg.garrickadenbuie.com/metathis",
       image = "https://garrickadenbuie.com/apple-touch-icon-114x114.png",
       image_alt = "An image for social meda cards",
@@ -133,3 +136,21 @@ Thanks also to [Malcolm Barret](https://github.com/malcolmbarrett).
 Watching over his shoulder as he developed [ymlthis](https://r-lib.github.io/ymlthis) made putting this package together so much easier.
 
 Finally, thanks to the [RStudio team](https://github.com/rstudio) and others who developed [htmltools](https://github.com/rstudio/htmltools) for making HTML in R a breeze.
+
+```{r, echo=FALSE, warning=FALSE}
+meta() %>%
+  meta_description(
+    "<meta> and social media cards for web things inR"
+  ) %>% 
+  meta_name("github-repo" = "gadenbuie/metathis") %>% 
+  meta_social(
+    title = "{metathis}",
+    url = "https://pkg.garrickadenbuie.com/metathis",
+    image = "https://https://github.com/gadenbuie/metathis/raw/master/man/figures/card.png",
+    image_alt = "many <meta> tags and the name of the R package: <metathis>",
+    og_author = c("Garrick Aden-Buie"),
+    twitter_card_type = "summary",
+    twitter_creator = "@grrrck"
+  )
+```
+

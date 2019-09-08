@@ -41,7 +41,8 @@ devtools::install_github("gadenbuie/metathis")
 ✅ [xaringan](https://slides.yihui.name/xaringan)  
 ✅ [pagedown](https://github.com/rstudio/pagedown)  
 ❌ [blogdown](https://bookdown.org/yihui/blogdown)  
-❓ [bookdown](https://bookdown.org/)
+❓ [bookdown](https://bookdown.org/)  
+❓ [pkgdown](https://pkgdown.r-lib.org)
 
 `<meta>` tags can be added to ✅ packages with a standard R chunk
 
@@ -124,7 +125,7 @@ ui <- fluidPage(
   meta() %>%
     meta_social(
       title = "metathis",
-      description = "<meta> and social meda cards for you R-web things",
+      description = "<meta> and social media cards for web things in R",
       url = "https://pkg.garrickadenbuie.com/metathis",
       image = "https://garrickadenbuie.com/apple-touch-icon-114x114.png",
       image_alt = "An image for social meda cards",
