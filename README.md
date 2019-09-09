@@ -40,8 +40,8 @@ devtools::install_github("gadenbuie/metathis")
 ✅ [Shiny](https://shiny.rstudio.com) Apps  
 ✅ [xaringan](https://slides.yihui.name/xaringan)  
 ✅ [pagedown](https://github.com/rstudio/pagedown)  
-ℹ [pkgdown](https://pkgdown.r-lib.org)  
 ❌ [blogdown](https://bookdown.org/yihui/blogdown)  
+❌ [pkgdown](https://pkgdown.r-lib.org)  
 ❓ [bookdown](https://bookdown.org/)
 
 `<meta>` tags can be added to ✅ packages with a standard R chunk
@@ -53,18 +53,10 @@ meta() %>%
 ```
 ````
 
-For other packages or situations, you can use `include_meta()` for ℹ
-formats to explicitly declare the meta tags as an html dependency or use
-`write_meta()` for ❌ formats to save the `<meta>` tags to an `.html`
-file that can be included via `includes: in_header`.
-
-```` markdown
-```{r pkgdown-meta, echo = FALSE}
-meta() %>% 
-  meta_description("My awesome package") %>% 
-  include_meta()
-```
-````
+For other packages or situations, you can use `include_meta()` to
+explicitly declare the meta tags as an html dependency or use
+`write_meta()` to save the `<meta>` tags to an `.html` file that can be
+included via `includes: in_header`.
 
 ```` markdown
 ```{r blogdown-meta, echo = FALSE}
@@ -105,13 +97,15 @@ meta() %>%
 #> <meta name="description" content="This book will teach you how to do data science with R..."/>
 #> <meta name="github-repo" content="hadley/r4ds"/>
 #> <meta name="twitter:title" content="R for Data Science"/>
+#> <meta name="twitter:description" content="This book will teach you how to do data science with R..."/>
 #> <meta name="twitter:url" content="https://r4ds.had.co.nz"/>
-#> <meta name="twitter:image" content="https://r4ds.had.co.nz/cover.png"/>
+#> <meta name="twitter:image:src" content="https://r4ds.had.co.nz/cover.png"/>
 #> <meta name="twitter:image:alt" content="The cover of the R4DS book"/>
 #> <meta name="twitter:card" content="summary"/>
 #> <meta name="twitter:creator" content="@hadley"/>
 #> <meta name="twitter:site" content="@hadley"/>
 #> <meta name="og:title" content="R for Data Science"/>
+#> <meta name="og:description" content="This book will teach you how to do data science with R..."/>
 #> <meta name="og:url" content="https://r4ds.had.co.nz"/>
 #> <meta name="og:image" content="https://r4ds.had.co.nz/cover.png"/>
 #> <meta name="og:image:alt" content="The cover of the R4DS book"/>

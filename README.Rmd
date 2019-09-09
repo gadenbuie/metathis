@@ -53,8 +53,8 @@ devtools::install_github("gadenbuie/metathis")
 &#x2705; [Shiny] Apps  
 &#x2705; [xaringan]  
 &#x2705; [pagedown]  
-&#x2139; [pkgdown]  
 &#x274C; [blogdown]  
+&#x274C; [pkgdown]  
 &#x2753; [bookdown]  
 
 `<meta>` tags can be added to &#x2705; packages with a standard R chunk
@@ -66,15 +66,7 @@ meta() %>%
 ```
 ````
 
-For other packages or situations, you can use `include_meta()` for &#x2139; formats to explicitly declare the meta tags as an html dependency or use `write_meta()` for &#x274C; formats to save the `<meta>` tags to an `.html` file that can be included via `includes: in_header`.
-
-````markdown
-```{r pkgdown-meta, echo = FALSE}`r ''`
-meta() %>% 
-  meta_description("My awesome package") %>% 
-  include_meta()
-```
-````
+For other packages or situations, you can use `include_meta()` to explicitly declare the meta tags as an html dependency or use `write_meta()` to save the `<meta>` tags to an `.html` file that can be included via `includes: in_header`.
 
 ````markdown
 ```{r blogdown-meta, echo = FALSE}`r ''`
