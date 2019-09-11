@@ -22,8 +22,13 @@ great in social media timelines.
 pages and Shiny apps easier by using the
 [htmltools](https://github.com/rstudio/htmltools) package to add
 `<meta>` tags as a dependency, added directly to the document in an R
-code chunk rather than requiring you to adjust templates or write
-additional files.
+code chunk or your Shiny app UI rather than requiring you to adjust
+templates or write additional files.
+
+If you want great looking social media cards, the
+[`meta_social()`](http://pkg.garrickadenbuie.com/metathis/reference/meta_social.html)
+function will help you add everything you need for Twitter, Facebook and
+other social media sites that support the Open Graph protocol.
 
 ## Installation
 
@@ -40,9 +45,9 @@ devtools::install_github("gadenbuie/metathis")
 ✅ [Shiny](https://shiny.rstudio.com) Apps  
 ✅ [xaringan](https://slides.yihui.name/xaringan)  
 ✅ [pagedown](https://github.com/rstudio/pagedown)  
+✅ [bookdown](https://bookdown.org/)  
 ❌ [blogdown](https://bookdown.org/yihui/blogdown)  
-❌ [pkgdown](https://pkgdown.r-lib.org)  
-❓ [bookdown](https://bookdown.org/)
+❌ [pkgdown](https://pkgdown.r-lib.org)
 
 `<meta>` tags can be added to ✅ packages with a standard R chunk
 
@@ -56,7 +61,8 @@ meta() %>%
 For other packages or situations, you can use `include_meta()` to
 explicitly declare the meta tags as an html dependency or use
 `write_meta()` to save the `<meta>` tags to an `.html` file that can be
-included via `includes: in_header`.
+included via `includes: in_header`. (In blogdown, consult your
+blogdown/hugo theme for the correct inclusion method.)
 
 ```` markdown
 ```{r blogdown-meta, echo = FALSE}
