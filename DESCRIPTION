@@ -1,5 +1,5 @@
 Package: metathis
-Title: Create HTML Metadata Tags with Ease
+Title: HTML Metadata Tags for R Markdown and Shiny
 Version: 0.1.0
 Authors@R: 
     person(given = "Garrick",
@@ -7,8 +7,9 @@ Authors@R:
            role = c("aut", "cre"),
            email = "garrick@adenbuie.com",
            comment = c(ORCID = "0000-0002-7111-0077"))
-Description: Creates metadata tags for use in R Markdown HTML
-    documents and Shiny applications.
+Description: Create <meta> tags for R Markdown HTML documents
+    and Shiny apps for social media cards, accessibility, and quality
+    search engine indexing.
 License: MIT + file LICENSE
 URL: https://github.com/gadenbuie/metathis
 BugReports: https://github.com/gadenbuie/metathis/issues
