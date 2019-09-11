@@ -1,5 +1,11 @@
 url: https://pkg.garrickadenbuie.com/metathis/
 
+template:
+  opengraph:
+    image: reference/figures/card.png
+    twitter: "@grrrck"
+    twitter_card: summary_large_image
+
 authors:
   Garrick Aden-Buie:
     href: https://www.garrickadenbuie.com
