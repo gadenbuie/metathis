@@ -105,7 +105,8 @@
 <a href="#why-metathis" class="anchor"></a>Why metathis?</h2>
 <p>The goal of <strong>metathis</strong> is to help you add HTML <code>&lt;meta&gt;</code> tags to your <a href="https://rmarkdown.rstudio.com">R Markdown</a> and <a href="https://shiny.rstudio.com">Shiny</a> apps.</p>
 <p>HTML <code>&lt;meta&gt;</code> tags provide browsers and social media with metadata about HTML pages. Using <code>&lt;meta&gt;</code> tags will help your users find your articles, Shiny apps, and presentations, and will help you make sure they look great in social media timelines.</p>
-<p><strong>metathis</strong> makes the process of adding these tags to your R Markdown pages and Shiny apps easier by using the <a href="https://github.com/rstudio/htmltools">htmltools</a> package to add <code>&lt;meta&gt;</code> tags as a dependency, added directly to the document in an R code chunk rather than requiring you to adjust templates or write additional files.</p>
+<p><strong>metathis</strong> makes the process of adding these tags to your R Markdown pages and Shiny apps easier by using the <a href="https://github.com/rstudio/htmltools">htmltools</a> package to add <code>&lt;meta&gt;</code> tags as a dependency, added directly to the document in an R code chunk or your Shiny app UI rather than requiring you to adjust templates or write additional files.</p>
+<p>If you want great looking social media cards, the <a href="http://pkg.garrickadenbuie.com/metathis/reference/meta_social.html"><code><a href="reference/meta_social.html">meta_social()</a></code></a> function will help you add everything you need for Twitter, Facebook and other social media sites that support the Open Graph protocol.</p>
 </div>
 <div id="installation" class="section level2">
 <h2 class="hasAnchor">
@@ -120,15 +121,15 @@
 ✅ <a href="https://shiny.rstudio.com">Shiny</a> Apps<br>
 ✅ <a href="https://slides.yihui.name/xaringan">xaringan</a><br>
 ✅ <a href="https://github.com/rstudio/pagedown">pagedown</a><br>
+✅ <a href="https://bookdown.org/">bookdown</a><br>
 ❌ <a href="https://bookdown.org/yihui/blogdown">blogdown</a><br>
-❌ <a href="https://pkgdown.r-lib.org">pkgdown</a><br>
-❓ <a href="https://bookdown.org/">bookdown</a></p>
+❌ <a href="https://pkgdown.r-lib.org">pkgdown</a></p>
 <p><code>&lt;meta&gt;</code> tags can be added to ✅ packages with a standard R chunk</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode markdown"><code class="sourceCode markdown"><a class="sourceLine" id="cb2-1" data-line-number="1">```{r, echo=FALSE}</a>
 <a class="sourceLine" id="cb2-2" data-line-number="2">meta() %&gt;% </a>
 <a class="sourceLine" id="cb2-3" data-line-number="3">  meta_description("My awesome presentation")</a>
 <a class="sourceLine" id="cb2-4" data-line-number="4">```</a></code></pre></div>
-<p>For other packages or situations, you can use <code><a href="reference/include_meta.html">include_meta()</a></code> to explicitly declare the meta tags as an html dependency or use <code><a href="reference/write_meta.html">write_meta()</a></code> to save the <code>&lt;meta&gt;</code> tags to an <code>.html</code> file that can be included via <code>includes: in_header</code>.</p>
+<p>For other packages or situations, you can use <code><a href="reference/include_meta.html">include_meta()</a></code> to explicitly declare the meta tags as an html dependency or use <code><a href="reference/write_meta.html">write_meta()</a></code> to save the <code>&lt;meta&gt;</code> tags to an <code>.html</code> file that can be included via <code>includes: in_header</code>. (In blogdown, consult your blogdown/hugo theme for the correct inclusion method.)</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode markdown"><code class="sourceCode markdown"><a class="sourceLine" id="cb3-1" data-line-number="1">```{r blogdown-meta, echo = FALSE}</a>
 <a class="sourceLine" id="cb3-2" data-line-number="2">meta() %&gt;% </a>
 <a class="sourceLine" id="cb3-3" data-line-number="3">  meta_description("A fantastic blog post") %&gt;% </a>
