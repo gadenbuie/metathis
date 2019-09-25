@@ -187,6 +187,7 @@ metaDependency <- function(.meta) {
     paste0("metathis", "-", random_id()),
     version = metathis_version,
     src = system.file(package = "metathis"),
+    all_files = FALSE,
     head = .meta %>% paste()
   )
 }
