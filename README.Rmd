@@ -17,6 +17,9 @@ knitr::opts_chunk$set(
 # metathis <a href='https://pkg.garrickadenbuie.com/metathis'><img src='man/figures/logo.png' align="right" height="120" /></a>
 
 <!-- badges: start -->
+[![CRAN status](https://www.r-pkg.org/badges/version/metathis)](https://CRAN.R-project.org/package=metathis)
+[![Lifecycle: stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://www.tidyverse.org/lifecycle/#stable)
+[![travis](https://travis-ci.org/gadenbuie/metathis.svg?branch=master)](https://travis-ci.org/gadenbuie/metathis)
 <!-- badges: end -->
 
 [rmarkdown]: https://rmarkdown.rstudio.com
@@ -84,7 +87,7 @@ meta() %>%
 
 This is a basic example that re-creates the `<meta>` tags for the [R for Data Science][r4ds] book. 
 
-```{r example}
+```{r example, results="asis"}
 library(metathis)
 
 meta() %>%
@@ -102,13 +105,14 @@ meta() %>%
     og_author = c("Garrett Grolemund", "Hadley Wickham"),
     twitter_card_type = "summary",
     twitter_creator = "@hadley"
-  ) %>% 
-  print()
+  )
 ```
 
 ### In Shiny Apps
 
-To use `metathis` in Shiny apps, simply call `meta()` and related tags anywhere inside your page UI, for example inside `fluidPage()`.
+To use `metathis` in Shiny apps, 
+simply call `meta()` and related tags anywhere inside your page UI, 
+for example inside `fluidPage()`.
 
 ```r
 ui <- fluidPage(
@@ -129,6 +133,35 @@ ui <- fluidPage(
   # ... your UI ...
 )
 ```
+
+### In xaringan Slides
+
+To use `metathis` in [xaringan] slides,
+add `meta()` and related tags in a chunk anywhere in your slide's source `.Rmd` file.
+This example is from a [presentation on the drake package](https://pkg.garrickadenbuie.com/drake-intro/).
+
+````markdown
+```{r meta, echo=FALSE}`r ''`
+library(metathis)
+meta() %>%
+  meta_general(
+    description = "A gentle introduction to reproducible data workflows with the {drake} package.",
+    generator = "xaringan and remark.js"
+  ) %>% 
+  meta_name("github-repo" = "gadenbuie/drake-intro") %>% 
+  meta_social(
+    title = "Reproducible Data Workflows With Drake",
+    url = "https://pkg.garrickadenbuie.com/drake-intro",
+    image = "https://pkg.garrickadenbuie.com/drake-intro/assets/images/drake-intro-cover.jpg",
+    image_alt = "The first slide of the Reproducible Data Workflows with drake presentation, featuring the drake hex logo and neatly ordered row of items on a desk (eraser, pencil, coffee cup, paperclips).",
+    og_type = "website",
+    og_author = "Garrick Aden-Buie",
+    twitter_card_type = "summary_large_image",
+    twitter_creator = "@grrrck"
+  )
+```
+````
+
 
 ## Thanks
 

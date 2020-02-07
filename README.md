@@ -5,6 +5,11 @@
 
 <!-- badges: start -->
 
+[![CRAN
+status](https://www.r-pkg.org/badges/version/metathis)](https://CRAN.R-project.org/package=metathis)
+[![Lifecycle:
+stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://www.tidyverse.org/lifecycle/#stable)
+[![travis](https://travis-ci.org/gadenbuie/metathis.svg?branch=master)](https://travis-ci.org/gadenbuie/metathis)
 <!-- badges: end -->
 
 ## Why metathis?
@@ -97,28 +102,9 @@ meta() %>%
     og_author = c("Garrett Grolemund", "Hadley Wickham"),
     twitter_card_type = "summary",
     twitter_creator = "@hadley"
-  ) %>% 
-  print()
-#> <meta name="viewport" content="width=device-width, initial-scale=1, orientation=auto"/>
-#> <meta name="description" content="This book will teach you how to do data science with R..."/>
-#> <meta name="github-repo" content="hadley/r4ds"/>
-#> <meta name="twitter:title" content="R for Data Science"/>
-#> <meta name="twitter:description" content="This book will teach you how to do data science with R..."/>
-#> <meta name="twitter:url" content="https://r4ds.had.co.nz"/>
-#> <meta name="twitter:image:src" content="https://r4ds.had.co.nz/cover.png"/>
-#> <meta name="twitter:image:alt" content="The cover of the R4DS book"/>
-#> <meta name="twitter:card" content="summary"/>
-#> <meta name="twitter:creator" content="@hadley"/>
-#> <meta name="twitter:site" content="@hadley"/>
-#> <meta name="og:title" content="R for Data Science"/>
-#> <meta name="og:description" content="This book will teach you how to do data science with R..."/>
-#> <meta name="og:url" content="https://r4ds.had.co.nz"/>
-#> <meta name="og:image" content="https://r4ds.had.co.nz/cover.png"/>
-#> <meta name="og:image:alt" content="The cover of the R4DS book"/>
-#> <meta name="og:type" content="book"/>
-#> <meta name="og:locale" content="en_US"/>
-#> <meta name="article:author" content="Garrett Grolemund"/>
-#> <meta name="article:author" content="Hadley Wickham"/>
+  )
+#> Warning: knitr output format is not HTML. Use `include_meta()` to ensure that
+#> the <meta> tags are properly included in the <head> output (if possible).
 ```
 
 ### In Shiny Apps
@@ -145,6 +131,35 @@ ui <- fluidPage(
   # ... your UI ...
 )
 ```
+
+### In xaringan Slides
+
+To use `metathis` in [xaringan](https://slides.yihui.name/xaringan)
+slides, add `meta()` and related tags in a chunk anywhere in your
+slide’s source `.Rmd` file. This example is from a [presentation on
+the drake package](https://pkg.garrickadenbuie.com/drake-intro/).
+
+```` markdown
+```{r meta, echo=FALSE}
+library(metathis)
+meta() %>%
+  meta_general(
+    description = "A gentle introduction to reproducible data workflows with the {drake} package.",
+    generator = "xaringan and remark.js"
+  ) %>% 
+  meta_name("github-repo" = "gadenbuie/drake-intro") %>% 
+  meta_social(
+    title = "Reproducible Data Workflows With Drake",
+    url = "https://pkg.garrickadenbuie.com/drake-intro",
+    image = "https://pkg.garrickadenbuie.com/drake-intro/assets/images/drake-intro-cover.jpg",
+    image_alt = "The first slide of the Reproducible Data Workflows with drake presentation, featuring the drake hex logo and neatly ordered row of items on a desk (eraser, pencil, coffee cup, paperclips).",
+    og_type = "website",
+    og_author = "Garrick Aden-Buie",
+    twitter_card_type = "summary_large_image",
+    twitter_creator = "@grrrck"
+  )
+```
+````
 
 ## Thanks
 
