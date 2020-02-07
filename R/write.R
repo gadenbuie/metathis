@@ -11,6 +11,15 @@
 #'
 #' @family meta_actions
 #'
+#' @examples
+#' meta_html_snippet <- tempfile("metathis_example", fileext = ".html")
+#'
+#' meta() %>%
+#'   meta_name("package" = "metathis") %>%
+#'   write_meta(meta_html_snippet)
+#'
+#' readLines(meta_html_snippet, warn = FALSE)
+#'
 #' @export
 write_meta <- function(.meta, path = "meta.html", append = FALSE) {
   .meta %>%

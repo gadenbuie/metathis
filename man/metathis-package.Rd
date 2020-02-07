@@ -8,9 +8,11 @@
 \description{
 \if{html}{\figure{logo.png}{options: align='right' alt='logo' width='120'}}
 
-Create <meta> tags for R Markdown HTML documents
-    and Shiny apps for social media cards, accessibility, and quality
-    search engine indexing.
+Create meta tags for R Markdown HTML documents
+    and Shiny apps for customized social media cards, for accessibility, and 
+    quality search engine indexing. metathis currently supports HTML documents
+    created with rmarkdown, shiny, xaringan, pagedown, bookdown, and 
+    flexdashboard.
 }
 \seealso{
 Useful links:

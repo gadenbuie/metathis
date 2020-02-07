@@ -24,6 +24,11 @@ meta <- function() {
 #'
 #' @family meta_actions
 #'
+#' @examples
+#' meta() %>%
+#'   meta_name("github-repo" = "gadenbuie/metathis") %>%
+#'   include_meta()
+#'
 #' @export
 include_meta <- function(.meta) {
   assert_is_meta(.meta)

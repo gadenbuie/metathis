@@ -20,6 +20,12 @@ dependency. In general, this is not required when knitting to an HTML
 document. This function explicitly attaches an \code{\link[htmltools:htmlDependency]{htmltools::htmlDependency()}}
 and may work in some unusual cases.
 }
+\examples{
+meta() \%>\%
+  meta_name("github-repo" = "gadenbuie/metathis") \%>\%
+  include_meta()
+
+}
 \seealso{
 Other meta_actions: 
 \code{\link{write_meta}()}

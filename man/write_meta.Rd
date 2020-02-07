@@ -25,6 +25,16 @@ Returns \code{.meta} invisibly.
 Write your metadata tags to an HTML file that can be manually included in
 your page.
 }
+\examples{
+meta_html_snippet <- tempfile("metathis_example", fileext = ".html")
+
+meta() \%>\%
+  meta_name("package" = "metathis") \%>\%
+  write_meta(meta_html_snippet)
+
+readLines(meta_html_snippet, warn = FALSE)
+
+}
 \seealso{
 Other meta_actions: 
 \code{\link{include_meta}()}
