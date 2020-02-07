@@ -1,1 +1,3 @@
-# metathis 0.1.0 (development)
+# metathis 1.0.0
+
+_metathis_ package released!
