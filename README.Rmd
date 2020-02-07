@@ -58,8 +58,10 @@ devtools::install_github("gadenbuie/metathis")
 &#x2705; [xaringan]  
 &#x2705; [pagedown]  
 &#x2705; [bookdown]  
-&#x274C; [blogdown]  
-&#x274C; [pkgdown]  
+&#x274C; [blogdown][^1]  
+&#x274C; [pkgdown]
+
+[^1]: For adding meta tags to blogdown sites, [Socialize your blogdown by Xavier A](https://xvrdm.github.io/2017/10/23/socialize-your-blogdown/) is an excelent resource and you can use metathis to help discover the tags you need while following the instructions in the article.
 
 `<meta>` tags can be added to &#x2705; packages with a standard R chunk
 
@@ -190,3 +192,6 @@ meta() %>%
   include_meta()
 ```
 
+---
+
+### Notes

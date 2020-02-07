@@ -51,7 +51,7 @@ devtools::install_github("gadenbuie/metathis")
 ✅ [xaringan](https://slides.yihui.name/xaringan)  
 ✅ [pagedown](https://github.com/rstudio/pagedown)  
 ✅ [bookdown](https://bookdown.org/)  
-❌ [blogdown](https://bookdown.org/yihui/blogdown)  
+❌ [blogdown](https://bookdown.org/yihui/blogdown)\[1\]  
 ❌ [pkgdown](https://pkgdown.r-lib.org)
 
 `<meta>` tags can be added to ✅ packages with a standard R chunk
@@ -176,3 +176,13 @@ together so much easier.
 Finally, thanks to the [RStudio team](https://github.com/rstudio) and
 others who developed [htmltools](https://github.com/rstudio/htmltools)
 for making HTML in R a breeze.
+
+-----
+
+### Notes
+
+1.  For adding meta tags to blogdown sites, [Socialize your blogdown by
+    Xavier
+    A](https://xvrdm.github.io/2017/10/23/socialize-your-blogdown/) is
+    an excelent resource and you can use metathis to help discover the
+    tags you need while following the instructions in the article.
