@@ -164,7 +164,7 @@ meta() %>%
 ## Thanks
 
 Thanks to [Josh Buchea](https://github.com/joshbuchea) for providing an
-[excellent and indispensible
+[excellent and indispensable
 resource](https://github.com/joshbuchea/HEAD) on `<meta>` tags and other
 things that go in the HTML `<head>` tags.
 
@@ -184,5 +184,5 @@ for making HTML in R a breeze.
 1.  For adding meta tags to blogdown sites, [Socialize your blogdown by
     Xavier
     A](https://xvrdm.github.io/2017/10/23/socialize-your-blogdown/) is
-    an excelent resource and you can use metathis to help discover the
+    an excellent resource and you can use metathis to help discover the
     tags you need while following the instructions in the article.

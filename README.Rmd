@@ -165,7 +165,7 @@ meta() %>%
 
 ## Thanks
 
-Thanks to [Josh Buchea](https://github.com/joshbuchea) for providing an [excellent and indispensible resource](https://github.com/joshbuchea/HEAD) on `<meta>` tags and other things that go in the HTML `<head>` tags.
+Thanks to [Josh Buchea](https://github.com/joshbuchea) for providing an [excellent and indispensable resource](https://github.com/joshbuchea/HEAD) on `<meta>` tags and other things that go in the HTML `<head>` tags.
 
 Thanks also to [Malcolm Barret](https://github.com/malcolmbarrett). 
 Watching over his shoulder as he developed [ymlthis](https://r-lib.github.io/ymlthis) made putting this package together so much easier.
@@ -194,4 +194,4 @@ meta() %>%
 
 ### Notes
 
-1. For adding meta tags to blogdown sites, [Socialize your blogdown by Xavier A](https://xvrdm.github.io/2017/10/23/socialize-your-blogdown/) is an excelent resource and you can use metathis to help discover the tags you need while following the instructions in the article.
+1. For adding meta tags to blogdown sites, [Socialize your blogdown by Xavier A](https://xvrdm.github.io/2017/10/23/socialize-your-blogdown/) is an excellent resource and you can use metathis to help discover the tags you need while following the instructions in the article.
