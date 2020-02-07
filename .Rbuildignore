@@ -9,3 +9,4 @@
 ^appveyor\.yml$
 ^tic\.R$
 ^cran-comments\.md$
+^CRAN-RELEASE$
