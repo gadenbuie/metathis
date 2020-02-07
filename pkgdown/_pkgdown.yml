@@ -2,7 +2,7 @@ url: https://pkg.garrickadenbuie.com/metathis/
 
 home:
   description: >
-    Easy <meta> tags for social media cards, accessibility and quality search
+    Easy &lt;meta&gt; tags for social media cards, accessibility and quality search
     indexing in R Markdown and Shiny.
 
 template:
