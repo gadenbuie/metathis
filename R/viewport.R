@@ -24,6 +24,16 @@
 #' @param user_scalable User scalable
 #' @param ... Additional name/value pairs
 #'
+#' @examples
+#' meta() %>%
+#'   meta_viewport()
+#'
+#' meta() %>%
+#'   meta_viewport(orientation = NULL)
+#'
+#' meta() %>%
+#'   meta_viewport(maximum_scale = 1)
+#'
 #' @template describe-meta-return
 #' @export
 meta_viewport <- function(

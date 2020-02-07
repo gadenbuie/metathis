@@ -4,17 +4,29 @@
 \alias{meta_social}
 \title{Social Media Metadata}
 \usage{
-meta_social(.meta = meta(), title = NULL, url = NULL, image = NULL,
-  image_alt = NULL, image_width = NULL, image_height = NULL,
-  description = NULL, twitter_card_type = c("summary",
-  "summary_large_image", "app", "player"), twitter_creator = NULL,
-  twitter_site = twitter_creator, og_type = "website",
-  og_locale = "en_US", og_author = NULL, og_site_name = NULL,
-  facebook_app_id = NULL, disable_pinterest = FALSE)
+meta_social(
+  .meta = meta(),
+  title = NULL,
+  url = NULL,
+  image = NULL,
+  image_alt = NULL,
+  image_width = NULL,
+  image_height = NULL,
+  description = NULL,
+  twitter_card_type = c("summary", "summary_large_image", "app", "player"),
+  twitter_creator = NULL,
+  twitter_site = twitter_creator,
+  og_type = "website",
+  og_locale = "en_US",
+  og_author = NULL,
+  og_site_name = NULL,
+  facebook_app_id = NULL,
+  disable_pinterest = FALSE
+)
 }
 \arguments{
 \item{.meta}{A \code{meta} object created by \code{\link[=meta]{meta()}} or \code{\link[=as_meta]{as_meta()}}, or returned
-by a \code{meta_*()} object.}
+by a \verb{meta_*()} object.}
 
 \item{title}{Content title}
 
@@ -35,9 +47,9 @@ automatically be used.}
 \item{twitter_card_type}{One of \code{"summary"}, \code{"summary_large_image"},
 \code{"app"}, or \code{"player"}.}
 
-\item{twitter_creator}{\code{@username} for the content creator / author.}
+\item{twitter_creator}{\verb{@username} for the content creator / author.}
 
-\item{twitter_site}{\code{@username`` for the website used in the card footer. }twitter_creator` is used by default.}
+\item{twitter_site}{\verb{@username`` for the website used in the card footer. }twitter_creator` is used by default.}
 
 \item{og_type}{Open Graph card type, default is \code{"website"}. Other common
 options include \code{"article"}, \code{"book"}, or \code{"profile"}. The full list of
@@ -60,8 +72,8 @@ your website. See the
 for more information.}
 }
 \value{
-A \code{meta} object, or a set of \code{<meta>} HTML tags inside an HTML
-\code{<head>} tag. For use in \code{\link[rmarkdown:html_document]{rmarkdown::html_document()}}, \code{\link[shiny:runApp]{shiny::runApp()}},
+A \code{meta} object, or a set of \verb{<meta>} HTML tags inside an HTML
+\verb{<head>} tag. For use in \code{\link[rmarkdown:html_document]{rmarkdown::html_document()}}, \code{\link[shiny:runApp]{shiny::runApp()}},
 or other HTML locations.
 }
 \description{
@@ -92,10 +104,14 @@ meta() \%>\%
 }
 }
 \seealso{
-Other meta: \code{\link{meta_apple_itunes_app}},
-  \code{\link{meta_apple_web_app}},
-  \code{\link{meta_general}}, \code{\link{meta_geo}},
-  \code{\link{meta_name}}, \code{\link{meta_tag}},
-  \code{\link{meta_viewport}}
+Other meta: 
+\code{\link{meta_apple_itunes_app}()},
+\code{\link{meta_apple_web_app}()},
+\code{\link{meta_general}()},
+\code{\link{meta_geo}()},
+\code{\link{meta_name}()},
+\code{\link{meta_tag}()},
+\code{\link{meta_viewport}()},
+\code{\link{meta}()}
 }
 \concept{meta}

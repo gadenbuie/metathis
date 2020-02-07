@@ -4,12 +4,13 @@
 \name{metathis-package}
 \alias{metathis}
 \alias{metathis-package}
-\title{metathis: Create HTML Metadata Tags with Ease}
+\title{metathis: HTML Metadata Tags for R Markdown and Shiny}
 \description{
-\if{html}{\figure{logo.png}{options: align='right'}}
+\if{html}{\figure{logo.png}{options: align='right' alt='logo' width='120'}}
 
-Creates metadata tags for use in R Markdown HTML
-    documents and Shiny applications.
+Create <meta> tags for R Markdown HTML documents
+    and Shiny apps for social media cards, accessibility, and quality
+    search engine indexing.
 }
 \seealso{
 Useful links:
@@ -20,7 +21,7 @@ Useful links:
 
 }
 \author{
-\strong{Maintainer}: Garrick Aden-Buie \email{garrick@adenbuie.com} (0000-0002-7111-0077)
+\strong{Maintainer}: Garrick Aden-Buie \email{garrick@adenbuie.com} (\href{https://orcid.org/0000-0002-7111-0077}{ORCID})
 
 }
 \keyword{internal}

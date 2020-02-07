@@ -1,5 +1,11 @@
 #' Initialize a List of HTML Metadata Tags
 #'
+#' Initialize a _metathis_ object (i.e. a list of HTML metadata tags), test if
+#' an object is a _metathis_ object, or coerce a list of `meta` tags to be a
+#' _metathis_ object.
+#'
+#' @template describe-meta-return
+#'
 #' @export
 meta <- function() {
   as_meta(list())
@@ -82,7 +88,12 @@ meta_tag <- function(.meta = meta(), ...) {
   append_to_meta(.meta, list(tag_meta(...)))
 }
 
-#' @rdname as_meta
+#' @describeIn meta Test if an objects is a _metathis_ object
+#' @examples
+#' meta() %>%
+#'   meta_viewport() %>%
+#'   is_meta()
+#'
 #' @export
 is_meta <- function(x) {
   inherits(x, "meta")
@@ -96,11 +107,17 @@ assert_is_meta <- function(x, var = ".meta") {
   }
 }
 
-#' @title metathis Object Checks and Coercions
+#' @describeIn meta Convert a list of meta tags into a _metathis_ object.
 #'
-#' @description Functions to check if an object is a \pkg{metathis} obect or to
-#'   coerce an object into a metathis object.
 #' @param x A list or metathis object
+#'
+#' @examples
+#' list_of_meta_tags <- list(
+#'   htmltools::tags$meta(github = "gadenbuie"),
+#'   htmltools::tags$meta(twitter = "grrrck")
+#' )
+#'
+#' as_meta(list_of_meta_tags)
 #' @export
 as_meta <- function(x) UseMethod("as_meta", x)
 

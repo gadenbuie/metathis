@@ -4,12 +4,18 @@
 \alias{meta_geo}
 \title{Geotagging Metadata Tags}
 \usage{
-meta_geo(.meta = meta(), icbm = NULL, geo_position = NULL,
-  geo_region = NULL, geo_placename = NULL, ...)
+meta_geo(
+  .meta = meta(),
+  icbm = NULL,
+  geo_position = NULL,
+  geo_region = NULL,
+  geo_placename = NULL,
+  ...
+)
 }
 \arguments{
 \item{.meta}{A \code{meta} object created by \code{\link[=meta]{meta()}} or \code{\link[=as_meta]{as_meta()}}, or returned
-by a \code{meta_*()} object.}
+by a \verb{meta_*()} object.}
 
 \item{icbm}{Latitude and longitude of geographic positions specified as
 \code{"lat, long"}. Can optionally be a length-two vector, i.e. \code{c(lat, long)}.}
@@ -31,8 +37,8 @@ will be converted to periods, so you can also specify \code{geo_country} in
 place of \code{geo.country}.}
 }
 \value{
-A \code{meta} object, or a set of \code{<meta>} HTML tags inside an HTML
-\code{<head>} tag. For use in \code{\link[rmarkdown:html_document]{rmarkdown::html_document()}}, \code{\link[shiny:runApp]{shiny::runApp()}},
+A \code{meta} object, or a set of \verb{<meta>} HTML tags inside an HTML
+\verb{<head>} tag. For use in \code{\link[rmarkdown:html_document]{rmarkdown::html_document()}}, \code{\link[shiny:runApp]{shiny::runApp()}},
 or other HTML locations.
 }
 \description{
@@ -53,10 +59,14 @@ meta() \%>\%
 \href{https://en.wikipedia.org/wiki/Geotagging#HTML_pages}{Geotagging on Wikipedia}
 }
 \seealso{
-Other meta: \code{\link{meta_apple_itunes_app}},
-  \code{\link{meta_apple_web_app}},
-  \code{\link{meta_general}}, \code{\link{meta_name}},
-  \code{\link{meta_social}}, \code{\link{meta_tag}},
-  \code{\link{meta_viewport}}
+Other meta: 
+\code{\link{meta_apple_itunes_app}()},
+\code{\link{meta_apple_web_app}()},
+\code{\link{meta_general}()},
+\code{\link{meta_name}()},
+\code{\link{meta_social}()},
+\code{\link{meta_tag}()},
+\code{\link{meta_viewport}()},
+\code{\link{meta}()}
 }
 \concept{meta}

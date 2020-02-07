@@ -8,13 +8,13 @@ meta_name(.meta = meta(), ...)
 }
 \arguments{
 \item{.meta}{A \code{meta} object created by \code{\link[=meta]{meta()}} or \code{\link[=as_meta]{as_meta()}}, or returned
-by a \code{meta_*()} object.}
+by a \verb{meta_*()} object.}
 
 \item{...}{Name (argument names) and content (argument value) pairs.}
 }
 \value{
-A \code{meta} object, or a set of \code{<meta>} HTML tags inside an HTML
-\code{<head>} tag. For use in \code{\link[rmarkdown:html_document]{rmarkdown::html_document()}}, \code{\link[shiny:runApp]{shiny::runApp()}},
+A \code{meta} object, or a set of \verb{<meta>} HTML tags inside an HTML
+\verb{<head>} tag. For use in \code{\link[rmarkdown:html_document]{rmarkdown::html_document()}}, \code{\link[shiny:runApp]{shiny::runApp()}},
 or other HTML locations.
 }
 \description{
@@ -27,10 +27,14 @@ meta() \%>\%
 
 }
 \seealso{
-Other meta: \code{\link{meta_apple_itunes_app}},
-  \code{\link{meta_apple_web_app}},
-  \code{\link{meta_general}}, \code{\link{meta_geo}},
-  \code{\link{meta_social}}, \code{\link{meta_tag}},
-  \code{\link{meta_viewport}}
+Other meta: 
+\code{\link{meta_apple_itunes_app}()},
+\code{\link{meta_apple_web_app}()},
+\code{\link{meta_general}()},
+\code{\link{meta_geo}()},
+\code{\link{meta_social}()},
+\code{\link{meta_tag}()},
+\code{\link{meta_viewport}()},
+\code{\link{meta}()}
 }
 \concept{meta}

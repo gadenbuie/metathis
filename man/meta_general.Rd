@@ -9,9 +9,17 @@
 \alias{meta_theme_color}
 \title{General Metadata Tags}
 \usage{
-meta_general(.meta = meta(), application_name = NULL,
-  theme_color = NULL, description = NULL, robots = NULL,
-  generator = NULL, subject = NULL, rating = NULL, referrer = NULL)
+meta_general(
+  .meta = meta(),
+  application_name = NULL,
+  theme_color = NULL,
+  description = NULL,
+  robots = NULL,
+  generator = NULL,
+  subject = NULL,
+  rating = NULL,
+  referrer = NULL
+)
 
 meta_description(.meta = meta(), description)
 
@@ -25,7 +33,7 @@ meta_theme_color(.meta = meta(), theme_color)
 }
 \arguments{
 \item{.meta}{A \code{meta} object created by \code{\link[=meta]{meta()}} or \code{\link[=as_meta]{as_meta()}}, or returned
-by a \code{meta_*()} object.}
+by a \verb{meta_*()} object.}
 
 \item{application_name}{Name of web application (only should be used if the
 website is used as an app).}
@@ -58,8 +66,8 @@ e.g. \code{"General"}.}
 \code{"strict-origin-when-cross-origin"}, or \code{"unsafe-url"}.}
 }
 \value{
-A \code{meta} object, or a set of \code{<meta>} HTML tags inside an HTML
-\code{<head>} tag. For use in \code{\link[rmarkdown:html_document]{rmarkdown::html_document()}}, \code{\link[shiny:runApp]{shiny::runApp()}},
+A \code{meta} object, or a set of \verb{<meta>} HTML tags inside an HTML
+\verb{<head>} tag. For use in \code{\link[rmarkdown:html_document]{rmarkdown::html_document()}}, \code{\link[shiny:runApp]{shiny::runApp()}},
 or other HTML locations.
 }
 \description{
@@ -80,9 +88,14 @@ meta() \%>\%
 
 }
 \seealso{
-Other meta: \code{\link{meta_apple_itunes_app}},
-  \code{\link{meta_apple_web_app}}, \code{\link{meta_geo}},
-  \code{\link{meta_name}}, \code{\link{meta_social}},
-  \code{\link{meta_tag}}, \code{\link{meta_viewport}}
+Other meta: 
+\code{\link{meta_apple_itunes_app}()},
+\code{\link{meta_apple_web_app}()},
+\code{\link{meta_geo}()},
+\code{\link{meta_name}()},
+\code{\link{meta_social}()},
+\code{\link{meta_tag}()},
+\code{\link{meta_viewport}()},
+\code{\link{meta}()}
 }
 \concept{meta}

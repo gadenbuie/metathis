@@ -4,12 +4,16 @@
 \alias{meta_apple_web_app}
 \title{Apple Web App Meta Tags}
 \usage{
-meta_apple_web_app(.meta = meta(), title = NULL, capable = NULL,
-  status_bar_style = c("default", "black", "black-translucent"))
+meta_apple_web_app(
+  .meta = meta(),
+  title = NULL,
+  capable = NULL,
+  status_bar_style = c("default", "black", "black-translucent")
+)
 }
 \arguments{
 \item{.meta}{A \code{meta} object created by \code{\link[=meta]{meta()}} or \code{\link[=as_meta]{as_meta()}}, or returned
-by a \code{meta_*()} object.}
+by a \verb{meta_*()} object.}
 
 \item{title}{Launch Icon Title}
 
@@ -26,8 +30,8 @@ the web content is displayed on the entire screen, partially obscured by
 the status bar. The default value is default."}
 }
 \value{
-A \code{meta} object, or a set of \code{<meta>} HTML tags inside an HTML
-\code{<head>} tag. For use in \code{\link[rmarkdown:html_document]{rmarkdown::html_document()}}, \code{\link[shiny:runApp]{shiny::runApp()}},
+A \code{meta} object, or a set of \verb{<meta>} HTML tags inside an HTML
+\verb{<head>} tag. For use in \code{\link[rmarkdown:html_document]{rmarkdown::html_document()}}, \code{\link[shiny:runApp]{shiny::runApp()}},
 or other HTML locations.
 }
 \description{
@@ -45,9 +49,14 @@ meta() \%>\%
 \url{https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/MetaTags.html}
 }
 \seealso{
-Other meta: \code{\link{meta_apple_itunes_app}},
-  \code{\link{meta_general}}, \code{\link{meta_geo}},
-  \code{\link{meta_name}}, \code{\link{meta_social}},
-  \code{\link{meta_tag}}, \code{\link{meta_viewport}}
+Other meta: 
+\code{\link{meta_apple_itunes_app}()},
+\code{\link{meta_general}()},
+\code{\link{meta_geo}()},
+\code{\link{meta_name}()},
+\code{\link{meta_social}()},
+\code{\link{meta_tag}()},
+\code{\link{meta_viewport}()},
+\code{\link{meta}()}
 }
 \concept{meta}

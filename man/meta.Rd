@@ -2,10 +2,57 @@
 % Please edit documentation in R/meta.R
 \name{meta}
 \alias{meta}
+\alias{is_meta}
+\alias{as_meta}
 \title{Initialize a List of HTML Metadata Tags}
 \usage{
 meta()
+
+is_meta(x)
+
+as_meta(x)
+}
+\arguments{
+\item{x}{A list or metathis object}
+}
+\value{
+A \code{meta} object, or a set of \verb{<meta>} HTML tags inside an HTML
+\verb{<head>} tag. For use in \code{\link[rmarkdown:html_document]{rmarkdown::html_document()}}, \code{\link[shiny:runApp]{shiny::runApp()}},
+or other HTML locations.
 }
 \description{
-Initialize a List of HTML Metadata Tags
+Initialize a \emph{metathis} object (i.e. a list of HTML metadata tags), test if
+an object is a \emph{metathis} object, or coerce a list of \code{meta} tags to be a
+\emph{metathis} object.
 }
+\section{Functions}{
+\itemize{
+\item \code{is_meta}: Test if an objects is a \emph{metathis} object
+
+\item \code{as_meta}: Convert a list of meta tags into a \emph{metathis} object.
+}}
+
+\examples{
+meta() \%>\%
+  meta_viewport() \%>\%
+  is_meta()
+
+list_of_meta_tags <- list(
+  htmltools::tags$meta(github = "gadenbuie"),
+  htmltools::tags$meta(twitter = "grrrck")
+)
+
+as_meta(list_of_meta_tags)
+}
+\seealso{
+Other meta: 
+\code{\link{meta_apple_itunes_app}()},
+\code{\link{meta_apple_web_app}()},
+\code{\link{meta_general}()},
+\code{\link{meta_geo}()},
+\code{\link{meta_name}()},
+\code{\link{meta_social}()},
+\code{\link{meta_tag}()},
+\code{\link{meta_viewport}()}
+}
+\concept{meta}

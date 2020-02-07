@@ -8,7 +8,7 @@ write_meta(.meta, path = "meta.html", append = FALSE)
 }
 \arguments{
 \item{.meta}{A \code{meta} object created by \code{\link[=meta]{meta()}} or \code{\link[=as_meta]{as_meta()}}, or returned
-by a \code{meta_*()} object.}
+by a \verb{meta_*()} object.}
 
 \item{path}{The file to write into, defaults to \code{"meta.html"}.}
 
@@ -26,6 +26,7 @@ Write your metadata tags to an HTML file that can be manually included in
 your page.
 }
 \seealso{
-Other meta_actions: \code{\link{include_meta}}
+Other meta_actions: 
+\code{\link{include_meta}()}
 }
 \concept{meta_actions}

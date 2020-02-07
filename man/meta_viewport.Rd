@@ -4,15 +4,25 @@
 \alias{meta_viewport}
 \title{Viewport Meta Tag}
 \usage{
-meta_viewport(.meta = meta(), width = "device-width",
-  initial_scale = "1", orientation = c("auto", "portrait",
-  "landscape"), min_width = NULL, max_width = NULL, height = NULL,
-  min_height = NULL, max_height = NULL, minimum_scale = NULL,
-  maximum_scale = NULL, user_scalable = NULL, ...)
+meta_viewport(
+  .meta = meta(),
+  width = "device-width",
+  initial_scale = "1",
+  orientation = c("auto", "portrait", "landscape"),
+  min_width = NULL,
+  max_width = NULL,
+  height = NULL,
+  min_height = NULL,
+  max_height = NULL,
+  minimum_scale = NULL,
+  maximum_scale = NULL,
+  user_scalable = NULL,
+  ...
+)
 }
 \arguments{
 \item{.meta}{A \code{meta} object created by \code{\link[=meta]{meta()}} or \code{\link[=as_meta]{as_meta()}}, or returned
-by a \code{meta_*()} object.}
+by a \verb{meta_*()} object.}
 
 \item{width}{Sets the width of initial viewport. \code{width} sets \code{min_width} and
 \code{max_width} and may contain two values; for example, the following are
@@ -40,22 +50,37 @@ the same conventions as \code{width}, \code{min_width}, and \code{max_width}.}
 \item{...}{Additional name/value pairs}
 }
 \value{
-A \code{meta} object, or a set of \code{<meta>} HTML tags inside an HTML
-\code{<head>} tag. For use in \code{\link[rmarkdown:html_document]{rmarkdown::html_document()}}, \code{\link[shiny:runApp]{shiny::runApp()}},
+A \code{meta} object, or a set of \verb{<meta>} HTML tags inside an HTML
+\verb{<head>} tag. For use in \code{\link[rmarkdown:html_document]{rmarkdown::html_document()}}, \code{\link[shiny:runApp]{shiny::runApp()}},
 or other HTML locations.
 }
 \description{
 Create or add a viewport meta tag.
+}
+\examples{
+meta() \%>\%
+  meta_viewport()
+
+meta() \%>\%
+  meta_viewport(orientation = NULL)
+
+meta() \%>\%
+  meta_viewport(maximum_scale = 1)
+
 }
 \references{
 \href{https://developer.mozilla.org/en-US/docs/Mozilla/Mobile/Viewport_meta_tag}{MDN: Viewport Meta Tag},
 \href{https://drafts.csswg.org/css-device-adapt/#viewport-meta}{W3C Viewport Meta Element Specification}
 }
 \seealso{
-Other meta: \code{\link{meta_apple_itunes_app}},
-  \code{\link{meta_apple_web_app}},
-  \code{\link{meta_general}}, \code{\link{meta_geo}},
-  \code{\link{meta_name}}, \code{\link{meta_social}},
-  \code{\link{meta_tag}}
+Other meta: 
+\code{\link{meta_apple_itunes_app}()},
+\code{\link{meta_apple_web_app}()},
+\code{\link{meta_general}()},
+\code{\link{meta_geo}()},
+\code{\link{meta_name}()},
+\code{\link{meta_social}()},
+\code{\link{meta_tag}()},
+\code{\link{meta}()}
 }
 \concept{meta}

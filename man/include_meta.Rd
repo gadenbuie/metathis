@@ -8,11 +8,11 @@ include_meta(.meta)
 }
 \arguments{
 \item{.meta}{A \code{meta} object created by \code{\link[=meta]{meta()}} or \code{\link[=as_meta]{as_meta()}}, or returned
-by a \code{meta_*()} object.}
+by a \verb{meta_*()} object.}
 }
 \value{
 An \code{\link[htmltools:htmlDependency]{htmltools::htmlDependency()}} containing the metadata tags to be
-included in the \code{<head>} of the HTML document.
+included in the \verb{<head>} of the HTML document.
 }
 \description{
 Use \code{include_meta()} to explicitly declare the \code{\link[=meta]{meta()}} tags as an HTML
@@ -21,6 +21,7 @@ document. This function explicitly attaches an \code{\link[htmltools:htmlDepende
 and may work in some unusual cases.
 }
 \seealso{
-Other meta_actions: \code{\link{write_meta}}
+Other meta_actions: 
+\code{\link{write_meta}()}
 }
 \concept{meta_actions}

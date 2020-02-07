@@ -4,12 +4,11 @@
 \alias{meta_apple_itunes_app}
 \title{Apple Smart Banner Meta Tag}
 \usage{
-meta_apple_itunes_app(.meta = meta(), app_id = NULL,
-  affiliate_id = NULL, ...)
+meta_apple_itunes_app(.meta = meta(), app_id = NULL, affiliate_id = NULL, ...)
 }
 \arguments{
 \item{.meta}{A \code{meta} object created by \code{\link[=meta]{meta()}} or \code{\link[=as_meta]{as_meta()}}, or returned
-by a \code{meta_*()} object.}
+by a \verb{meta_*()} object.}
 
 \item{app_id}{Apple app ID}
 
@@ -18,8 +17,8 @@ by a \code{meta_*()} object.}
 \item{...}{Additional name=value pairs.}
 }
 \value{
-A \code{meta} object, or a set of \code{<meta>} HTML tags inside an HTML
-\code{<head>} tag. For use in \code{\link[rmarkdown:html_document]{rmarkdown::html_document()}}, \code{\link[shiny:runApp]{shiny::runApp()}},
+A \code{meta} object, or a set of \verb{<meta>} HTML tags inside an HTML
+\verb{<head>} tag. For use in \code{\link[rmarkdown:html_document]{rmarkdown::html_document()}}, \code{\link[shiny:runApp]{shiny::runApp()}},
 or other HTML locations.
 }
 \description{
@@ -32,9 +31,14 @@ Apple Smart Banner Meta Tag
 }
 
 \seealso{
-Other meta: \code{\link{meta_apple_web_app}},
-  \code{\link{meta_general}}, \code{\link{meta_geo}},
-  \code{\link{meta_name}}, \code{\link{meta_social}},
-  \code{\link{meta_tag}}, \code{\link{meta_viewport}}
+Other meta: 
+\code{\link{meta_apple_web_app}()},
+\code{\link{meta_general}()},
+\code{\link{meta_geo}()},
+\code{\link{meta_name}()},
+\code{\link{meta_social}()},
+\code{\link{meta_tag}()},
+\code{\link{meta_viewport}()},
+\code{\link{meta}()}
 }
 \concept{meta}
