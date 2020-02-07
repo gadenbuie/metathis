@@ -10,6 +10,7 @@ status](https://www.r-pkg.org/badges/version/metathis)](https://CRAN.R-project.o
 [![Lifecycle:
 stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://www.tidyverse.org/lifecycle/#stable)
 [![travis](https://travis-ci.org/gadenbuie/metathis.svg?branch=master)](https://travis-ci.org/gadenbuie/metathis)
+[![Codecov](https://img.shields.io/codecov/c/github/gadenbuie/metathis)](https://codecov.io/github/gadenbuie/metathis)
 <!-- badges: end -->
 
 ## Why metathis?
