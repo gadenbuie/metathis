@@ -1,10 +1,17 @@
 url: https://pkg.garrickadenbuie.com/metathis/
 
+home:
+  description: >
+    Easy <meta> tags for social media cards, accessibility and quality search
+    indexing in R Markdown and Shiny.
+
 template:
   opengraph:
-    image: reference/figures/card.png
-    twitter: "@grrrck"
-    twitter_card: summary_large_image
+    image:
+      src: man/figures/card.png
+    twitter:
+      creator: "@grrrck"
+      card: summary_large_image
 
 authors:
   Garrick Aden-Buie:
