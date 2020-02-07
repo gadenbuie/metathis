@@ -44,8 +44,8 @@ meta_viewport <- function(
 
   assert_is_meta(.meta)
 
-  has_minmax_width <- !vapply(list(min_width, max_width), is.null, FALSE) %>% any()
-  has_minmax_height <- !vapply(list(min_height, max_height), is.null, FALSE) %>% any()
+  has_minmax_width <- purrr::some(list(min_width, max_width), purrr::negate(is.null))
+  has_minmax_height <- purrr::some(list(min_height, max_height), purrr::negate(is.null))
 
   if (has_minmax_width && !is.null(width)) {
     warning("Ignoring `width` because one of `min_width` or `max_width` was provided")
@@ -57,7 +57,7 @@ meta_viewport <- function(
     height <- NULL
   }
 
-  orientation <- match.arg(orientation)
+  orientation <- orientation %??% match.arg(orientation)
 
   content <- c(
     width           = if (is.null(min_width) && is.null(max_width)) width,
@@ -76,7 +76,9 @@ meta_viewport <- function(
 
   content <- paste(names(content), content, sep = "=", collapse = ", ")
 
-  stopifnot(length(content) == 1)
+  if (!nzchar(content)) {
+    stop("At least one argument must be provided")
+  }
 
   # viewport tag has to come first in list of meta tags
   meta_new <- tag_meta(name = "viewport", content = content)
