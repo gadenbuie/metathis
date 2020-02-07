@@ -18,7 +18,7 @@
 <!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/headroom.min.js" integrity="sha256-DJFC1kqIhelURkuza0AvYal5RxMtpzLjFhsnVIeuk+U=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- pkgdown --><link href="pkgdown.css" rel="stylesheet">
 <script src="pkgdown.js"></script><link href="extra.css" rel="stylesheet">
 <meta property="og:title" content="HTML Metadata Tags for R Markdown and Shiny">
-<meta property="og:description" content="Easy &lt;meta&gt; tags for social media cards, accessibility and quality search indexing in R Markdown and Shiny.
+<meta property="og:description" content="Easy &amp;lt;meta&amp;gt; tags for social media cards, accessibility and quality search indexing in R Markdown and Shiny.
 ">
 <meta property="og:image" content="https://pkg.garrickadenbuie.com/metathis/reference/figures/card.png">
 <meta name="twitter:card" content="summary_large_image">
@@ -98,7 +98,7 @@
 <a href="#metathis" class="anchor"></a>metathis <a href="https://pkg.garrickadenbuie.com/metathis"><img src="reference/figures/logo.png" align="right" height="120"></a>
 </h1></div>
 <!-- badges: start -->
-<!-- badges: end -->
+
 <div id="why-metathis" class="section level2">
 <h2 class="hasAnchor">
 <a href="#why-metathis" class="anchor"></a>Why metathis?</h2>
@@ -121,7 +121,7 @@
 ✅ <a href="https://slides.yihui.name/xaringan">xaringan</a><br>
 ✅ <a href="https://github.com/rstudio/pagedown">pagedown</a><br>
 ✅ <a href="https://bookdown.org/">bookdown</a><br>
-❌ <a href="https://bookdown.org/yihui/blogdown">blogdown</a><br>
+❌ <a href="https://bookdown.org/yihui/blogdown">blogdown</a><br><span class="math display">1</span><br><br>
 ❌ <a href="https://pkgdown.r-lib.org">pkgdown</a></p>
 <p><code>&lt;meta&gt;</code> tags can be added to ✅ packages with a standard R chunk</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode markdown"><code class="sourceCode markdown"><a class="sourceLine" id="cb2-1" data-line-number="1">```{r, echo=FALSE}</a>
@@ -159,28 +159,9 @@
 <a class="sourceLine" id="cb4-15" data-line-number="15">    <span class="dt">og_author =</span> <span class="kw"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="st">"Garrett Grolemund"</span>, <span class="st">"Hadley Wickham"</span>),</a>
 <a class="sourceLine" id="cb4-16" data-line-number="16">    <span class="dt">twitter_card_type =</span> <span class="st">"summary"</span>,</a>
 <a class="sourceLine" id="cb4-17" data-line-number="17">    <span class="dt">twitter_creator =</span> <span class="st">"@hadley"</span></a>
-<a class="sourceLine" id="cb4-18" data-line-number="18">  ) <span class="op">%&gt;%</span><span class="st"> </span></a>
-<a class="sourceLine" id="cb4-19" data-line-number="19"><span class="st">  </span><span class="kw"><a href="https://rdrr.io/r/base/print.html">print</a></span>()</a>
-<a class="sourceLine" id="cb4-20" data-line-number="20"><span class="co">#&gt; &lt;meta name="viewport" content="width=device-width, initial-scale=1, orientation=auto"/&gt;</span></a>
-<a class="sourceLine" id="cb4-21" data-line-number="21"><span class="co">#&gt; &lt;meta name="description" content="This book will teach you how to do data science with R..."/&gt;</span></a>
-<a class="sourceLine" id="cb4-22" data-line-number="22"><span class="co">#&gt; &lt;meta name="github-repo" content="hadley/r4ds"/&gt;</span></a>
-<a class="sourceLine" id="cb4-23" data-line-number="23"><span class="co">#&gt; &lt;meta name="twitter:title" content="R for Data Science"/&gt;</span></a>
-<a class="sourceLine" id="cb4-24" data-line-number="24"><span class="co">#&gt; &lt;meta name="twitter:description" content="This book will teach you how to do data science with R..."/&gt;</span></a>
-<a class="sourceLine" id="cb4-25" data-line-number="25"><span class="co">#&gt; &lt;meta name="twitter:url" content="https://r4ds.had.co.nz"/&gt;</span></a>
-<a class="sourceLine" id="cb4-26" data-line-number="26"><span class="co">#&gt; &lt;meta name="twitter:image:src" content="https://r4ds.had.co.nz/cover.png"/&gt;</span></a>
-<a class="sourceLine" id="cb4-27" data-line-number="27"><span class="co">#&gt; &lt;meta name="twitter:image:alt" content="The cover of the R4DS book"/&gt;</span></a>
-<a class="sourceLine" id="cb4-28" data-line-number="28"><span class="co">#&gt; &lt;meta name="twitter:card" content="summary"/&gt;</span></a>
-<a class="sourceLine" id="cb4-29" data-line-number="29"><span class="co">#&gt; &lt;meta name="twitter:creator" content="@hadley"/&gt;</span></a>
-<a class="sourceLine" id="cb4-30" data-line-number="30"><span class="co">#&gt; &lt;meta name="twitter:site" content="@hadley"/&gt;</span></a>
-<a class="sourceLine" id="cb4-31" data-line-number="31"><span class="co">#&gt; &lt;meta name="og:title" content="R for Data Science"/&gt;</span></a>
-<a class="sourceLine" id="cb4-32" data-line-number="32"><span class="co">#&gt; &lt;meta name="og:description" content="This book will teach you how to do data science with R..."/&gt;</span></a>
-<a class="sourceLine" id="cb4-33" data-line-number="33"><span class="co">#&gt; &lt;meta name="og:url" content="https://r4ds.had.co.nz"/&gt;</span></a>
-<a class="sourceLine" id="cb4-34" data-line-number="34"><span class="co">#&gt; &lt;meta name="og:image" content="https://r4ds.had.co.nz/cover.png"/&gt;</span></a>
-<a class="sourceLine" id="cb4-35" data-line-number="35"><span class="co">#&gt; &lt;meta name="og:image:alt" content="The cover of the R4DS book"/&gt;</span></a>
-<a class="sourceLine" id="cb4-36" data-line-number="36"><span class="co">#&gt; &lt;meta name="og:type" content="book"/&gt;</span></a>
-<a class="sourceLine" id="cb4-37" data-line-number="37"><span class="co">#&gt; &lt;meta name="og:locale" content="en_US"/&gt;</span></a>
-<a class="sourceLine" id="cb4-38" data-line-number="38"><span class="co">#&gt; &lt;meta name="article:author" content="Garrett Grolemund"/&gt;</span></a>
-<a class="sourceLine" id="cb4-39" data-line-number="39"><span class="co">#&gt; &lt;meta name="article:author" content="Hadley Wickham"/&gt;</span></a></code></pre></div>
+<a class="sourceLine" id="cb4-18" data-line-number="18">  )</a>
+<a class="sourceLine" id="cb4-19" data-line-number="19"><span class="co">#&gt; Warning: knitr output format is not HTML. Use `include_meta()` to ensure that</span></a>
+<a class="sourceLine" id="cb4-20" data-line-number="20"><span class="co">#&gt; the &lt;meta&gt; tags are properly included in the &lt;head&gt; output (if possible).</span></a></code></pre></div>
 </div>
 <div id="in-shiny-apps" class="section level3">
 <h3 class="hasAnchor">
@@ -204,6 +185,30 @@
 <a class="sourceLine" id="cb5-16" data-line-number="16">  <span class="co"># ... your UI ...</span></a>
 <a class="sourceLine" id="cb5-17" data-line-number="17">)</a></code></pre></div>
 </div>
+<div id="in-xaringan-slides" class="section level3">
+<h3 class="hasAnchor">
+<a href="#in-xaringan-slides" class="anchor"></a>In xaringan Slides</h3>
+<p>To use <code>metathis</code> in <a href="https://slides.yihui.name/xaringan">xaringan</a> slides, add <code><a href="reference/meta.html">meta()</a></code> and related tags in a chunk anywhere in your slide’s source <code>.Rmd</code> file. This example is from a <a href="https://pkg.garrickadenbuie.com/drake-intro/">presentation on the drake package</a>.</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode markdown"><code class="sourceCode markdown"><a class="sourceLine" id="cb6-1" data-line-number="1">```{r meta, echo=FALSE}</a>
+<a class="sourceLine" id="cb6-2" data-line-number="2">library(metathis)</a>
+<a class="sourceLine" id="cb6-3" data-line-number="3">meta() %&gt;%</a>
+<a class="sourceLine" id="cb6-4" data-line-number="4">  meta_general(</a>
+<a class="sourceLine" id="cb6-5" data-line-number="5"><span class="bn">    description = "A gentle introduction to reproducible data workflows with the {drake} package.",</span></a>
+<a class="sourceLine" id="cb6-6" data-line-number="6"><span class="bn">    generator = "xaringan and remark.js"</span></a>
+<a class="sourceLine" id="cb6-7" data-line-number="7">  ) %&gt;% </a>
+<a class="sourceLine" id="cb6-8" data-line-number="8">  meta_name("github-repo" = "gadenbuie/drake-intro") %&gt;% </a>
+<a class="sourceLine" id="cb6-9" data-line-number="9">  meta_social(</a>
+<a class="sourceLine" id="cb6-10" data-line-number="10"><span class="bn">    title = "Reproducible Data Workflows With Drake",</span></a>
+<a class="sourceLine" id="cb6-11" data-line-number="11"><span class="bn">    url = "https://pkg.garrickadenbuie.com/drake-intro",</span></a>
+<a class="sourceLine" id="cb6-12" data-line-number="12"><span class="bn">    image = "https://pkg.garrickadenbuie.com/drake-intro/assets/images/drake-intro-cover.jpg",</span></a>
+<a class="sourceLine" id="cb6-13" data-line-number="13"><span class="bn">    image_alt = "The first slide of the Reproducible Data Workflows with drake presentation, featuring the drake hex logo and neatly ordered row of items on a desk (eraser, pencil, coffee cup, paperclips).",</span></a>
+<a class="sourceLine" id="cb6-14" data-line-number="14"><span class="bn">    og_type = "website",</span></a>
+<a class="sourceLine" id="cb6-15" data-line-number="15"><span class="bn">    og_author = "Garrick Aden-Buie",</span></a>
+<a class="sourceLine" id="cb6-16" data-line-number="16"><span class="bn">    twitter_card_type = "summary_large_image",</span></a>
+<a class="sourceLine" id="cb6-17" data-line-number="17"><span class="bn">    twitter_creator = "@grrrck"</span></a>
+<a class="sourceLine" id="cb6-18" data-line-number="18">  )</a>
+<a class="sourceLine" id="cb6-19" data-line-number="19">```</a></code></pre></div>
+</div>
 </div>
 <div id="thanks" class="section level2">
 <h2 class="hasAnchor">
@@ -211,6 +216,14 @@
 <p>Thanks to <a href="https://github.com/joshbuchea">Josh Buchea</a> for providing an <a href="https://github.com/joshbuchea/HEAD">excellent and indispensible resource</a> on <code>&lt;meta&gt;</code> tags and other things that go in the HTML <code>&lt;head&gt;</code> tags.</p>
 <p>Thanks also to <a href="https://github.com/malcolmbarrett">Malcolm Barret</a>. Watching over his shoulder as he developed <a href="https://r-lib.github.io/ymlthis">ymlthis</a> made putting this package together so much easier.</p>
 <p>Finally, thanks to the <a href="https://github.com/rstudio">RStudio team</a> and others who developed <a href="https://github.com/rstudio/htmltools">htmltools</a> for making HTML in R a breeze.</p>
+<hr>
+<div id="notes" class="section level3">
+<h3 class="hasAnchor">
+<a href="#notes" class="anchor"></a>Notes</h3>
+<ol>
+<li>For adding meta tags to blogdown sites, <a href="https://xvrdm.github.io/2017/10/23/socialize-your-blogdown/">Socialize your blogdown by Xavier A</a> is an excelent resource and you can use metathis to help discover the tags you need while following the instructions in the article.</li>
+</ol>
+</div>
 </div>
 </div>
   </div>
