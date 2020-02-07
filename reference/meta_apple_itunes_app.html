@@ -25,8 +25,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
 
 <!-- Font Awesome icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css" integrity="sha256-nAmazAk6vS34Xqo0BSrTb+abbtFlgsFK7NKSi6o7Y78=" crossorigin="anonymous" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/v4-shims.min.css" integrity="sha256-6qHlizsOWFskGlwVOKuns+D1nB6ssZrHQrNj1wGplHc=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.1/css/all.min.css" integrity="sha256-PbSmjxuVAzJ6FPvNYsrXygfGhNJYyZ2GktDbkMBqQZg=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.1/css/v4-shims.min.css" integrity="sha256-A6jcAdwFD48VMjlI3GDxUd+eCQa7/KWy6G9oe/ovaPA=" crossorigin="anonymous" />
 
 <!-- clipboard.js -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script>
@@ -142,15 +142,14 @@
     <p>Apple Smart Banner Meta Tag</p>
     </div>
 
-    <pre class="usage"><span class='fu'>meta_apple_itunes_app</span>(<span class='kw'>.meta</span> <span class='kw'>=</span> <span class='fu'><a href='meta.html'>meta</a></span>(), <span class='kw'>app_id</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>affiliate_id</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='no'>...</span>)</pre>
+    <pre class="usage"><span class='fu'>meta_apple_itunes_app</span>(<span class='kw'>.meta</span> <span class='kw'>=</span> <span class='fu'><a href='meta.html'>meta</a></span>(), <span class='kw'>app_id</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>affiliate_id</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='no'>...</span>)</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
       <th>.meta</th>
-      <td><p>A <code>meta</code> object created by <code><a href='meta.html'>meta()</a></code> or <code><a href='as_meta.html'>as_meta()</a></code>, or returned
+      <td><p>A <code>meta</code> object created by <code><a href='meta.html'>meta()</a></code> or <code><a href='meta.html'>as_meta()</a></code>, or returned
 by a <code>meta_*()</code> object.</p></td>
     </tr>
     <tr>
@@ -170,7 +169,7 @@ by a <code>meta_*()</code> object.</p></td>
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
     <p>A <code>meta</code> object, or a set of <code>&lt;meta&gt;</code> HTML tags inside an HTML
-<code>&lt;head&gt;</code> tag. For use in <code><a href='https://rdrr.io/pkg/rmarkdown/man/html_document.html'>rmarkdown::html_document()</a></code>, <code>shiny::runApp()</code>,
+<code>&lt;head&gt;</code> tag. For use in <code><a href='https://rdrr.io/pkg/rmarkdown/man/html_document.html'>rmarkdown::html_document()</a></code>, <code><a href='https://rdrr.io/pkg/shiny/man/runApp.html'>shiny::runApp()</a></code>,
 or other HTML locations.</p>
     <h2 class="hasAnchor" id="example"><a class="anchor" href="#example"></a>Example</h2>
 
@@ -181,13 +180,18 @@ or other HTML locations.</p>
 
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
-    <div class='dont-index'><p>Other meta: <code><a href='meta_apple_web_app.html'>meta_apple_web_app</a></code>,
-  <code><a href='meta_general.html'>meta_general</a></code>, <code><a href='meta_geo.html'>meta_geo</a></code>,
-  <code><a href='meta_name.html'>meta_name</a></code>, <code><a href='meta_social.html'>meta_social</a></code>,
-  <code><a href='meta_tag.html'>meta_tag</a></code>, <code><a href='meta_viewport.html'>meta_viewport</a></code></p></div>
+    <div class='dont-index'><p>Other meta: 
+<code><a href='meta_apple_web_app.html'>meta_apple_web_app</a>()</code>,
+<code><a href='meta_general.html'>meta_general</a>()</code>,
+<code><a href='meta_geo.html'>meta_geo</a>()</code>,
+<code><a href='meta_name.html'>meta_name</a>()</code>,
+<code><a href='meta_social.html'>meta_social</a>()</code>,
+<code><a href='meta_tag.html'>meta_tag</a>()</code>,
+<code><a href='meta_viewport.html'>meta_viewport</a>()</code>,
+<code><a href='meta.html'>meta</a>()</code></p></div>
 
   </div>
-  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
+  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
       <li><a href="#arguments">Arguments</a></li>
@@ -206,7 +210,7 @@ or other HTML locations.</p>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.4.0.9000.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.4.1.9000.</p>
 </div>
 
       </footer>

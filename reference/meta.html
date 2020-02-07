@@ -25,8 +25,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
 
 <!-- Font Awesome icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css" integrity="sha256-nAmazAk6vS34Xqo0BSrTb+abbtFlgsFK7NKSi6o7Y78=" crossorigin="anonymous" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/v4-shims.min.css" integrity="sha256-6qHlizsOWFskGlwVOKuns+D1nB6ssZrHQrNj1wGplHc=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.1/css/all.min.css" integrity="sha256-PbSmjxuVAzJ6FPvNYsrXygfGhNJYyZ2GktDbkMBqQZg=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.1/css/v4-shims.min.css" integrity="sha256-A6jcAdwFD48VMjlI3GDxUd+eCQa7/KWy6G9oe/ovaPA=" crossorigin="anonymous" />
 
 <!-- clipboard.js -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script>
@@ -45,7 +45,9 @@
   
 
 <meta property="og:title" content="Initialize a List of HTML Metadata Tags — meta" />
-<meta property="og:description" content="Initialize a List of HTML Metadata Tags" />
+<meta property="og:description" content="Initialize a metathis object (i.e. a list of HTML metadata tags), test if
+an object is a metathis object, or coerce a list of meta tags to be a
+metathis object." />
 <meta property="og:image" content="https://pkg.garrickadenbuie.com/metathis/reference/figures/card.png" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:creator" content="@grrrck" />
@@ -139,17 +141,70 @@
     </div>
 
     <div class="ref-description">
-    <p>Initialize a List of HTML Metadata Tags</p>
+    <p>Initialize a <em>metathis</em> object (i.e. a list of HTML metadata tags), test if
+an object is a <em>metathis</em> object, or coerce a list of <code>meta</code> tags to be a
+<em>metathis</em> object.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>meta</span>()</pre>
+    <pre class="usage"><span class='fu'>meta</span>()
 
+<span class='fu'>is_meta</span>(<span class='no'>x</span>)
 
+<span class='fu'>as_meta</span>(<span class='no'>x</span>)</pre>
 
+    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
+    <table class="ref-arguments">
+    <colgroup><col class="name" /><col class="desc" /></colgroup>
+    <tr>
+      <th>x</th>
+      <td><p>A list or metathis object</p></td>
+    </tr>
+    </table>
+
+    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
+
+    <p>A <code>meta</code> object, or a set of <code>&lt;meta&gt;</code> HTML tags inside an HTML
+<code>&lt;head&gt;</code> tag. For use in <code><a href='https://rdrr.io/pkg/rmarkdown/man/html_document.html'>rmarkdown::html_document()</a></code>, <code><a href='https://rdrr.io/pkg/shiny/man/runApp.html'>shiny::runApp()</a></code>,
+or other HTML locations.</p>
+    <h2 class="hasAnchor" id="functions"><a class="anchor" href="#functions"></a>Functions</h2>
+
+    
+<ul>
+<li><p><code>is_meta</code>: Test if an objects is a <em>metathis</em> object</p></li>
+<li><p><code>as_meta</code>: Convert a list of meta tags into a <em>metathis</em> object.</p></li>
+</ul>
+    <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
+
+    <div class='dont-index'><p>Other meta: 
+<code><a href='meta_apple_itunes_app.html'>meta_apple_itunes_app</a>()</code>,
+<code><a href='meta_apple_web_app.html'>meta_apple_web_app</a>()</code>,
+<code><a href='meta_general.html'>meta_general</a>()</code>,
+<code><a href='meta_geo.html'>meta_geo</a>()</code>,
+<code><a href='meta_name.html'>meta_name</a>()</code>,
+<code><a href='meta_social.html'>meta_social</a>()</code>,
+<code><a href='meta_tag.html'>meta_tag</a>()</code>,
+<code><a href='meta_viewport.html'>meta_viewport</a>()</code></p></div>
+
+    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
+    <pre class="examples"><div class='input'><span class='fu'>meta</span>() <span class='kw'>%&gt;%</span>
+  <span class='fu'><a href='meta_viewport.html'>meta_viewport</a></span>() <span class='kw'>%&gt;%</span>
+  <span class='fu'>is_meta</span>()</div><div class='output co'>#&gt; [1] TRUE</div><div class='input'>
+<span class='no'>list_of_meta_tags</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span>(
+  <span class='kw pkg'>htmltools</span><span class='kw ns'>::</span><span class='no'><a href='https://rdrr.io/pkg/htmltools/man/builder.html'>tags</a></span>$<span class='fu'>meta</span>(<span class='kw'>github</span> <span class='kw'>=</span> <span class='st'>"gadenbuie"</span>),
+  <span class='kw pkg'>htmltools</span><span class='kw ns'>::</span><span class='no'><a href='https://rdrr.io/pkg/htmltools/man/builder.html'>tags</a></span>$<span class='fu'>meta</span>(<span class='kw'>twitter</span> <span class='kw'>=</span> <span class='st'>"grrrck"</span>)
+)
+
+<span class='fu'>as_meta</span>(<span class='no'>list_of_meta_tags</span>)</div><div class='output co'>#&gt; &lt;meta github="gadenbuie"/&gt;
+#&gt; &lt;meta twitter="grrrck"/&gt;</div></pre>
   </div>
-  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
+  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
+      <li><a href="#arguments">Arguments</a></li>
+      <li><a href="#value">Value</a></li>
+      <li><a href="#functions">Functions</a></li>
+      <li><a href="#see-also">See also</a></li>
+      <li><a href="#examples">Examples</a></li>
     </ul>
 
   </div>
@@ -162,7 +217,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.4.0.9000.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.4.1.9000.</p>
 </div>
 
       </footer>
