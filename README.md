@@ -87,7 +87,9 @@ Data Science](https://r4ds.had.co.nz/) book.
 
 ``` r
 library(metathis)
+```
 
+``` r
 meta() %>%
   meta_description(
     "This book will teach you how to do data science with R..."
@@ -104,9 +106,28 @@ meta() %>%
     twitter_card_type = "summary",
     twitter_creator = "@hadley"
   )
-#> Warning: knitr output format is not HTML. Use `include_meta()` to ensure that
-#> the <meta> tags are properly included in the <head> output (if possible).
 ```
+
+    #> <meta name="viewport" content="width=device-width, initial-scale=1, orientation=auto"/>
+    #> <meta name="description" content="This book will teach you how to do data science with R..."/>
+    #> <meta name="github-repo" content="hadley/r4ds"/>
+    #> <meta name="twitter:title" content="R for Data Science"/>
+    #> <meta name="twitter:description" content="This book will teach you how to do data science with R..."/>
+    #> <meta name="twitter:url" content="https://r4ds.had.co.nz"/>
+    #> <meta name="twitter:image:src" content="https://r4ds.had.co.nz/cover.png"/>
+    #> <meta name="twitter:image:alt" content="The cover of the R4DS book"/>
+    #> <meta name="twitter:card" content="summary"/>
+    #> <meta name="twitter:creator" content="@hadley"/>
+    #> <meta name="twitter:site" content="@hadley"/>
+    #> <meta name="og:title" content="R for Data Science"/>
+    #> <meta name="og:description" content="This book will teach you how to do data science with R..."/>
+    #> <meta name="og:url" content="https://r4ds.had.co.nz"/>
+    #> <meta name="og:image" content="https://r4ds.had.co.nz/cover.png"/>
+    #> <meta name="og:image:alt" content="The cover of the R4DS book"/>
+    #> <meta name="og:type" content="book"/>
+    #> <meta name="og:locale" content="en_US"/>
+    #> <meta name="article:author" content="Garrett Grolemund"/>
+    #> <meta name="article:author" content="Hadley Wickham"/>
 
 ### In Shiny Apps
 

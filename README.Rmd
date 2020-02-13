@@ -88,9 +88,11 @@ meta() %>%
 
 This is a basic example that re-creates the `<meta>` tags for the [R for Data Science][r4ds] book. 
 
-```{r example, results="asis"}
+```{r library}
 library(metathis)
+```
 
+```{r example, eval=FALSE}
 meta() %>%
   meta_description(
     "This book will teach you how to do data science with R..."
@@ -107,6 +109,13 @@ meta() %>%
     twitter_card_type = "summary",
     twitter_creator = "@hadley"
   )
+```
+
+```{r example-print, echo=FALSE}
+x <- 
+<<example>>
+  
+print(x)
 ```
 
 ### In Shiny Apps
