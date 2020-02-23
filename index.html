@@ -110,8 +110,11 @@
 <div id="installation" class="section level2">
 <h2 class="hasAnchor">
 <a href="#installation" class="anchor"></a>Installation</h2>
-<p>You can install the latest version of metathis from <a href="https://github.com/gadenbuie/metathis">Github</a> with:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" data-line-number="1">devtools<span class="op">::</span><span class="kw">install_github</span>(<span class="st">"gadenbuie/metathis"</span>)</a></code></pre></div>
+<p>You can install the latest version of metathis from <a href="https://CRAN.R-project.org">CRAN</a> with:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="kw">isntall.packages</span>(<span class="st">"metathis"</span>)</a></code></pre></div>
+<p>And the development version from <a href="https://github.com/gadenbuie/metathis">Github</a> with:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" data-line-number="1"><span class="co"># install.packages("devtools")</span></a>
+<a class="sourceLine" id="cb2-2" data-line-number="2">devtools<span class="op">::</span><span class="kw">install_github</span>(<span class="st">"gadenbuie/metathis"</span>)</a></code></pre></div>
 </div>
 <div id="works-in" class="section level2">
 <h2 class="hasAnchor">
@@ -124,16 +127,16 @@
 ❌ <a href="https://bookdown.org/yihui/blogdown">blogdown</a><sup>1</sup><br>
 ❌ <a href="https://pkgdown.r-lib.org">pkgdown</a></p>
 <p><code>&lt;meta&gt;</code> tags can be added to ✅ packages with a standard R chunk</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode markdown"><code class="sourceCode markdown"><a class="sourceLine" id="cb2-1" data-line-number="1">```{r, echo=FALSE}</a>
-<a class="sourceLine" id="cb2-2" data-line-number="2">meta() %&gt;% </a>
-<a class="sourceLine" id="cb2-3" data-line-number="3">  meta_description("My awesome presentation")</a>
-<a class="sourceLine" id="cb2-4" data-line-number="4">```</a></code></pre></div>
-<p>For other packages or situations, you can use <code><a href="reference/include_meta.html">include_meta()</a></code> to explicitly declare the meta tags as an html dependency or use <code><a href="reference/write_meta.html">write_meta()</a></code> to save the <code>&lt;meta&gt;</code> tags to an <code>.html</code> file that can be included via <code>includes: in_header</code>. (In blogdown, consult your blogdown/hugo theme for the correct inclusion method.)</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode markdown"><code class="sourceCode markdown"><a class="sourceLine" id="cb3-1" data-line-number="1">```{r blogdown-meta, echo = FALSE}</a>
+<div class="sourceCode" id="cb3"><pre class="sourceCode markdown"><code class="sourceCode markdown"><a class="sourceLine" id="cb3-1" data-line-number="1">```{r, echo=FALSE}</a>
 <a class="sourceLine" id="cb3-2" data-line-number="2">meta() %&gt;% </a>
-<a class="sourceLine" id="cb3-3" data-line-number="3">  meta_description("A fantastic blog post") %&gt;% </a>
-<a class="sourceLine" id="cb3-4" data-line-number="4">  write_meta("meta.html")</a>
-<a class="sourceLine" id="cb3-5" data-line-number="5">```</a></code></pre></div>
+<a class="sourceLine" id="cb3-3" data-line-number="3">  meta_description("My awesome presentation")</a>
+<a class="sourceLine" id="cb3-4" data-line-number="4">```</a></code></pre></div>
+<p>For other packages or situations, you can use <code><a href="reference/include_meta.html">include_meta()</a></code> to explicitly declare the meta tags as an html dependency or use <code><a href="reference/write_meta.html">write_meta()</a></code> to save the <code>&lt;meta&gt;</code> tags to an <code>.html</code> file that can be included via <code>includes: in_header</code>. (In blogdown, consult your blogdown/hugo theme for the correct inclusion method.)</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode markdown"><code class="sourceCode markdown"><a class="sourceLine" id="cb4-1" data-line-number="1">```{r blogdown-meta, echo = FALSE}</a>
+<a class="sourceLine" id="cb4-2" data-line-number="2">meta() %&gt;% </a>
+<a class="sourceLine" id="cb4-3" data-line-number="3">  meta_description("A fantastic blog post") %&gt;% </a>
+<a class="sourceLine" id="cb4-4" data-line-number="4">  write_meta("meta.html")</a>
+<a class="sourceLine" id="cb4-5" data-line-number="5">```</a></code></pre></div>
 </div>
 <div id="example" class="section level2">
 <h2 class="hasAnchor">
@@ -142,89 +145,89 @@
 <h3 class="hasAnchor">
 <a href="#in-r-markdown" class="anchor"></a>In R Markdown</h3>
 <p>This is a basic example that re-creates the <code>&lt;meta&gt;</code> tags for the <a href="https://r4ds.had.co.nz/">R for Data Science</a> book.</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" data-line-number="1"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span>(metathis)</a></code></pre></div>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb5-1" data-line-number="1"><span class="kw"><a href="reference/meta.html">meta</a></span>() <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb5-2" data-line-number="2"><span class="st">  </span><span class="kw"><a href="reference/meta_general.html">meta_description</a></span>(</a>
-<a class="sourceLine" id="cb5-3" data-line-number="3">    <span class="st">"This book will teach you how to do data science with R..."</span></a>
-<a class="sourceLine" id="cb5-4" data-line-number="4">  ) <span class="op">%&gt;%</span><span class="st"> </span></a>
-<a class="sourceLine" id="cb5-5" data-line-number="5"><span class="st">  </span><span class="kw"><a href="reference/meta_name.html">meta_name</a></span>(<span class="st">"github-repo"</span> =<span class="st"> "hadley/r4ds"</span>) <span class="op">%&gt;%</span><span class="st"> </span></a>
-<a class="sourceLine" id="cb5-6" data-line-number="6"><span class="st">  </span><span class="kw"><a href="reference/meta_viewport.html">meta_viewport</a></span>() <span class="op">%&gt;%</span><span class="st"> </span></a>
-<a class="sourceLine" id="cb5-7" data-line-number="7"><span class="st">  </span><span class="kw"><a href="reference/meta_social.html">meta_social</a></span>(</a>
-<a class="sourceLine" id="cb5-8" data-line-number="8">    <span class="dt">title =</span> <span class="st">"R for Data Science"</span>,</a>
-<a class="sourceLine" id="cb5-9" data-line-number="9">    <span class="dt">url =</span> <span class="st">"https://r4ds.had.co.nz"</span>,</a>
-<a class="sourceLine" id="cb5-10" data-line-number="10">    <span class="dt">image =</span> <span class="st">"https://r4ds.had.co.nz/cover.png"</span>,</a>
-<a class="sourceLine" id="cb5-11" data-line-number="11">    <span class="dt">image_alt =</span> <span class="st">"The cover of the R4DS book"</span>,</a>
-<a class="sourceLine" id="cb5-12" data-line-number="12">    <span class="dt">og_type =</span> <span class="st">"book"</span>,</a>
-<a class="sourceLine" id="cb5-13" data-line-number="13">    <span class="dt">og_author =</span> <span class="kw"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="st">"Garrett Grolemund"</span>, <span class="st">"Hadley Wickham"</span>),</a>
-<a class="sourceLine" id="cb5-14" data-line-number="14">    <span class="dt">twitter_card_type =</span> <span class="st">"summary"</span>,</a>
-<a class="sourceLine" id="cb5-15" data-line-number="15">    <span class="dt">twitter_creator =</span> <span class="st">"@hadley"</span></a>
-<a class="sourceLine" id="cb5-16" data-line-number="16">  )</a></code></pre></div>
-<div class="sourceCode" id="cb6"><pre class="sourceCode R"><code class="sourceCode r"><a class="sourceLine" id="cb6-1" data-line-number="1"><span class="co">#&gt; &lt;meta name="viewport" content="width=device-width, initial-scale=1, orientation=auto"/&gt;</span></a>
-<a class="sourceLine" id="cb6-2" data-line-number="2"><span class="co">#&gt; &lt;meta name="description" content="This book will teach you how to do data science with R..."/&gt;</span></a>
-<a class="sourceLine" id="cb6-3" data-line-number="3"><span class="co">#&gt; &lt;meta name="github-repo" content="hadley/r4ds"/&gt;</span></a>
-<a class="sourceLine" id="cb6-4" data-line-number="4"><span class="co">#&gt; &lt;meta name="twitter:title" content="R for Data Science"/&gt;</span></a>
-<a class="sourceLine" id="cb6-5" data-line-number="5"><span class="co">#&gt; &lt;meta name="twitter:description" content="This book will teach you how to do data science with R..."/&gt;</span></a>
-<a class="sourceLine" id="cb6-6" data-line-number="6"><span class="co">#&gt; &lt;meta name="twitter:url" content="https://r4ds.had.co.nz"/&gt;</span></a>
-<a class="sourceLine" id="cb6-7" data-line-number="7"><span class="co">#&gt; &lt;meta name="twitter:image:src" content="https://r4ds.had.co.nz/cover.png"/&gt;</span></a>
-<a class="sourceLine" id="cb6-8" data-line-number="8"><span class="co">#&gt; &lt;meta name="twitter:image:alt" content="The cover of the R4DS book"/&gt;</span></a>
-<a class="sourceLine" id="cb6-9" data-line-number="9"><span class="co">#&gt; &lt;meta name="twitter:card" content="summary"/&gt;</span></a>
-<a class="sourceLine" id="cb6-10" data-line-number="10"><span class="co">#&gt; &lt;meta name="twitter:creator" content="@hadley"/&gt;</span></a>
-<a class="sourceLine" id="cb6-11" data-line-number="11"><span class="co">#&gt; &lt;meta name="twitter:site" content="@hadley"/&gt;</span></a>
-<a class="sourceLine" id="cb6-12" data-line-number="12"><span class="co">#&gt; &lt;meta name="og:title" content="R for Data Science"/&gt;</span></a>
-<a class="sourceLine" id="cb6-13" data-line-number="13"><span class="co">#&gt; &lt;meta name="og:description" content="This book will teach you how to do data science with R..."/&gt;</span></a>
-<a class="sourceLine" id="cb6-14" data-line-number="14"><span class="co">#&gt; &lt;meta name="og:url" content="https://r4ds.had.co.nz"/&gt;</span></a>
-<a class="sourceLine" id="cb6-15" data-line-number="15"><span class="co">#&gt; &lt;meta name="og:image" content="https://r4ds.had.co.nz/cover.png"/&gt;</span></a>
-<a class="sourceLine" id="cb6-16" data-line-number="16"><span class="co">#&gt; &lt;meta name="og:image:alt" content="The cover of the R4DS book"/&gt;</span></a>
-<a class="sourceLine" id="cb6-17" data-line-number="17"><span class="co">#&gt; &lt;meta name="og:type" content="book"/&gt;</span></a>
-<a class="sourceLine" id="cb6-18" data-line-number="18"><span class="co">#&gt; &lt;meta name="og:locale" content="en_US"/&gt;</span></a>
-<a class="sourceLine" id="cb6-19" data-line-number="19"><span class="co">#&gt; &lt;meta name="article:author" content="Garrett Grolemund"/&gt;</span></a>
-<a class="sourceLine" id="cb6-20" data-line-number="20"><span class="co">#&gt; &lt;meta name="article:author" content="Hadley Wickham"/&gt;</span></a></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb5-1" data-line-number="1"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span>(metathis)</a></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb6-1" data-line-number="1"><span class="kw"><a href="reference/meta.html">meta</a></span>() <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb6-2" data-line-number="2"><span class="st">  </span><span class="kw"><a href="reference/meta_general.html">meta_description</a></span>(</a>
+<a class="sourceLine" id="cb6-3" data-line-number="3">    <span class="st">"This book will teach you how to do data science with R..."</span></a>
+<a class="sourceLine" id="cb6-4" data-line-number="4">  ) <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb6-5" data-line-number="5"><span class="st">  </span><span class="kw"><a href="reference/meta_name.html">meta_name</a></span>(<span class="st">"github-repo"</span> =<span class="st"> "hadley/r4ds"</span>) <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb6-6" data-line-number="6"><span class="st">  </span><span class="kw"><a href="reference/meta_viewport.html">meta_viewport</a></span>() <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb6-7" data-line-number="7"><span class="st">  </span><span class="kw"><a href="reference/meta_social.html">meta_social</a></span>(</a>
+<a class="sourceLine" id="cb6-8" data-line-number="8">    <span class="dt">title =</span> <span class="st">"R for Data Science"</span>,</a>
+<a class="sourceLine" id="cb6-9" data-line-number="9">    <span class="dt">url =</span> <span class="st">"https://r4ds.had.co.nz"</span>,</a>
+<a class="sourceLine" id="cb6-10" data-line-number="10">    <span class="dt">image =</span> <span class="st">"https://r4ds.had.co.nz/cover.png"</span>,</a>
+<a class="sourceLine" id="cb6-11" data-line-number="11">    <span class="dt">image_alt =</span> <span class="st">"The cover of the R4DS book"</span>,</a>
+<a class="sourceLine" id="cb6-12" data-line-number="12">    <span class="dt">og_type =</span> <span class="st">"book"</span>,</a>
+<a class="sourceLine" id="cb6-13" data-line-number="13">    <span class="dt">og_author =</span> <span class="kw"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="st">"Garrett Grolemund"</span>, <span class="st">"Hadley Wickham"</span>),</a>
+<a class="sourceLine" id="cb6-14" data-line-number="14">    <span class="dt">twitter_card_type =</span> <span class="st">"summary"</span>,</a>
+<a class="sourceLine" id="cb6-15" data-line-number="15">    <span class="dt">twitter_creator =</span> <span class="st">"@hadley"</span></a>
+<a class="sourceLine" id="cb6-16" data-line-number="16">  )</a></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode R"><code class="sourceCode r"><a class="sourceLine" id="cb7-1" data-line-number="1"><span class="co">#&gt; &lt;meta name="viewport" content="width=device-width, initial-scale=1, orientation=auto"/&gt;</span></a>
+<a class="sourceLine" id="cb7-2" data-line-number="2"><span class="co">#&gt; &lt;meta name="description" content="This book will teach you how to do data science with R..."/&gt;</span></a>
+<a class="sourceLine" id="cb7-3" data-line-number="3"><span class="co">#&gt; &lt;meta name="github-repo" content="hadley/r4ds"/&gt;</span></a>
+<a class="sourceLine" id="cb7-4" data-line-number="4"><span class="co">#&gt; &lt;meta name="twitter:title" content="R for Data Science"/&gt;</span></a>
+<a class="sourceLine" id="cb7-5" data-line-number="5"><span class="co">#&gt; &lt;meta name="twitter:description" content="This book will teach you how to do data science with R..."/&gt;</span></a>
+<a class="sourceLine" id="cb7-6" data-line-number="6"><span class="co">#&gt; &lt;meta name="twitter:url" content="https://r4ds.had.co.nz"/&gt;</span></a>
+<a class="sourceLine" id="cb7-7" data-line-number="7"><span class="co">#&gt; &lt;meta name="twitter:image:src" content="https://r4ds.had.co.nz/cover.png"/&gt;</span></a>
+<a class="sourceLine" id="cb7-8" data-line-number="8"><span class="co">#&gt; &lt;meta name="twitter:image:alt" content="The cover of the R4DS book"/&gt;</span></a>
+<a class="sourceLine" id="cb7-9" data-line-number="9"><span class="co">#&gt; &lt;meta name="twitter:card" content="summary"/&gt;</span></a>
+<a class="sourceLine" id="cb7-10" data-line-number="10"><span class="co">#&gt; &lt;meta name="twitter:creator" content="@hadley"/&gt;</span></a>
+<a class="sourceLine" id="cb7-11" data-line-number="11"><span class="co">#&gt; &lt;meta name="twitter:site" content="@hadley"/&gt;</span></a>
+<a class="sourceLine" id="cb7-12" data-line-number="12"><span class="co">#&gt; &lt;meta name="og:title" content="R for Data Science"/&gt;</span></a>
+<a class="sourceLine" id="cb7-13" data-line-number="13"><span class="co">#&gt; &lt;meta name="og:description" content="This book will teach you how to do data science with R..."/&gt;</span></a>
+<a class="sourceLine" id="cb7-14" data-line-number="14"><span class="co">#&gt; &lt;meta name="og:url" content="https://r4ds.had.co.nz"/&gt;</span></a>
+<a class="sourceLine" id="cb7-15" data-line-number="15"><span class="co">#&gt; &lt;meta name="og:image" content="https://r4ds.had.co.nz/cover.png"/&gt;</span></a>
+<a class="sourceLine" id="cb7-16" data-line-number="16"><span class="co">#&gt; &lt;meta name="og:image:alt" content="The cover of the R4DS book"/&gt;</span></a>
+<a class="sourceLine" id="cb7-17" data-line-number="17"><span class="co">#&gt; &lt;meta name="og:type" content="book"/&gt;</span></a>
+<a class="sourceLine" id="cb7-18" data-line-number="18"><span class="co">#&gt; &lt;meta name="og:locale" content="en_US"/&gt;</span></a>
+<a class="sourceLine" id="cb7-19" data-line-number="19"><span class="co">#&gt; &lt;meta name="article:author" content="Garrett Grolemund"/&gt;</span></a>
+<a class="sourceLine" id="cb7-20" data-line-number="20"><span class="co">#&gt; &lt;meta name="article:author" content="Hadley Wickham"/&gt;</span></a></code></pre></div>
 </div>
 <div id="in-shiny-apps" class="section level3">
 <h3 class="hasAnchor">
 <a href="#in-shiny-apps" class="anchor"></a>In Shiny Apps</h3>
 <p>To use <code>metathis</code> in Shiny apps, simply call <code><a href="reference/meta.html">meta()</a></code> and related tags anywhere inside your page UI, for example inside <code>fluidPage()</code>.</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb7-1" data-line-number="1">ui &lt;-<span class="st"> </span><span class="kw">fluidPage</span>(</a>
-<a class="sourceLine" id="cb7-2" data-line-number="2">  <span class="co"># Application title</span></a>
-<a class="sourceLine" id="cb7-3" data-line-number="3">  <span class="kw">titlePanel</span>(<span class="st">"metathis Example"</span>),</a>
-<a class="sourceLine" id="cb7-4" data-line-number="4">  </a>
-<a class="sourceLine" id="cb7-5" data-line-number="5">  <span class="kw"><a href="reference/meta.html">meta</a></span>() <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb7-6" data-line-number="6"><span class="st">    </span><span class="kw"><a href="reference/meta_social.html">meta_social</a></span>(</a>
-<a class="sourceLine" id="cb7-7" data-line-number="7">      <span class="dt">title =</span> <span class="st">"metathis"</span>,</a>
-<a class="sourceLine" id="cb7-8" data-line-number="8">      <span class="dt">description =</span> <span class="st">"&lt;meta&gt; and social media cards for web things in R"</span>,</a>
-<a class="sourceLine" id="cb7-9" data-line-number="9">      <span class="dt">url =</span> <span class="st">"https://pkg.garrickadenbuie.com/metathis"</span>,</a>
-<a class="sourceLine" id="cb7-10" data-line-number="10">      <span class="dt">image =</span> <span class="st">"https://garrickadenbuie.com/apple-touch-icon-114x114.png"</span>,</a>
-<a class="sourceLine" id="cb7-11" data-line-number="11">      <span class="dt">image_alt =</span> <span class="st">"An image for social meda cards"</span>,</a>
-<a class="sourceLine" id="cb7-12" data-line-number="12">      <span class="dt">twitter_creator =</span> <span class="st">"@grrrck"</span>,</a>
-<a class="sourceLine" id="cb7-13" data-line-number="13">      <span class="dt">twitter_card_type =</span> <span class="st">"summary"</span>,</a>
-<a class="sourceLine" id="cb7-14" data-line-number="14">      <span class="dt">twitter_site =</span> <span class="st">"@grrrck"</span></a>
-<a class="sourceLine" id="cb7-15" data-line-number="15">  )</a>
-<a class="sourceLine" id="cb7-16" data-line-number="16">  <span class="co"># ... your UI ...</span></a>
-<a class="sourceLine" id="cb7-17" data-line-number="17">)</a></code></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb8-1" data-line-number="1">ui &lt;-<span class="st"> </span><span class="kw">fluidPage</span>(</a>
+<a class="sourceLine" id="cb8-2" data-line-number="2">  <span class="co"># Application title</span></a>
+<a class="sourceLine" id="cb8-3" data-line-number="3">  <span class="kw">titlePanel</span>(<span class="st">"metathis Example"</span>),</a>
+<a class="sourceLine" id="cb8-4" data-line-number="4">  </a>
+<a class="sourceLine" id="cb8-5" data-line-number="5">  <span class="kw"><a href="reference/meta.html">meta</a></span>() <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb8-6" data-line-number="6"><span class="st">    </span><span class="kw"><a href="reference/meta_social.html">meta_social</a></span>(</a>
+<a class="sourceLine" id="cb8-7" data-line-number="7">      <span class="dt">title =</span> <span class="st">"metathis"</span>,</a>
+<a class="sourceLine" id="cb8-8" data-line-number="8">      <span class="dt">description =</span> <span class="st">"&lt;meta&gt; and social media cards for web things in R"</span>,</a>
+<a class="sourceLine" id="cb8-9" data-line-number="9">      <span class="dt">url =</span> <span class="st">"https://pkg.garrickadenbuie.com/metathis"</span>,</a>
+<a class="sourceLine" id="cb8-10" data-line-number="10">      <span class="dt">image =</span> <span class="st">"https://garrickadenbuie.com/apple-touch-icon-114x114.png"</span>,</a>
+<a class="sourceLine" id="cb8-11" data-line-number="11">      <span class="dt">image_alt =</span> <span class="st">"An image for social meda cards"</span>,</a>
+<a class="sourceLine" id="cb8-12" data-line-number="12">      <span class="dt">twitter_creator =</span> <span class="st">"@grrrck"</span>,</a>
+<a class="sourceLine" id="cb8-13" data-line-number="13">      <span class="dt">twitter_card_type =</span> <span class="st">"summary"</span>,</a>
+<a class="sourceLine" id="cb8-14" data-line-number="14">      <span class="dt">twitter_site =</span> <span class="st">"@grrrck"</span></a>
+<a class="sourceLine" id="cb8-15" data-line-number="15">  )</a>
+<a class="sourceLine" id="cb8-16" data-line-number="16">  <span class="co"># ... your UI ...</span></a>
+<a class="sourceLine" id="cb8-17" data-line-number="17">)</a></code></pre></div>
 </div>
 <div id="in-xaringan-slides" class="section level3">
 <h3 class="hasAnchor">
 <a href="#in-xaringan-slides" class="anchor"></a>In xaringan Slides</h3>
 <p>To use <code>metathis</code> in <a href="https://slides.yihui.name/xaringan">xaringan</a> slides, add <code><a href="reference/meta.html">meta()</a></code> and related tags in a chunk anywhere in your slide’s source <code>.Rmd</code> file. This example is from a <a href="https://pkg.garrickadenbuie.com/drake-intro/">presentation on the drake package</a>.</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode markdown"><code class="sourceCode markdown"><a class="sourceLine" id="cb8-1" data-line-number="1">```{r meta, echo=FALSE}</a>
-<a class="sourceLine" id="cb8-2" data-line-number="2">library(metathis)</a>
-<a class="sourceLine" id="cb8-3" data-line-number="3">meta() %&gt;%</a>
-<a class="sourceLine" id="cb8-4" data-line-number="4">  meta_general(</a>
-<a class="sourceLine" id="cb8-5" data-line-number="5"><span class="bn">    description = "A gentle introduction to reproducible data workflows with the {drake} package.",</span></a>
-<a class="sourceLine" id="cb8-6" data-line-number="6"><span class="bn">    generator = "xaringan and remark.js"</span></a>
-<a class="sourceLine" id="cb8-7" data-line-number="7">  ) %&gt;% </a>
-<a class="sourceLine" id="cb8-8" data-line-number="8">  meta_name("github-repo" = "gadenbuie/drake-intro") %&gt;% </a>
-<a class="sourceLine" id="cb8-9" data-line-number="9">  meta_social(</a>
-<a class="sourceLine" id="cb8-10" data-line-number="10"><span class="bn">    title = "Reproducible Data Workflows With Drake",</span></a>
-<a class="sourceLine" id="cb8-11" data-line-number="11"><span class="bn">    url = "https://pkg.garrickadenbuie.com/drake-intro",</span></a>
-<a class="sourceLine" id="cb8-12" data-line-number="12"><span class="bn">    image = "https://pkg.garrickadenbuie.com/drake-intro/assets/images/drake-intro-cover.jpg",</span></a>
-<a class="sourceLine" id="cb8-13" data-line-number="13"><span class="bn">    image_alt = "The first slide of the Reproducible Data Workflows with drake presentation, featuring the drake hex logo and neatly ordered row of items on a desk (eraser, pencil, coffee cup, paperclips).",</span></a>
-<a class="sourceLine" id="cb8-14" data-line-number="14"><span class="bn">    og_type = "website",</span></a>
-<a class="sourceLine" id="cb8-15" data-line-number="15"><span class="bn">    og_author = "Garrick Aden-Buie",</span></a>
-<a class="sourceLine" id="cb8-16" data-line-number="16"><span class="bn">    twitter_card_type = "summary_large_image",</span></a>
-<a class="sourceLine" id="cb8-17" data-line-number="17"><span class="bn">    twitter_creator = "@grrrck"</span></a>
-<a class="sourceLine" id="cb8-18" data-line-number="18">  )</a>
-<a class="sourceLine" id="cb8-19" data-line-number="19">```</a></code></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode markdown"><code class="sourceCode markdown"><a class="sourceLine" id="cb9-1" data-line-number="1">```{r meta, echo=FALSE}</a>
+<a class="sourceLine" id="cb9-2" data-line-number="2">library(metathis)</a>
+<a class="sourceLine" id="cb9-3" data-line-number="3">meta() %&gt;%</a>
+<a class="sourceLine" id="cb9-4" data-line-number="4">  meta_general(</a>
+<a class="sourceLine" id="cb9-5" data-line-number="5"><span class="bn">    description = "A gentle introduction to reproducible data workflows with the {drake} package.",</span></a>
+<a class="sourceLine" id="cb9-6" data-line-number="6"><span class="bn">    generator = "xaringan and remark.js"</span></a>
+<a class="sourceLine" id="cb9-7" data-line-number="7">  ) %&gt;% </a>
+<a class="sourceLine" id="cb9-8" data-line-number="8">  meta_name("github-repo" = "gadenbuie/drake-intro") %&gt;% </a>
+<a class="sourceLine" id="cb9-9" data-line-number="9">  meta_social(</a>
+<a class="sourceLine" id="cb9-10" data-line-number="10"><span class="bn">    title = "Reproducible Data Workflows With Drake",</span></a>
+<a class="sourceLine" id="cb9-11" data-line-number="11"><span class="bn">    url = "https://pkg.garrickadenbuie.com/drake-intro",</span></a>
+<a class="sourceLine" id="cb9-12" data-line-number="12"><span class="bn">    image = "https://pkg.garrickadenbuie.com/drake-intro/assets/images/drake-intro-cover.jpg",</span></a>
+<a class="sourceLine" id="cb9-13" data-line-number="13"><span class="bn">    image_alt = "The first slide of the Reproducible Data Workflows with drake presentation, featuring the drake hex logo and neatly ordered row of items on a desk (eraser, pencil, coffee cup, paperclips).",</span></a>
+<a class="sourceLine" id="cb9-14" data-line-number="14"><span class="bn">    og_type = "website",</span></a>
+<a class="sourceLine" id="cb9-15" data-line-number="15"><span class="bn">    og_author = "Garrick Aden-Buie",</span></a>
+<a class="sourceLine" id="cb9-16" data-line-number="16"><span class="bn">    twitter_card_type = "summary_large_image",</span></a>
+<a class="sourceLine" id="cb9-17" data-line-number="17"><span class="bn">    twitter_creator = "@grrrck"</span></a>
+<a class="sourceLine" id="cb9-18" data-line-number="18">  )</a>
+<a class="sourceLine" id="cb9-19" data-line-number="19">```</a></code></pre></div>
 </div>
 </div>
 <div id="thanks" class="section level2">
