@@ -1,11 +1,8 @@
 ## Resubmission
 This is a resubmission. In this version I have:
 
-* Used single quotes around names of software mentioned in the Description field
-* Increased the package version from 1.0.0 to 1.0.1
-
-
-# From previous submission (1.0.0)
+* Used single quotes around names of software mentioned in the package title
+* Updated the year in the LICENSE file to 2020
 
 ## Test environments
 * local OS X install, R 3.6.2
