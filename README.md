@@ -39,9 +39,17 @@ other social media sites that support the Open Graph protocol.
 ## Installation
 
 You can install the latest version of metathis from
+[CRAN](https://CRAN.R-project.org) with:
+
+``` r
+isntall.packages("metathis")
+```
+
+And the development version from
 [Github](https://github.com/gadenbuie/metathis) with:
 
 ``` r
+# install.packages("devtools")
 devtools::install_github("gadenbuie/metathis")
 ```
 
