@@ -4,7 +4,7 @@
 \name{metathis-package}
 \alias{metathis}
 \alias{metathis-package}
-\title{metathis: HTML Metadata Tags for R Markdown and Shiny}
+\title{metathis: HTML Metadata Tags for 'R Markdown' and 'Shiny'}
 \description{
 \if{html}{\figure{logo.png}{options: align='right' alt='logo' width='120'}}
 
