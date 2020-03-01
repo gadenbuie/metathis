@@ -1,8 +1,6 @@
-## Resubmission
-This is a resubmission. In this version I have:
+## Fixing failing test on Solaris
 
-* Used single quotes around names of software mentioned in the package title
-* Updated the year in the LICENSE file to 2020
+This submission fixes a failing test on Solaris when pandoc is not available.
 
 ## Test environments
 * local OS X install, R 3.6.2
@@ -14,8 +12,10 @@ This is a resubmission. In this version I have:
 
 ## R CMD check results
 
-There were no ERRORs or WARNINGs
+There were no ERRORs, WARNINGs
 
-There was 1 NOTE:
+1 NOTE:
 
-* This is a new release.
+Days since last update: 0
+
+This update was requested by Prof Brian Ripley after the package was accepted to CRAN.

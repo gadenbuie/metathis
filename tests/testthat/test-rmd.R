@@ -1,4 +1,6 @@
 test_that("knit_print() and include_meta() work in Rmd", {
+  skip_if_not(rmarkdown::pandoc_available("1.12.3"))
+
   temp_html <- tempfile("metathis-rmd", fileext = ".html")
   rmarkdown::render("rmd/test-metathis.Rmd", output_file = temp_html, quiet = TRUE)
   out <- readLines(temp_html)
