@@ -1,6 +1,6 @@
 pandoc: '2.2'
 pkgdown: 1.4.1.9000
-pkgdown_sha: 7a33d4dacc2598ce37c12256b46db63b98836d76
+pkgdown_sha: 74c19e23fcbf46cc2e0d99be4e4105332c288696
 articles: []
 urls:
   reference: https://pkg.garrickadenbuie.com/metathis//reference
