@@ -1,7 +1,17 @@
 pandoc: '2.2'
 pkgdown: 1.4.1.9000
-pkgdown_sha: 74c19e23fcbf46cc2e0d99be4e4105332c288696
+pkgdown_sha: 43f56dab8638b548b2d3ef1fe341df85afa7346f
 articles: []
+last_built:
+  sec: 0.0
+  min: 48
+  hour: 21
+  mday: 28
+  mon: 3
+  year: 120
+  wday: 2
+  yday: 118
+  isdst: 0
 urls:
   reference: https://pkg.garrickadenbuie.com/metathis//reference
   article: https://pkg.garrickadenbuie.com/metathis//articles
