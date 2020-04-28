@@ -42,7 +42,7 @@ You can install the latest version of metathis from
 [CRAN](https://CRAN.R-project.org) with:
 
 ``` r
-isntall.packages("metathis")
+install.packages("metathis")
 ```
 
 And the development version from
