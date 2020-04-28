@@ -51,7 +51,7 @@ If you want great looking social media cards, the [`meta_social()`](http://pkg.g
 You can install the latest version of metathis from [CRAN](https://CRAN.R-project.org) with:
 
 ``` r
-isntall.packages("metathis")
+install.packages("metathis")
 ```
 
 And the development version from [Github](https://github.com/gadenbuie/metathis) with:
