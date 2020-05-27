@@ -154,8 +154,13 @@ as.character.meta <- function(x, ...) {
 }
 
 #' @export
+format.meta <- function(x, ...) {
+  collapse(as.character(x), "\n")
+}
+
+#' @export
 print.meta <- function(x, ...) {
-  cat(collapse(x, "\n"))
+  cat(format(x))
 }
 
 #' @export
