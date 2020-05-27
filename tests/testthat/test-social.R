@@ -49,4 +49,21 @@ describe("meta_social()", {
     expect_true(sum(grepl("Banana", .meta)) == 1)
   })
 
+  it("uses property for og:<x> tags", {
+    x <- meta_social(
+      title = "R for Data Science",
+      description = "This book with teach you how to do data science with R",
+      url = "https://r4ds.had.co.nz",
+      image = "https://r4ds.had.co.nz/cover.png",
+      image_alt = "The cover of the R4DS book",
+      og_type = "book",
+      og_author = c("Garrett Grolemund", "Hadley Wickham"),
+      twitter_card_type = "summary",
+      twitter_creator = "@hadley"
+    ) %>%
+      as.character()
+
+    x_og <- grep("og:", x, value = TRUE)
+    expect_equal(sum(grepl("property=\"og:", x_og)), length(x_og))
+  })
 })
