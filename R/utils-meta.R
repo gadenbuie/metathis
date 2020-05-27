@@ -11,6 +11,12 @@ tag_meta_list <- function(.list) {
     unname()
 }
 
+tag_meta_list_property <- function(.list) {
+  .list %>%
+    purrr::imap(~ tag_meta(property = .y, content = .x)) %>%
+    unname()
+}
+
 collapse_single_string <- function(.list, sep = " ") {
   .list %>%
     purrr::compact() %>%

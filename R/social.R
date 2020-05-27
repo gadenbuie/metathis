@@ -109,7 +109,14 @@ meta_social <- function(
     social %>%
     duplicate_vector_entries() %>%
     collapse_single_string() %>%
-    tag_meta_list()
+    purrr::imap(function(content, property) {
+      if (grepl("^twitter:", property)) {
+        tag_meta(name = property, content = content)
+      } else {
+        tag_meta(property = property, content = content)
+      }
+    }) %>%
+    unname()
 
   if (disable_pinterest) {
     meta_social <- c(

@@ -127,15 +127,15 @@ meta() %>%
     #> <meta name="twitter:card" content="summary"/>
     #> <meta name="twitter:creator" content="@hadley"/>
     #> <meta name="twitter:site" content="@hadley"/>
-    #> <meta name="og:title" content="R for Data Science"/>
-    #> <meta name="og:description" content="This book will teach you how to do data science with R..."/>
-    #> <meta name="og:url" content="https://r4ds.had.co.nz"/>
-    #> <meta name="og:image" content="https://r4ds.had.co.nz/cover.png"/>
-    #> <meta name="og:image:alt" content="The cover of the R4DS book"/>
-    #> <meta name="og:type" content="book"/>
-    #> <meta name="og:locale" content="en_US"/>
-    #> <meta name="article:author" content="Garrett Grolemund"/>
-    #> <meta name="article:author" content="Hadley Wickham"/>
+    #> <meta property="og:title" content="R for Data Science"/>
+    #> <meta property="og:description" content="This book will teach you how to do data science with R..."/>
+    #> <meta property="og:url" content="https://r4ds.had.co.nz"/>
+    #> <meta property="og:image" content="https://r4ds.had.co.nz/cover.png"/>
+    #> <meta property="og:image:alt" content="The cover of the R4DS book"/>
+    #> <meta property="og:type" content="book"/>
+    #> <meta property="og:locale" content="en_US"/>
+    #> <meta property="article:author" content="Garrett Grolemund"/>
+    #> <meta property="article:author" content="Hadley Wickham"/>
 
 ### In Shiny Apps
 
