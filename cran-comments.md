@@ -1,21 +1,20 @@
-## Fixing failing test on Solaris
+## Patch Release v1.0.3
 
-This submission fixes a failing test on Solaris when pandoc is not available.
+- Fixed an issue with Open Graph social media `<meta>` HTML tags,
+  Open Graph expects "property" attributes and not "name" attributes
 
 ## Test environments
+
 * local OS X install, R 3.6.2
-* ubuntu 14.04 (on travis-ci), R 3.6.2
-* windows server 2008 R2 SP1 (devel, on rhub)
-* ubuntu 16.04 (on rhub), R 3.6.2
-* fedora (on rhub), R 3.6.2
+* local OS X install, R 4.0.2
+* Microsoft Windows Server 2019 (release, devel, via GitHub Actions)
+* Mac OS X 10.15.5 (release, devel, via GitHub Actions)
+* Ubuntu 18.04.4 (release, via GitHub Actions)
 * win-builder (devel and release)
 
 ## R CMD check results
 
-There were no ERRORs, WARNINGs
+There was 1 NOTE (locally on macOS only):
 
-1 NOTE:
-
-Days since last update: 0
-
-This update was requested by Prof Brian Ripley after the package was accepted to CRAN.
+checking for future file timestamps ... NOTE
+  unable to verify current time
