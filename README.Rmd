@@ -14,7 +14,7 @@ knitr::opts_chunk$set(
 )
 ```
 
-# metathis <a href='https://pkg.garrickadenbuie.com/metathis'><img src='man/figures/logo.png' align="right" height="120" /></a>
+# metathis <a href='https://pkg.garrickadenbuie.com/metathis/'><img src='man/figures/logo.png' align="right" height="120" /></a>
 
 <!-- badges: start -->
 [![CRAN status](https://www.r-pkg.org/badges/version/metathis)](https://CRAN.R-project.org/package=metathis)
@@ -27,7 +27,7 @@ knitr::opts_chunk$set(
 [blogdown]: https://bookdown.org/yihui/blogdown
 [Shiny]: https://shiny.rstudio.com
 [r4ds]: https://r4ds.had.co.nz/
-[xaringan]: https://slides.yihui.name/xaringan
+[xaringan]: https://slides.yihui.org/xaringan
 [bookdown]: https://bookdown.org/
 [pagedown]: https://github.com/rstudio/pagedown
 [htmltools]: https://github.com/rstudio/htmltools
@@ -187,7 +187,7 @@ meta() %>%
 Thanks to [Josh Buchea](https://github.com/joshbuchea) for providing an [excellent and indispensable resource](https://github.com/joshbuchea/HEAD) on `<meta>` tags and other things that go in the HTML `<head>` tags.
 
 Thanks also to [Malcolm Barret](https://github.com/malcolmbarrett). 
-Watching over his shoulder as he developed [ymlthis](https://r-lib.github.io/ymlthis) made putting this package together so much easier.
+Watching over his shoulder as he developed [ymlthis](https://ymlthis.r-lib.org) made putting this package together so much easier.
 
 Finally, thanks to the [RStudio team](https://github.com/rstudio) and others who developed [htmltools](https://github.com/rstudio/htmltools) for making HTML in R a breeze.
 

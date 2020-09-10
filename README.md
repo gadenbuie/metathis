@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# metathis <a href='https://pkg.garrickadenbuie.com/metathis'><img src='man/figures/logo.png' align="right" height="120" /></a>
+# metathis <a href='https://pkg.garrickadenbuie.com/metathis/'><img src='man/figures/logo.png' align="right" height="120" /></a>
 
 <!-- badges: start -->
 
@@ -57,7 +57,7 @@ devtools::install_github("gadenbuie/metathis")
 
 ✅ [R Markdown](https://rmarkdown.rstudio.com) HTML Documents  
 ✅ [Shiny](https://shiny.rstudio.com) Apps  
-✅ [xaringan](https://slides.yihui.name/xaringan)  
+✅ [xaringan](https://slides.yihui.org/xaringan)  
 ✅ [pagedown](https://github.com/rstudio/pagedown)  
 ✅ [bookdown](https://bookdown.org/)  
 ❌ [blogdown](https://bookdown.org/yihui/blogdown)<sup>1</sup>  
@@ -164,7 +164,7 @@ ui <- fluidPage(
 
 ### In xaringan Slides
 
-To use `metathis` in [xaringan](https://slides.yihui.name/xaringan)
+To use `metathis` in [xaringan](https://slides.yihui.org/xaringan)
 slides, add `meta()` and related tags in a chunk anywhere in your
 slide’s source `.Rmd` file. This example is from a [presentation on
 the drake package](https://pkg.garrickadenbuie.com/drake-intro/).
@@ -200,8 +200,8 @@ things that go in the HTML `<head>` tags.
 
 Thanks also to [Malcolm Barret](https://github.com/malcolmbarrett).
 Watching over his shoulder as he developed
-[ymlthis](https://r-lib.github.io/ymlthis) made putting this package
-together so much easier.
+[ymlthis](https://ymlthis.r-lib.org) made putting this package together
+so much easier.
 
 Finally, thanks to the [RStudio team](https://github.com/rstudio) and
 others who developed [htmltools](https://github.com/rstudio/htmltools)

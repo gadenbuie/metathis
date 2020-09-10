@@ -14,7 +14,4 @@
 
 ## R CMD check results
 
-There was 1 NOTE (locally on macOS only):
-
-checking for future file timestamps ... NOTE
-  unable to verify current time
+Fixed URLs that moved or were redirected
