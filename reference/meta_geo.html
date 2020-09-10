@@ -85,7 +85,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">metathis</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.0.2.9000</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.0.3</span>
       </span>
     </div>
 
@@ -147,12 +147,12 @@
     </div>
 
     <pre class="usage"><span class='fu'>meta_geo</span>(
-  <span class='kw'>.meta</span> <span class='kw'>=</span> <span class='fu'><a href='meta.html'>meta</a></span>(),
-  <span class='kw'>icbm</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>geo_position</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>geo_region</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>geo_placename</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='no'>...</span>
+  .meta = <span class='fu'><a href='meta.html'>meta</a></span>(),
+  icbm = <span class='kw'>NULL</span>,
+  geo_position = <span class='kw'>NULL</span>,
+  geo_region = <span class='kw'>NULL</span>,
+  geo_placename = <span class='kw'>NULL</span>,
+  <span class='kw'>...</span>
 )</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
@@ -176,7 +176,7 @@ as <code>"lat;long"</code>. Can optionally be a length-two vector, i.e. <code><a
     <tr>
       <th>geo_region</th>
       <td><p>Name of the geographic region related to the page content,
-specified using <a href='http://en.wikipedia.org/wiki/ISO_3166'>ISO-3166</a>
+specified using <a href='https://en.wikipedia.org/wiki/ISO_3166'>ISO-3166</a>
 2-character country code and 2-character national subdivision. Example:
 <code>"US-NY"</code>.</p></td>
     </tr>
@@ -216,13 +216,14 @@ or other HTML locations.</p>
 <code><a href='meta.html'>meta</a>()</code></p></div>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'><a href='meta.html'>meta</a></span>() <span class='kw'>%&gt;%</span>
+    <pre class="examples"><div class='input'><span class='fu'><a href='meta.html'>meta</a></span>() <span class='op'>%&gt;%</span>
   <span class='fu'>meta_geo</span>(
-    <span class='kw'>icbm</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>50.167958</span>, -<span class='fl'>97.133185</span>),
-    <span class='kw'>geo_position</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>50.167958</span>, -<span class='fl'>97.133185</span>),
-    <span class='kw'>geo_placename</span> <span class='kw'>=</span> <span class='st'>"Manitoba, Canada"</span>,
-    <span class='kw'>geo_region</span> <span class='kw'>=</span> <span class='st'>"ca-mb"</span>
-  )</div><div class='output co'>#&gt; &lt;meta name="ICBM" content="50.167958, -97.133185"/&gt;
+    icbm = <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>50.167958</span>, <span class='op'>-</span><span class='fl'>97.133185</span>),
+    geo_position = <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>50.167958</span>, <span class='op'>-</span><span class='fl'>97.133185</span>),
+    geo_placename = <span class='st'>"Manitoba, Canada"</span>,
+    geo_region = <span class='st'>"ca-mb"</span>
+  )
+</div><div class='output co'>#&gt; &lt;meta name="ICBM" content="50.167958, -97.133185"/&gt;
 #&gt; &lt;meta name="geo.position" content="50.167958;-97.133185"/&gt;
 #&gt; &lt;meta name="geo.region" content="ca-mb"/&gt;
 #&gt; &lt;meta name="geo.placename" content="Manitoba, Canada"/&gt;</div><div class='input'>
@@ -242,7 +243,7 @@ or other HTML locations.</p>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.0.</p>
 </div>
 
       </footer>

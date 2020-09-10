@@ -85,7 +85,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">metathis</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.0.2.9000</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.0.3</span>
       </span>
     </div>
 
@@ -147,10 +147,10 @@
     </div>
 
     <pre class="usage"><span class='fu'>meta_apple_web_app</span>(
-  <span class='kw'>.meta</span> <span class='kw'>=</span> <span class='fu'><a href='meta.html'>meta</a></span>(),
-  <span class='kw'>title</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>capable</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>status_bar_style</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"default"</span>, <span class='st'>"black"</span>, <span class='st'>"black-translucent"</span>)
+  .meta = <span class='fu'><a href='meta.html'>meta</a></span>(),
+  title = <span class='kw'>NULL</span>,
+  capable = <span class='kw'>NULL</span>,
+  status_bar_style = <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"default"</span>, <span class='st'>"black"</span>, <span class='st'>"black-translucent"</span>)
 )</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
@@ -203,12 +203,13 @@ or other HTML locations.</p>
 <code><a href='meta.html'>meta</a>()</code></p></div>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'><a href='meta.html'>meta</a></span>() <span class='kw'>%&gt;%</span>
+    <pre class="examples"><div class='input'><span class='fu'><a href='meta.html'>meta</a></span>() <span class='op'>%&gt;%</span>
   <span class='fu'>meta_apple_web_app</span>(
-    <span class='kw'>title</span> <span class='kw'>=</span> <span class='st'>"My Fancy App"</span>,
-    <span class='kw'>capable</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>,
-    <span class='kw'>status_bar_style</span> <span class='kw'>=</span> <span class='st'>"black-translucent"</span>
-  )</div><div class='output co'>#&gt; &lt;meta name="apple-mobile-web-app-title" content="My Fancy App"/&gt;
+    title = <span class='st'>"My Fancy App"</span>,
+    capable = <span class='fl'>TRUE</span>,
+    status_bar_style = <span class='st'>"black-translucent"</span>
+  )
+</div><div class='output co'>#&gt; &lt;meta name="apple-mobile-web-app-title" content="My Fancy App"/&gt;
 #&gt; &lt;meta name="apple-mobile-web-app-capable" content="yes"/&gt;
 #&gt; &lt;meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/&gt;</div></pre>
   </div>
@@ -226,7 +227,7 @@ or other HTML locations.</p>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.0.</p>
 </div>
 
       </footer>

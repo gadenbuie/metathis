@@ -85,7 +85,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">metathis</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.0.2.9000</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.0.3</span>
       </span>
     </div>
 
@@ -147,23 +147,23 @@
     </div>
 
     <pre class="usage"><span class='fu'>meta_social</span>(
-  <span class='kw'>.meta</span> <span class='kw'>=</span> <span class='fu'><a href='meta.html'>meta</a></span>(),
-  <span class='kw'>title</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>url</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>image</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>image_alt</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>image_width</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>image_height</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>description</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>twitter_card_type</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"summary"</span>, <span class='st'>"summary_large_image"</span>, <span class='st'>"app"</span>, <span class='st'>"player"</span>),
-  <span class='kw'>twitter_creator</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>twitter_site</span> <span class='kw'>=</span> <span class='no'>twitter_creator</span>,
-  <span class='kw'>og_type</span> <span class='kw'>=</span> <span class='st'>"website"</span>,
-  <span class='kw'>og_locale</span> <span class='kw'>=</span> <span class='st'>"en_US"</span>,
-  <span class='kw'>og_author</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>og_site_name</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>facebook_app_id</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>disable_pinterest</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>
+  .meta = <span class='fu'><a href='meta.html'>meta</a></span>(),
+  title = <span class='kw'>NULL</span>,
+  url = <span class='kw'>NULL</span>,
+  image = <span class='kw'>NULL</span>,
+  image_alt = <span class='kw'>NULL</span>,
+  image_width = <span class='kw'>NULL</span>,
+  image_height = <span class='kw'>NULL</span>,
+  description = <span class='kw'>NULL</span>,
+  twitter_card_type = <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"summary"</span>, <span class='st'>"summary_large_image"</span>, <span class='st'>"app"</span>, <span class='st'>"player"</span>),
+  twitter_creator = <span class='kw'>NULL</span>,
+  twitter_site = <span class='kw'>twitter_creator</span>,
+  og_type = <span class='st'>"website"</span>,
+  og_locale = <span class='st'>"en_US"</span>,
+  og_author = <span class='kw'>NULL</span>,
+  og_site_name = <span class='kw'>NULL</span>,
+  facebook_app_id = <span class='kw'>NULL</span>,
+  disable_pinterest = <span class='fl'>FALSE</span>
 )</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
@@ -263,7 +263,7 @@ or other HTML locations.</p>
 <li><p><a href='https://ogp.me/'>Open Graph</a></p></li>
 <li><p><a href='https://search.google.com/structured-data/testing-tool'>Google Structured Data Testing Tool</a></p></li>
 <li><p><a href='https://developers.facebook.com/tools/debug/'>Facebook Sharing Debugger</a></p></li>
-<li><p><a href='https://developer.twitter.com/en/docs/tweets/optimize-with-cards/guides/getting-started'>Twitter Card Documentation</a></p></li>
+<li><p><a href='https://developer.twitter.com/en/docs/twitter-for-websites/cards/guides/getting-started'>Twitter Card Documentation</a></p></li>
 <li><p><a href='https://cards-dev.twitter.com/validator'>Twitter Card Validator</a></p></li>
 </ul>
 
@@ -280,18 +280,19 @@ or other HTML locations.</p>
 <code><a href='meta.html'>meta</a>()</code></p></div>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'><a href='meta.html'>meta</a></span>() <span class='kw'>%&gt;%</span>
+    <pre class="examples"><div class='input'><span class='fu'><a href='meta.html'>meta</a></span>() <span class='op'>%&gt;%</span>
   <span class='fu'>meta_social</span>(
-    <span class='kw'>title</span> <span class='kw'>=</span> <span class='st'>"R for Data Science"</span>,
-    <span class='kw'>description</span> <span class='kw'>=</span> <span class='st'>"This book with teach you how to do data science with R"</span>,
-    <span class='kw'>url</span> <span class='kw'>=</span> <span class='st'>"https://r4ds.had.co.nz"</span>,
-    <span class='kw'>image</span> <span class='kw'>=</span> <span class='st'>"https://r4ds.had.co.nz/cover.png"</span>,
-    <span class='kw'>image_alt</span> <span class='kw'>=</span> <span class='st'>"The cover of the R4DS book"</span>,
-    <span class='kw'>og_type</span> <span class='kw'>=</span> <span class='st'>"book"</span>,
-    <span class='kw'>og_author</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"Garrett Grolemund"</span>, <span class='st'>"Hadley Wickham"</span>),
-    <span class='kw'>twitter_card_type</span> <span class='kw'>=</span> <span class='st'>"summary"</span>,
-    <span class='kw'>twitter_creator</span> <span class='kw'>=</span> <span class='st'>"@hadley"</span>
-  )</div><div class='output co'>#&gt; &lt;meta name="twitter:title" content="R for Data Science"/&gt;
+    title = <span class='st'>"R for Data Science"</span>,
+    description = <span class='st'>"This book with teach you how to do data science with R"</span>,
+    url = <span class='st'>"https://r4ds.had.co.nz"</span>,
+    image = <span class='st'>"https://r4ds.had.co.nz/cover.png"</span>,
+    image_alt = <span class='st'>"The cover of the R4DS book"</span>,
+    og_type = <span class='st'>"book"</span>,
+    og_author = <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"Garrett Grolemund"</span>, <span class='st'>"Hadley Wickham"</span>),
+    twitter_card_type = <span class='st'>"summary"</span>,
+    twitter_creator = <span class='st'>"@hadley"</span>
+  )
+</div><div class='output co'>#&gt; &lt;meta name="twitter:title" content="R for Data Science"/&gt;
 #&gt; &lt;meta name="twitter:description" content="This book with teach you how to do data science with R"/&gt;
 #&gt; &lt;meta name="twitter:url" content="https://r4ds.had.co.nz"/&gt;
 #&gt; &lt;meta name="twitter:image:src" content="https://r4ds.had.co.nz/cover.png"/&gt;
@@ -324,7 +325,7 @@ or other HTML locations.</p>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.0.</p>
 </div>
 
       </footer>

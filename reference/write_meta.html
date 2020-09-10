@@ -86,7 +86,7 @@ your page." />
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">metathis</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.0.2.9000</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.0.3</span>
       </span>
     </div>
 
@@ -148,7 +148,7 @@ your page." />
 your page.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>write_meta</span>(<span class='no'>.meta</span>, <span class='kw'>path</span> <span class='kw'>=</span> <span class='st'>"meta.html"</span>, <span class='kw'>append</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>)</pre>
+    <pre class="usage"><span class='fu'>write_meta</span>(<span class='kw'>.meta</span>, path = <span class='st'>"meta.html"</span>, append = <span class='fl'>FALSE</span>)</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -181,13 +181,14 @@ by a <code>meta_*()</code> object.</p></td>
 <code><a href='include_meta.html'>include_meta</a>()</code></p></div>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='no'>meta_html_snippet</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/tempfile.html'>tempfile</a></span>(<span class='st'>"metathis_example"</span>, <span class='kw'>fileext</span> <span class='kw'>=</span> <span class='st'>".html"</span>)
+    <pre class="examples"><div class='input'><span class='kw'>meta_html_snippet</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/tempfile.html'>tempfile</a></span>(<span class='st'>"metathis_example"</span>, fileext = <span class='st'>".html"</span>)
 
-<span class='fu'><a href='meta.html'>meta</a></span>() <span class='kw'>%&gt;%</span>
-  <span class='fu'><a href='meta_name.html'>meta_name</a></span>(<span class='st'>"package"</span> <span class='kw'>=</span> <span class='st'>"metathis"</span>) <span class='kw'>%&gt;%</span>
-  <span class='fu'>write_meta</span>(<span class='no'>meta_html_snippet</span>)
+<span class='fu'><a href='meta.html'>meta</a></span>() <span class='op'>%&gt;%</span>
+  <span class='fu'><a href='meta_name.html'>meta_name</a></span>(<span class='st'>"package"</span> = <span class='st'>"metathis"</span>) <span class='op'>%&gt;%</span>
+  <span class='fu'>write_meta</span>(<span class='kw'>meta_html_snippet</span>)
 
-<span class='fu'><a href='https://rdrr.io/r/base/readLines.html'>readLines</a></span>(<span class='no'>meta_html_snippet</span>, <span class='kw'>warn</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>)</div><div class='output co'>#&gt; [1] "&lt;meta name=\"package\" content=\"metathis\"/&gt;"</div><div class='input'>
+<span class='fu'><a href='https://rdrr.io/r/base/readLines.html'>readLines</a></span>(<span class='kw'>meta_html_snippet</span>, warn = <span class='fl'>FALSE</span>)
+</div><div class='output co'>#&gt; [1] "&lt;meta name=\"package\" content=\"metathis\"/&gt;"</div><div class='input'>
 </div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
@@ -204,7 +205,7 @@ by a <code>meta_*()</code> object.</p></td>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.0.</p>
 </div>
 
       </footer>

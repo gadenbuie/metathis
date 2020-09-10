@@ -85,7 +85,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">metathis</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.0.2.9000</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.0.3</span>
       </span>
     </div>
 
@@ -147,19 +147,19 @@
     </div>
 
     <pre class="usage"><span class='fu'>meta_viewport</span>(
-  <span class='kw'>.meta</span> <span class='kw'>=</span> <span class='fu'><a href='meta.html'>meta</a></span>(),
-  <span class='kw'>width</span> <span class='kw'>=</span> <span class='st'>"device-width"</span>,
-  <span class='kw'>initial_scale</span> <span class='kw'>=</span> <span class='st'>"1"</span>,
-  <span class='kw'>orientation</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"auto"</span>, <span class='st'>"portrait"</span>, <span class='st'>"landscape"</span>),
-  <span class='kw'>min_width</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>max_width</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>height</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>min_height</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>max_height</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>minimum_scale</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>maximum_scale</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>user_scalable</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='no'>...</span>
+  .meta = <span class='fu'><a href='meta.html'>meta</a></span>(),
+  width = <span class='st'>"device-width"</span>,
+  initial_scale = <span class='st'>"1"</span>,
+  orientation = <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"auto"</span>, <span class='st'>"portrait"</span>, <span class='st'>"landscape"</span>),
+  min_width = <span class='kw'>NULL</span>,
+  max_width = <span class='kw'>NULL</span>,
+  height = <span class='kw'>NULL</span>,
+  min_height = <span class='kw'>NULL</span>,
+  max_height = <span class='kw'>NULL</span>,
+  minimum_scale = <span class='kw'>NULL</span>,
+  maximum_scale = <span class='kw'>NULL</span>,
+  user_scalable = <span class='kw'>NULL</span>,
+  <span class='kw'>...</span>
 )</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
@@ -237,12 +237,15 @@ or other HTML locations.</p>
 <code><a href='meta.html'>meta</a>()</code></p></div>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'><a href='meta.html'>meta</a></span>() <span class='kw'>%&gt;%</span>
-  <span class='fu'>meta_viewport</span>()</div><div class='output co'>#&gt; &lt;meta name="viewport" content="width=device-width, initial-scale=1, orientation=auto"/&gt;</div><div class='input'>
-<span class='fu'><a href='meta.html'>meta</a></span>() <span class='kw'>%&gt;%</span>
-  <span class='fu'>meta_viewport</span>(<span class='kw'>orientation</span> <span class='kw'>=</span> <span class='kw'>NULL</span>)</div><div class='output co'>#&gt; &lt;meta name="viewport" content="width=device-width, initial-scale=1"/&gt;</div><div class='input'>
-<span class='fu'><a href='meta.html'>meta</a></span>() <span class='kw'>%&gt;%</span>
-  <span class='fu'>meta_viewport</span>(<span class='kw'>maximum_scale</span> <span class='kw'>=</span> <span class='fl'>1</span>)</div><div class='output co'>#&gt; &lt;meta name="viewport" content="width=device-width, initial-scale=1, orientation=auto, maximum-scale=1"/&gt;</div><div class='input'>
+    <pre class="examples"><div class='input'><span class='fu'><a href='meta.html'>meta</a></span>() <span class='op'>%&gt;%</span>
+  <span class='fu'>meta_viewport</span>()
+</div><div class='output co'>#&gt; &lt;meta name="viewport" content="width=device-width, initial-scale=1, orientation=auto"/&gt;</div><div class='input'>
+<span class='fu'><a href='meta.html'>meta</a></span>() <span class='op'>%&gt;%</span>
+  <span class='fu'>meta_viewport</span>(orientation = <span class='kw'>NULL</span>)
+</div><div class='output co'>#&gt; &lt;meta name="viewport" content="width=device-width, initial-scale=1"/&gt;</div><div class='input'>
+<span class='fu'><a href='meta.html'>meta</a></span>() <span class='op'>%&gt;%</span>
+  <span class='fu'>meta_viewport</span>(maximum_scale = <span class='fl'>1</span>)
+</div><div class='output co'>#&gt; &lt;meta name="viewport" content="width=device-width, initial-scale=1, orientation=auto, maximum-scale=1"/&gt;</div><div class='input'>
 </div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
@@ -259,7 +262,7 @@ or other HTML locations.</p>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.0.</p>
 </div>
 
       </footer>
