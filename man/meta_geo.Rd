@@ -24,7 +24,7 @@ by a \verb{meta_*()} object.}
 as \code{"lat;long"}. Can optionally be a length-two vector, i.e. \code{c(lat, long)}.}
 
 \item{geo_region}{Name of the geographic region related to the page content,
-specified using \href{http://en.wikipedia.org/wiki/ISO_3166}{ISO-3166}
+specified using \href{https://en.wikipedia.org/wiki/ISO_3166}{ISO-3166}
 2-character country code and 2-character national subdivision. Example:
 \code{"US-NY"}.}
 

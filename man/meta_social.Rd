@@ -99,7 +99,7 @@ meta() \%>\%
 \item \href{https://ogp.me/}{Open Graph}
 \item \href{https://search.google.com/structured-data/testing-tool}{Google Structured Data Testing Tool}
 \item \href{https://developers.facebook.com/tools/debug/}{Facebook Sharing Debugger}
-\item \href{https://developer.twitter.com/en/docs/tweets/optimize-with-cards/guides/getting-started}{Twitter Card Documentation}
+\item \href{https://developer.twitter.com/en/docs/twitter-for-websites/cards/guides/getting-started}{Twitter Card Documentation}
 \item \href{https://cards-dev.twitter.com/validator}{Twitter Card Validator}
 }
 }

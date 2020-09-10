@@ -8,7 +8,7 @@
 #'   as `"lat;long"`. Can optionally be a length-two vector, i.e. `c(lat,
 #'   long)`.
 #' @param geo_region Name of the geographic region related to the page content,
-#'   specified using [ISO-3166](http://en.wikipedia.org/wiki/ISO_3166)
+#'   specified using [ISO-3166](https://en.wikipedia.org/wiki/ISO_3166)
 #'   2-character country code and 2-character national subdivision. Example:
 #'   `"US-NY"`.
 #' @param geo_placename Name of the geographic place related to the page
