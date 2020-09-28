@@ -150,11 +150,11 @@ an object is a <em>metathis</em> object, or coerce a list of <code>meta</code> t
 <em>metathis</em> object.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>meta</span>()
+    <pre class="usage"><span class='fu'>meta</span><span class='op'>(</span><span class='op'>)</span>
 
-<span class='fu'>is_meta</span>(<span class='kw'>x</span>)
+<span class='fu'>is_meta</span><span class='op'>(</span><span class='va'>x</span><span class='op'>)</span>
 
-<span class='fu'>as_meta</span>(<span class='kw'>x</span>)</pre>
+<span class='fu'>as_meta</span><span class='op'>(</span><span class='va'>x</span><span class='op'>)</span></pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -190,16 +190,16 @@ or other HTML locations.</p>
 <code><a href='meta_viewport.html'>meta_viewport</a>()</code></p></div>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'>meta</span>() <span class='op'>%&gt;%</span>
-  <span class='fu'><a href='meta_viewport.html'>meta_viewport</a></span>() <span class='op'>%&gt;%</span>
-  <span class='fu'>is_meta</span>()
+    <pre class="examples"><div class='input'><span class='fu'>meta</span><span class='op'>(</span><span class='op'>)</span> <span class='op'>%&gt;%</span>
+  <span class='fu'><a href='meta_viewport.html'>meta_viewport</a></span><span class='op'>(</span><span class='op'>)</span> <span class='op'>%&gt;%</span>
+  <span class='fu'>is_meta</span><span class='op'>(</span><span class='op'>)</span>
 </div><div class='output co'>#&gt; [1] TRUE</div><div class='input'>
-<span class='kw'>list_of_meta_tags</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span>(
-  <span class='kw'>htmltools</span>::<span class='kw'><a href='https://rdrr.io/pkg/htmltools/man/builder.html'>tags</a></span><span class='op'>$</span><span class='fu'>meta</span>(github = <span class='st'>"gadenbuie"</span>),
-  <span class='kw'>htmltools</span>::<span class='kw'><a href='https://rdrr.io/pkg/htmltools/man/builder.html'>tags</a></span><span class='op'>$</span><span class='fu'>meta</span>(twitter = <span class='st'>"grrrck"</span>)
-)
+<span class='va'>list_of_meta_tags</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>
+  <span class='fu'>htmltools</span><span class='fu'>::</span><span class='va'><a href='https://rdrr.io/pkg/htmltools/man/builder.html'>tags</a></span><span class='op'>$</span><span class='fu'>meta</span><span class='op'>(</span>github <span class='op'>=</span> <span class='st'>"gadenbuie"</span><span class='op'>)</span>,
+  <span class='fu'>htmltools</span><span class='fu'>::</span><span class='va'><a href='https://rdrr.io/pkg/htmltools/man/builder.html'>tags</a></span><span class='op'>$</span><span class='fu'>meta</span><span class='op'>(</span>twitter <span class='op'>=</span> <span class='st'>"grrrck"</span><span class='op'>)</span>
+<span class='op'>)</span>
 
-<span class='fu'>as_meta</span>(<span class='kw'>list_of_meta_tags</span>)
+<span class='fu'>as_meta</span><span class='op'>(</span><span class='va'>list_of_meta_tags</span><span class='op'>)</span>
 </div><div class='output co'>#&gt; &lt;meta github="gadenbuie"/&gt;
 #&gt; &lt;meta twitter="grrrck"/&gt;</div></pre>
   </div>
