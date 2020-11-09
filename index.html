@@ -112,12 +112,12 @@
 <h2 class="hasAnchor">
 <a href="#installation" class="anchor"></a>Installation</h2>
 <p>You can install the latest version of metathis from <a href="https://CRAN.R-project.org">CRAN</a> with:</p>
-<div class="sourceCode" id="cb1"><pre class="downlit">
-<span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">"metathis"</span><span class="op">)</span></pre></div>
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">"metathis"</span><span class="op">)</span></code></pre></div>
 <p>And the development version from <a href="https://github.com/gadenbuie/metathis">Github</a> with:</p>
-<div class="sourceCode" id="cb2"><pre class="downlit">
-<span class="co"># install.packages("devtools")</span>
-<span class="fu">devtools</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"gadenbuie/metathis"</span><span class="op">)</span></pre></div>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="co"># install.packages("devtools")</span>
+<span class="fu">devtools</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"gadenbuie/metathis"</span><span class="op">)</span></code></pre></div>
 </div>
 <div id="works-in" class="section level2">
 <h2 class="hasAnchor">
@@ -148,10 +148,10 @@
 <h3 class="hasAnchor">
 <a href="#in-r-markdown" class="anchor"></a>In R Markdown</h3>
 <p>This is a basic example that re-creates the <code>&lt;meta&gt;</code> tags for the <a href="https://r4ds.had.co.nz/">R for Data Science</a> book.</p>
-<div class="sourceCode" id="cb5"><pre class="downlit">
-<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/gadenbuie/metathis">metathis</a></span><span class="op">)</span></pre></div>
-<div class="sourceCode" id="cb6"><pre class="downlit">
-<span class="fu"><a href="reference/meta.html">meta</a></span><span class="op">(</span><span class="op">)</span> <span class="op">%&gt;%</span>
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/gadenbuie/metathis">metathis</a></span><span class="op">)</span></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="reference/meta.html">meta</a></span><span class="op">(</span><span class="op">)</span> <span class="op">%&gt;%</span>
   <span class="fu"><a href="reference/meta_general.html">meta_description</a></span><span class="op">(</span>
     <span class="st">"This book will teach you how to do data science with R..."</span>
   <span class="op">)</span> <span class="op">%&gt;%</span> 
@@ -166,7 +166,7 @@
     og_author <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"Garrett Grolemund"</span>, <span class="st">"Hadley Wickham"</span><span class="op">)</span>,
     twitter_card_type <span class="op">=</span> <span class="st">"summary"</span>,
     twitter_creator <span class="op">=</span> <span class="st">"@hadley"</span>
-  <span class="op">)</span></pre></div>
+  <span class="op">)</span></code></pre></div>
 <div class="sourceCode" id="cb7"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a><span class="co">#&gt; &lt;meta name="viewport" content="width=device-width, initial-scale=1, orientation=auto"/&gt;</span></span>
 <span id="cb7-2"><a href="#cb7-2"></a><span class="co">#&gt; &lt;meta name="description" content="This book will teach you how to do data science with R..."/&gt;</span></span>
 <span id="cb7-3"><a href="#cb7-3"></a><span class="co">#&gt; &lt;meta name="github-repo" content="hadley/r4ds"/&gt;</span></span>
@@ -192,8 +192,8 @@
 <h3 class="hasAnchor">
 <a href="#in-shiny-apps" class="anchor"></a>In Shiny Apps</h3>
 <p>To use <code>metathis</code> in Shiny apps, simply call <code><a href="reference/meta.html">meta()</a></code> and related tags anywhere inside your page UI, for example inside <code>fluidPage()</code>.</p>
-<div class="sourceCode" id="cb8"><pre class="downlit">
-<span class="va">ui</span> <span class="op">&lt;-</span> <span class="fu">fluidPage</span><span class="op">(</span>
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="va">ui</span> <span class="op">&lt;-</span> <span class="fu">fluidPage</span><span class="op">(</span>
   <span class="co"># Application title</span>
   <span class="fu">titlePanel</span><span class="op">(</span><span class="st">"metathis Example"</span><span class="op">)</span>,
   
@@ -209,7 +209,7 @@
       twitter_site <span class="op">=</span> <span class="st">"@grrrck"</span>
   <span class="op">)</span>
   <span class="co"># ... your UI ...</span>
-<span class="op">)</span></pre></div>
+<span class="op">)</span></code></pre></div>
 </div>
 <div id="in-xaringan-slides" class="section level3">
 <h3 class="hasAnchor">
