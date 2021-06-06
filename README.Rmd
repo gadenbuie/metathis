@@ -18,7 +18,7 @@ knitr::opts_chunk$set(
 
 <!-- badges: start -->
 [![CRAN status](https://www.r-pkg.org/badges/version/metathis)](https://CRAN.R-project.org/package=metathis)
-[![Lifecycle: stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://www.tidyverse.org/lifecycle/#stable)
+[![Lifecycle: stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://lifecycle.r-lib.org/articles/stages.html)
 [![travis](https://travis-ci.org/gadenbuie/metathis.svg?branch=master)](https://travis-ci.org/gadenbuie/metathis)
 [![Codecov](https://img.shields.io/codecov/c/github/gadenbuie/metathis)](https://codecov.io/github/gadenbuie/metathis)
 <!-- badges: end -->
@@ -51,14 +51,18 @@ If you want great looking social media cards, the [`meta_social()`](http://pkg.g
 You can install the latest version of metathis from [CRAN](https://CRAN.R-project.org) with:
 
 ``` r
+# CRAN
 install.packages("metathis")
 ```
 
-And the development version from [Github](https://github.com/gadenbuie/metathis) with:
+And the development version from [Github](https://github.com/gadenbuie/metathis) or [r-universe](https://gadenbuie.r-universe.dev) with:
 
 ``` r
+# r-universe
+install.packages("metathis", repos = "https://gadenbuie.r-universe.dev")
+
 # install.packages("devtools")
-devtools::install_github("gadenbuie/metathis")
+devtools::install_github("gadenbuie/metathis@main")
 ```
 
 ## Works In
