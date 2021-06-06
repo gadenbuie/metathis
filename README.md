@@ -8,7 +8,7 @@
 [![CRAN
 status](https://www.r-pkg.org/badges/version/metathis)](https://CRAN.R-project.org/package=metathis)
 [![Lifecycle:
-stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://www.tidyverse.org/lifecycle/#stable)
+stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://lifecycle.r-lib.org/articles/stages.html)
 [![travis](https://travis-ci.org/gadenbuie/metathis.svg?branch=master)](https://travis-ci.org/gadenbuie/metathis)
 [![Codecov](https://img.shields.io/codecov/c/github/gadenbuie/metathis)](https://codecov.io/github/gadenbuie/metathis)
 <!-- badges: end -->
@@ -122,7 +122,7 @@ meta() %>%
     #> <meta name="twitter:title" content="R for Data Science"/>
     #> <meta name="twitter:description" content="This book will teach you how to do data science with R..."/>
     #> <meta name="twitter:url" content="https://r4ds.had.co.nz"/>
-    #> <meta name="twitter:image:src" content="https://r4ds.had.co.nz/cover.png"/>
+    #> <meta name="twitter:image" content="https://r4ds.had.co.nz/cover.png"/>
     #> <meta name="twitter:image:alt" content="The cover of the R4DS book"/>
     #> <meta name="twitter:card" content="summary"/>
     #> <meta name="twitter:creator" content="@hadley"/>
@@ -166,8 +166,8 @@ ui <- fluidPage(
 
 To use `metathis` in [xaringan](https://slides.yihui.org/xaringan)
 slides, add `meta()` and related tags in a chunk anywhere in your
-slide’s source `.Rmd` file. This example is from a [presentation on
-the drake package](https://pkg.garrickadenbuie.com/drake-intro/).
+slide’s source `.Rmd` file. This example is from a [presentation on the
+drake package](https://pkg.garrickadenbuie.com/drake-intro/).
 
 ```` markdown
 ```{r meta, echo=FALSE}
@@ -207,7 +207,7 @@ Finally, thanks to the [RStudio team](https://github.com/rstudio) and
 others who developed [htmltools](https://github.com/rstudio/htmltools)
 for making HTML in R a breeze.
 
------
+------------------------------------------------------------------------
 
 ### Notes
 
