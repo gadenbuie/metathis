@@ -42,15 +42,20 @@ You can install the latest version of metathis from
 [CRAN](https://CRAN.R-project.org) with:
 
 ``` r
+# CRAN
 install.packages("metathis")
 ```
 
 And the development version from
-[Github](https://github.com/gadenbuie/metathis) with:
+[Github](https://github.com/gadenbuie/metathis) or
+[r-universe](https://gadenbuie.r-universe.dev) with:
 
 ``` r
+# r-universe
+install.packages("metathis", repos = "https://gadenbuie.r-universe.dev")
+
 # install.packages("devtools")
-devtools::install_github("gadenbuie/metathis")
+devtools::install_github("gadenbuie/metathis@main")
 ```
 
 ## Works In
