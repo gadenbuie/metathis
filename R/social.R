@@ -84,7 +84,7 @@ meta_social <- function(
     "twitter:title"       = title,
     "twitter:description" = description,
     "twitter:url"         = url,
-    "twitter:image:src"   = image,
+    "twitter:image"       = image,
     "twitter:image:alt"   = image_alt,
     "twitter:image:width" = image_width,
     "twitter:image:height"= image_height,
