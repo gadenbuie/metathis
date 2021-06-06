@@ -43,7 +43,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="index.html">metathis</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.0.3</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.0.3.9000</span>
       </span>
     </div>
 
@@ -113,11 +113,15 @@
 <a href="#installation" class="anchor"></a>Installation</h2>
 <p>You can install the latest version of metathis from <a href="https://CRAN.R-project.org">CRAN</a> with:</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">"metathis"</span><span class="op">)</span></code></pre></div>
-<p>And the development version from <a href="https://github.com/gadenbuie/metathis">Github</a> with:</p>
+<code class="sourceCode R"><span class="co"># CRAN</span>
+<span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">"metathis"</span><span class="op">)</span></code></pre></div>
+<p>And the development version from <a href="https://github.com/gadenbuie/metathis">Github</a> or <a href="https://gadenbuie.r-universe.dev">r-universe</a> with:</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co"># install.packages("devtools")</span>
-<span class="fu">devtools</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"gadenbuie/metathis"</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span class="co"># r-universe</span>
+<span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">"metathis"</span>, repos <span class="op">=</span> <span class="st">"https://gadenbuie.r-universe.dev"</span><span class="op">)</span>
+
+<span class="co"># install.packages("devtools")</span>
+<span class="fu">devtools</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"gadenbuie/metathis@main"</span><span class="op">)</span></code></pre></div>
 </div>
 <div id="works-in" class="section level2">
 <h2 class="hasAnchor">
@@ -173,7 +177,7 @@
 <span id="cb7-4"><a href="#cb7-4"></a><span class="co">#&gt; &lt;meta name="twitter:title" content="R for Data Science"/&gt;</span></span>
 <span id="cb7-5"><a href="#cb7-5"></a><span class="co">#&gt; &lt;meta name="twitter:description" content="This book will teach you how to do data science with R..."/&gt;</span></span>
 <span id="cb7-6"><a href="#cb7-6"></a><span class="co">#&gt; &lt;meta name="twitter:url" content="https://r4ds.had.co.nz"/&gt;</span></span>
-<span id="cb7-7"><a href="#cb7-7"></a><span class="co">#&gt; &lt;meta name="twitter:image:src" content="https://r4ds.had.co.nz/cover.png"/&gt;</span></span>
+<span id="cb7-7"><a href="#cb7-7"></a><span class="co">#&gt; &lt;meta name="twitter:image" content="https://r4ds.had.co.nz/cover.png"/&gt;</span></span>
 <span id="cb7-8"><a href="#cb7-8"></a><span class="co">#&gt; &lt;meta name="twitter:image:alt" content="The cover of the R4DS book"/&gt;</span></span>
 <span id="cb7-9"><a href="#cb7-9"></a><span class="co">#&gt; &lt;meta name="twitter:card" content="summary"/&gt;</span></span>
 <span id="cb7-10"><a href="#cb7-10"></a><span class="co">#&gt; &lt;meta name="twitter:creator" content="@hadley"/&gt;</span></span>
@@ -285,7 +289,7 @@
 <h2>Dev status</h2>
 <ul class="list-unstyled">
 <li><a href="https://CRAN.R-project.org/package=metathis"><img src="https://www.r-pkg.org/badges/version/metathis" alt="CRAN status"></a></li>
-<li><a href="https://www.tidyverse.org/lifecycle/#stable"><img src="https://img.shields.io/badge/lifecycle-stable-brightgreen.svg" alt="Lifecycle: stable"></a></li>
+<li><a href="https://lifecycle.r-lib.org/articles/stages.html"><img src="https://img.shields.io/badge/lifecycle-stable-brightgreen.svg" alt="Lifecycle: stable"></a></li>
 <li><a href="https://travis-ci.org/gadenbuie/metathis"><img src="https://travis-ci.org/gadenbuie/metathis.svg?branch=master" alt="travis"></a></li>
 <li><a href="https://codecov.io/github/gadenbuie/metathis"><img src="https://img.shields.io/codecov/c/github/gadenbuie/metathis" alt="Codecov"></a></li>
 </ul>
