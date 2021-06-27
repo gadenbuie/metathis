@@ -7,13 +7,14 @@ Authors@R:
            role = c("aut", "cre"),
            email = "garrick@adenbuie.com",
            comment = c(ORCID = "0000-0002-7111-0077"))
-Description: Create meta tags for 'R Markdown' HTML documents
-    and 'Shiny' apps for customized social media cards, for accessibility, and 
-    quality search engine indexing. 'metathis' currently supports HTML documents
-    created with 'rmarkdown', 'shiny', 'xaringan', 'pagedown', 'bookdown', and 
-    'flexdashboard'.
+Description: Create meta tags for 'R Markdown' HTML documents and 'Shiny'
+    apps for customized social media cards, for accessibility, and quality
+    search engine indexing. 'metathis' currently supports HTML documents
+    created with 'rmarkdown', 'shiny', 'xaringan', 'pagedown', 'bookdown',
+    and 'flexdashboard'.
 License: MIT + file LICENSE
-URL: https://github.com/gadenbuie/metathis
+URL: https://pkg.garrickadenbuie.com/metathis/,
+    https://github.com/gadenbuie/metathis
 BugReports: https://github.com/gadenbuie/metathis/issues
 Imports: 
     htmltools,
