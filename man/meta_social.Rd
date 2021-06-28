@@ -109,6 +109,7 @@ Other meta:
 \code{\link{meta_apple_web_app}()},
 \code{\link{meta_general}()},
 \code{\link{meta_geo}()},
+\code{\link{meta_google_scholar}()},
 \code{\link{meta_name}()},
 \code{\link{meta_tag}()},
 \code{\link{meta_viewport}()},
