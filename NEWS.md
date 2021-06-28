@@ -1,4 +1,4 @@
-# metathis (development version)
+# metathis 1.1.0
 
 - Fixed an issue with the Twitter image `<meta>` tag (thanks @llrs, #19).
 
