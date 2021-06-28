@@ -7,16 +7,16 @@ with_dir <- function(path, x) {
 test_that("blogdown is guessed correctly", {
   blogdown_dir <- file.path(tempdir(), "blogdown", "content", "post")
   dir.create(blogdown_dir, recursive = TRUE)
+  on.exit(unlink(file.path(tempdir(), "blogdown"), recursive = TRUE))
+
+  # setup fake blogdown folder structure
   dir.create(file.path(blogdown_dir, "..", "..", "layouts"))
   dir.create(file.path(blogdown_dir, "..", "..", "static"))
   cat('', file = file.path(blogdown_dir, "..", "..", "config.toml"))
 
-
   blogdown_exp <- normalizePath(file.path(tempdir(), "blogdown"))
   expect_equal(find_config(blogdown_dir), blogdown_exp)
-
   with_dir(blogdown_dir, expect_true(guess_blogdown()))
-
 
   cat('baseURL = "/"', file = file.path(blogdown_dir, "..", "..", "config.toml"))
   expect_equal(find_config(blogdown_dir), blogdown_exp)
@@ -25,8 +25,8 @@ test_that("blogdown is guessed correctly", {
   expect_null(find_config(tempdir()))
   with_dir(tempdir(), expect_false(guess_blogdown()))
 
+  # create config.toml outside of blogdown, should be detected as non-blogdown
   cat("", file = file.path(tempdir(), "config.toml"))
+  on.exit(unlink(file.path(tempdir(), "config.toml")), add = TRUE)
   with_dir(tempdir(), expect_false(guess_blogdown()))
-
-  unlink(file.path(tempdir(), "blogdown"), recursive = TRUE)
 })

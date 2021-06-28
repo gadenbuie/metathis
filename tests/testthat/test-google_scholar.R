@@ -42,6 +42,16 @@ test_that("meta_google_scholar()", {
 
 test_that("meta_google_scholar() catches common errors", {
   expect_error(meta_google_scholar(title = "foo"))
-  expect_error(meta_google_scholar(title = "a", author = "b", publication_date = "2019-01-01"))
-  expect_error(meta_google_scholar(title = "a", author = "b", publication_date = 2000, online_date = "1/1/2021"))
+  expect_error(
+    meta_google_scholar(title = "a", author = "b", publication_date = "2019-01-01"),
+    "publication_date"
+  )
+  expect_error(
+    meta_google_scholar(title = "a", author = "b", publication_date = c(1999, 2000)),
+    "publication_date"
+  )
+  expect_error(
+    meta_google_scholar(title = "a", author = "b", publication_date = 2000, online_date = "1/1/2021"),
+    "online_date"
+  )
 })
