@@ -213,7 +213,7 @@ metaDependency <- function(.meta) {
   htmltools::htmlDependency(
     paste0("metathis", "-", random_id()),
     version = metathis_version,
-    src = system.file(package = "metathis"),
+    src = c(href = "http://example.com"),
     all_files = FALSE,
     head = .meta %>% paste()
   )
