@@ -48,7 +48,7 @@ install.packages("metathis")
 
 And the development version from
 [Github](https://github.com/gadenbuie/metathis) or
-[r-universe](https://gadenbuie.r-universe.dev) with:
+[r-universe](https://gadenbuie.r-universe.dev/ui) with:
 
 ``` r
 # r-universe

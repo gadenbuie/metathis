@@ -65,6 +65,10 @@ reference:
   desc: ~
   contents:
   - '`meta_social`'
+- title: Scholarly literature and publications
+  desc: ~
+  contents:
+  - '`meta_google_scholar`'
 - title: General meta tags
   desc: ~
   contents:
