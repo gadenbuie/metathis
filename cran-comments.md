@@ -6,4 +6,4 @@ introduced in the latest version of rmarkdown (2.9).
 I apologize for missing the issue in testing
 and for the small delay between submissions;
 the issue is large enough to warrant
-immediate attention.
+an immediate fix.
