@@ -1,4 +1,6 @@
-# metathis (development version)
+# metathis 1.1.1
+
+- Fixed an issue that caused metathis to fail for versions of rmarkdown <= 2.8
 
 # metathis 1.1.0
 

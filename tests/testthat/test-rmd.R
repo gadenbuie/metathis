@@ -17,6 +17,7 @@ test_that("knit_print() and include_meta() work in Rmd", {
 
 test_that("Doesn't create empty directory for non self-contained RMarkdown", {
   skip_if_not(rmarkdown::pandoc_available("1.12.3"))
+  skip_if_not(has_package_version("rmarkdown", "2.9"))
 
   temp_dir <- tempfile("metathis-rmd")
   dir.create(temp_dir)
