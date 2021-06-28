@@ -46,7 +46,8 @@
 #'   separate tag and omit all affiliations, degrees, certifications, etc., from
 #'   this field. At least one author tag is required for inclusion in Google
 #'   Scholar.
-#' @param publication_date The date the paper was published.
+#' @param publication_date,online_date The date the paper was published in the
+#'   journal (`publication_date`) or published online (`online_date`).
 #'
 #'   The `publication_date` tag must contain the date of publication, i.e., the
 #'   date that would normally be cited in references to this paper from other
@@ -55,7 +56,7 @@
 #'   format if available; or a year alone otherwise. This tag is required for
 #'   inclusion in Google Scholar.
 #'
-#' @param journal_title,conference_title,issn,isbn,volumn,issue,firstpage,lastpage
+#' @param journal_title,conference_title,issn,isbn,volume,issue,firstpage,lastpage
 #'   For journal and conference papers, provide the remaining bibliographic
 #'   citation data in the following tags: `journal_title` or `conference_title`,
 #'   `issn`, `isbn`, `volume`, `issue`, `firstpage`, and `lastpage.` These
@@ -100,7 +101,7 @@ meta_google_scholar <- function(
   pdf_url = NULL,
   issn = NULL,
   isbn = NULL,
-  dissertation_intitution = NULL,
+  dissertation_institution = NULL,
   technical_report_institution = NULL,
   technical_report_number = NULL
 ) {
@@ -122,7 +123,7 @@ meta_google_scholar <- function(
     pdf_url          = pdf_url,
     issn             = issn,
     isbn             = isbn,
-    dissertation_intitution      = dissertation_intitution,
+    dissertation_institution     = dissertation_institution,
     technical_report_institution = technical_report_institution,
     technical_report_number      = technical_report_number
   )

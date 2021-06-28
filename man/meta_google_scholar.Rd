@@ -19,7 +19,7 @@ meta_google_scholar(
   pdf_url = NULL,
   issn = NULL,
   isbn = NULL,
-  dissertation_intitution = NULL,
+  dissertation_institution = NULL,
   technical_report_institution = NULL,
   technical_report_number = NULL
 )
@@ -45,7 +45,8 @@ separate tag and omit all affiliations, degrees, certifications, etc., from
 this field. At least one author tag is required for inclusion in Google
 Scholar.}
 
-\item{publication_date}{The date the paper was published.
+\item{publication_date, online_date}{The date the paper was published in the
+journal (\code{publication_date}) or published online (\code{online_date}).
 
 The \code{publication_date} tag must contain the date of publication, i.e., the
 date that would normally be cited in references to this paper from other
@@ -54,7 +55,7 @@ should go into \code{online_date} instead. Provide full dates in the "2010/5/12"
 format if available; or a year alone otherwise. This tag is required for
 inclusion in Google Scholar.}
 
-\item{journal_title, conference_title, issn, isbn, volumn, issue, firstpage, lastpage}{For journal and conference papers, provide the remaining bibliographic
+\item{journal_title, conference_title, issn, isbn, volume, issue, firstpage, lastpage}{For journal and conference papers, provide the remaining bibliographic
 citation data in the following tags: \code{journal_title} or \code{conference_title},
 \code{issn}, \code{isbn}, \code{volume}, \code{issue}, \code{firstpage}, and \code{lastpage.} These
 fields must contain sufficient information to identify a reference to this
