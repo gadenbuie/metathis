@@ -1,7 +1,9 @@
-This is a re-submission to remove a folder that was included by accident
-and that caused the pre-check to fail.
-
-Original submission notes:
-
-> This is a new submission and a maintenance release
-> with a small number of new features.
+I'm resubmitting this package with a hot-fix
+for an issue that occurs when this package is
+used with an older version of {rmarkdown}.
+I inadvertently relied on behavior
+introduced in the latest version of rmarkdown (2.9).
+I apologize for missing the issue in testing
+and for the small delay between submissions;
+the issue is large enough to warrant
+immediate attention.
