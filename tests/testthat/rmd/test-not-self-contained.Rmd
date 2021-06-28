@@ -1,0 +1,33 @@
+---
+title: "test-metathis-not-self-contained-rmd"
+output: 
+  html_document_base:
+    self_contained: false
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+knitr::opts_knit$get("out.format")
+knitr::opts_knit$get("rmarkdown.pandoc.to")
+```
+
+
+```{r metathis}
+library(metathis)
+
+meta() %>%
+  meta_tag(method = "KNIT_PRINT")
+```
+
+```{r metathis-2}
+meta_tag(method = "knit_print(2)")
+```
+  
+```{r}
+meta() %>% 
+  meta_tag(method = "INCLUDE_META()") %>% 
+  include_meta()
+```

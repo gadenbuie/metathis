@@ -8,15 +8,16 @@
 \description{
 \if{html}{\figure{logo.png}{options: align='right' alt='logo' width='120'}}
 
-Create meta tags for 'R Markdown' HTML documents
-    and 'Shiny' apps for customized social media cards, for accessibility, and 
-    quality search engine indexing. 'metathis' currently supports HTML documents
-    created with 'rmarkdown', 'shiny', 'xaringan', 'pagedown', 'bookdown', and 
-    'flexdashboard'.
+Create meta tags for 'R Markdown' HTML documents and 'Shiny'
+    apps for customized social media cards, for accessibility, and quality
+    search engine indexing. 'metathis' currently supports HTML documents
+    created with 'rmarkdown', 'shiny', 'xaringan', 'pagedown', 'bookdown',
+    and 'flexdashboard'.
 }
 \seealso{
 Useful links:
 \itemize{
+  \item \url{https://pkg.garrickadenbuie.com/metathis/}
   \item \url{https://github.com/gadenbuie/metathis}
   \item Report bugs at \url{https://github.com/gadenbuie/metathis/issues}
 }
