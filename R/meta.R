@@ -210,10 +210,16 @@ prepend_to_meta <- function(.meta, .list = NULL) {
 metaDependency <- function(.meta) {
   assert_is_meta(.meta)
 
+  src <- if (has_package_version("rmarkdown", 2.9)) {
+    c(href = "/")
+  } else {
+    system.file(package = "metathis")
+  }
+
   htmltools::htmlDependency(
     paste0("metathis", "-", random_id()),
     version = metathis_version,
-    src = c(href = "http://example.com"),
+    src = src,
     all_files = FALSE,
     head = .meta %>% paste()
   )

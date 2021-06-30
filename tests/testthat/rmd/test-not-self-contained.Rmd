@@ -1,8 +1,8 @@
 ---
 title: "test-metathis-not-self-contained-rmd"
 output: 
-  html_document_base:
-    self_contained: false
+  html_document:
+    self_contained: no
 ---
 
 ```{r setup, include=FALSE}
