@@ -268,42 +268,43 @@ or other HTML locations.</p>
 <code><a href='meta.html'>meta</a>()</code></p></div>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'>meta_google_scholar</span><span class='op'>(</span>
-  title <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span>
-    <span class='st'>"The testis isoform of the phosphorylase kinase catalytic subunit (PhK-T)"</span>,
-    <span class='st'>"plays a critical role in regulation of glycogen mobilization in developing lung"</span>
-  <span class='op'>)</span>,
-  author <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span>
-    <span class='st'>"Liu, Li"</span>,
-    <span class='st'>"Rannels, Stephen R."</span>,
-    <span class='st'>"Falconieri, Mary"</span>,
-    <span class='st'>"Phillips, Karen S."</span>,
-    <span class='st'>"Wolpert, Ellen B."</span>,
-    <span class='st'>"Weaver, Timothy E."</span>
-  <span class='op'>)</span>,
-  publication_date <span class='op'>=</span> <span class='st'>"1996/05/17"</span>,
-  journal_title <span class='op'>=</span> <span class='st'>"Journal of Biological Chemistry"</span>,
-  volume <span class='op'>=</span> <span class='fl'>271</span>,
-  issue <span class='op'>=</span> <span class='fl'>20</span>,
-  firstpage <span class='op'>=</span> <span class='fl'>11761</span>,
-  lastpage <span class='op'>=</span> <span class='fl'>11766</span>,
-  pdf_url <span class='op'>=</span> <span class='st'>"http://www.example.com/content/271/20/11761.full.pdf"</span>
-<span class='op'>)</span>
-</div><div class='output co'>#&gt; &lt;meta name="citation_title" content="The testis isoform of the phosphorylase kinase catalytic subunit (PhK-T) plays a critical role in regulation of glycogen mobilization in developing lung"/&gt;
-#&gt; &lt;meta name="citation_author" content="Liu, Li"/&gt;
-#&gt; &lt;meta name="citation_author" content="Rannels, Stephen R."/&gt;
-#&gt; &lt;meta name="citation_author" content="Falconieri, Mary"/&gt;
-#&gt; &lt;meta name="citation_author" content="Phillips, Karen S."/&gt;
-#&gt; &lt;meta name="citation_author" content="Wolpert, Ellen B."/&gt;
-#&gt; &lt;meta name="citation_author" content="Weaver, Timothy E."/&gt;
-#&gt; &lt;meta name="citation_publication_date" content="1996/05/17"/&gt;
-#&gt; &lt;meta name="citation_journal_title" content="Journal of Biological Chemistry"/&gt;
-#&gt; &lt;meta name="citation_volume" content="271"/&gt;
-#&gt; &lt;meta name="citation_issue" content="20"/&gt;
-#&gt; &lt;meta name="citation_firstpage" content="11761"/&gt;
-#&gt; &lt;meta name="citation_lastpage" content="11766"/&gt;
-#&gt; &lt;meta name="citation_pdf_url" content="http://www.example.com/content/271/20/11761.full.pdf"/&gt;</div><div class='input'>
-</div></pre>
+    <pre class="examples"><span class='r-in'><span class='fu'>meta_google_scholar</span><span class='op'>(</span></span>
+<span class='r-in'>  title <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span></span>
+<span class='r-in'>    <span class='st'>"The testis isoform of the phosphorylase kinase catalytic subunit (PhK-T)"</span>,</span>
+<span class='r-in'>    <span class='st'>"plays a critical role in regulation of glycogen mobilization in developing lung"</span></span>
+<span class='r-in'>  <span class='op'>)</span>,</span>
+<span class='r-in'>  author <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span></span>
+<span class='r-in'>    <span class='st'>"Liu, Li"</span>,</span>
+<span class='r-in'>    <span class='st'>"Rannels, Stephen R."</span>,</span>
+<span class='r-in'>    <span class='st'>"Falconieri, Mary"</span>,</span>
+<span class='r-in'>    <span class='st'>"Phillips, Karen S."</span>,</span>
+<span class='r-in'>    <span class='st'>"Wolpert, Ellen B."</span>,</span>
+<span class='r-in'>    <span class='st'>"Weaver, Timothy E."</span></span>
+<span class='r-in'>  <span class='op'>)</span>,</span>
+<span class='r-in'>  publication_date <span class='op'>=</span> <span class='st'>"1996/05/17"</span>,</span>
+<span class='r-in'>  journal_title <span class='op'>=</span> <span class='st'>"Journal of Biological Chemistry"</span>,</span>
+<span class='r-in'>  volume <span class='op'>=</span> <span class='fl'>271</span>,</span>
+<span class='r-in'>  issue <span class='op'>=</span> <span class='fl'>20</span>,</span>
+<span class='r-in'>  firstpage <span class='op'>=</span> <span class='fl'>11761</span>,</span>
+<span class='r-in'>  lastpage <span class='op'>=</span> <span class='fl'>11766</span>,</span>
+<span class='r-in'>  pdf_url <span class='op'>=</span> <span class='st'>"http://www.example.com/content/271/20/11761.full.pdf"</span></span>
+<span class='r-in'><span class='op'>)</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> &lt;meta name="citation_title" content="The testis isoform of the phosphorylase kinase catalytic subunit (PhK-T) plays a critical role in regulation of glycogen mobilization in developing lung"/&gt;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> &lt;meta name="citation_author" content="Liu, Li"/&gt;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> &lt;meta name="citation_author" content="Rannels, Stephen R."/&gt;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> &lt;meta name="citation_author" content="Falconieri, Mary"/&gt;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> &lt;meta name="citation_author" content="Phillips, Karen S."/&gt;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> &lt;meta name="citation_author" content="Wolpert, Ellen B."/&gt;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> &lt;meta name="citation_author" content="Weaver, Timothy E."/&gt;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> &lt;meta name="citation_publication_date" content="1996/05/17"/&gt;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> &lt;meta name="citation_journal_title" content="Journal of Biological Chemistry"/&gt;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> &lt;meta name="citation_volume" content="271"/&gt;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> &lt;meta name="citation_issue" content="20"/&gt;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> &lt;meta name="citation_firstpage" content="11761"/&gt;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> &lt;meta name="citation_lastpage" content="11766"/&gt;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> &lt;meta name="citation_pdf_url" content="http://www.example.com/content/271/20/11761.full.pdf"/&gt;</span>
+<span class='r-in'></span>
+</pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">

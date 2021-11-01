@@ -166,12 +166,12 @@ by a <code>meta_*()</code> object.</p></td>
     <tr>
       <th>icbm</th>
       <td><p>Latitude and longitude of geographic positions specified as
-<code>"lat, long"</code>. Can optionally be a length-two vector, i.e. <code><a href='https://rdrr.io/r/base/c.html'>c(lat, long)</a></code>.</p></td>
+<code>"lat, long"</code>. Can optionally be a length-two vector, i.e. <code>c(lat, long)</code>.</p></td>
     </tr>
     <tr>
       <th>geo_position</th>
       <td><p>Latitude and longitude of geographic positions specified
-as <code>"lat;long"</code>. Can optionally be a length-two vector, i.e. <code><a href='https://rdrr.io/r/base/c.html'>c(lat, long)</a></code>.</p></td>
+as <code>"lat;long"</code>. Can optionally be a length-two vector, i.e. <code>c(lat, long)</code>.</p></td>
     </tr>
     <tr>
       <th>geo_region</th>
@@ -217,18 +217,19 @@ or other HTML locations.</p>
 <code><a href='meta.html'>meta</a>()</code></p></div>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'><a href='meta.html'>meta</a></span><span class='op'>(</span><span class='op'>)</span> <span class='op'>%&gt;%</span>
-  <span class='fu'>meta_geo</span><span class='op'>(</span>
-    icbm <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>50.167958</span>, <span class='op'>-</span><span class='fl'>97.133185</span><span class='op'>)</span>,
-    geo_position <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>50.167958</span>, <span class='op'>-</span><span class='fl'>97.133185</span><span class='op'>)</span>,
-    geo_placename <span class='op'>=</span> <span class='st'>"Manitoba, Canada"</span>,
-    geo_region <span class='op'>=</span> <span class='st'>"ca-mb"</span>
-  <span class='op'>)</span>
-</div><div class='output co'>#&gt; &lt;meta name="ICBM" content="50.167958, -97.133185"/&gt;
-#&gt; &lt;meta name="geo.position" content="50.167958;-97.133185"/&gt;
-#&gt; &lt;meta name="geo.region" content="ca-mb"/&gt;
-#&gt; &lt;meta name="geo.placename" content="Manitoba, Canada"/&gt;</div><div class='input'>
-</div></pre>
+    <pre class="examples"><span class='r-in'><span class='fu'><a href='meta.html'>meta</a></span><span class='op'>(</span><span class='op'>)</span> <span class='op'><a href='%>%.html'>%&gt;%</a></span></span>
+<span class='r-in'>  <span class='fu'>meta_geo</span><span class='op'>(</span></span>
+<span class='r-in'>    icbm <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>50.167958</span>, <span class='op'>-</span><span class='fl'>97.133185</span><span class='op'>)</span>,</span>
+<span class='r-in'>    geo_position <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>50.167958</span>, <span class='op'>-</span><span class='fl'>97.133185</span><span class='op'>)</span>,</span>
+<span class='r-in'>    geo_placename <span class='op'>=</span> <span class='st'>"Manitoba, Canada"</span>,</span>
+<span class='r-in'>    geo_region <span class='op'>=</span> <span class='st'>"ca-mb"</span></span>
+<span class='r-in'>  <span class='op'>)</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> &lt;meta name="ICBM" content="50.167958, -97.133185"/&gt;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> &lt;meta name="geo.position" content="50.167958;-97.133185"/&gt;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> &lt;meta name="geo.region" content="ca-mb"/&gt;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> &lt;meta name="geo.placename" content="Manitoba, Canada"/&gt;</span>
+<span class='r-in'></span>
+</pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">

@@ -174,7 +174,7 @@ by a <code>meta_*()</code> object.</p></td>
       <th>width</th>
       <td><p>Sets the width of initial viewport. <code>width</code> sets <code>min_width</code> and
 <code>max_width</code> and may contain two values; for example, the following are
-equivalent: <code>"300px 500px"</code> or <code><a href='https://rdrr.io/r/base/c.html'>c("300px", "500px")</a></code>). The values may be
+equivalent: <code>"300px 500px"</code> or <code>c("300px", "500px")</code>). The values may be
 a number with units, a percentage, or <code>"device-width"</code>. Pixels are assumed
 if no units are provided.</p></td>
     </tr>
@@ -238,16 +238,19 @@ or other HTML locations.</p>
 <code><a href='meta.html'>meta</a>()</code></p></div>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'><a href='meta.html'>meta</a></span><span class='op'>(</span><span class='op'>)</span> <span class='op'>%&gt;%</span>
-  <span class='fu'>meta_viewport</span><span class='op'>(</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; &lt;meta name="viewport" content="width=device-width, initial-scale=1, orientation=auto"/&gt;</div><div class='input'>
-<span class='fu'><a href='meta.html'>meta</a></span><span class='op'>(</span><span class='op'>)</span> <span class='op'>%&gt;%</span>
-  <span class='fu'>meta_viewport</span><span class='op'>(</span>orientation <span class='op'>=</span> <span class='cn'>NULL</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; &lt;meta name="viewport" content="width=device-width, initial-scale=1"/&gt;</div><div class='input'>
-<span class='fu'><a href='meta.html'>meta</a></span><span class='op'>(</span><span class='op'>)</span> <span class='op'>%&gt;%</span>
-  <span class='fu'>meta_viewport</span><span class='op'>(</span>maximum_scale <span class='op'>=</span> <span class='fl'>1</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; &lt;meta name="viewport" content="width=device-width, initial-scale=1, orientation=auto, maximum-scale=1"/&gt;</div><div class='input'>
-</div></pre>
+    <pre class="examples"><span class='r-in'><span class='fu'><a href='meta.html'>meta</a></span><span class='op'>(</span><span class='op'>)</span> <span class='op'><a href='%>%.html'>%&gt;%</a></span></span>
+<span class='r-in'>  <span class='fu'>meta_viewport</span><span class='op'>(</span><span class='op'>)</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> &lt;meta name="viewport" content="width=device-width, initial-scale=1, orientation=auto"/&gt;</span>
+<span class='r-in'></span>
+<span class='r-in'><span class='fu'><a href='meta.html'>meta</a></span><span class='op'>(</span><span class='op'>)</span> <span class='op'><a href='%>%.html'>%&gt;%</a></span></span>
+<span class='r-in'>  <span class='fu'>meta_viewport</span><span class='op'>(</span>orientation <span class='op'>=</span> <span class='cn'>NULL</span><span class='op'>)</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> &lt;meta name="viewport" content="width=device-width, initial-scale=1"/&gt;</span>
+<span class='r-in'></span>
+<span class='r-in'><span class='fu'><a href='meta.html'>meta</a></span><span class='op'>(</span><span class='op'>)</span> <span class='op'><a href='%>%.html'>%&gt;%</a></span></span>
+<span class='r-in'>  <span class='fu'>meta_viewport</span><span class='op'>(</span>maximum_scale <span class='op'>=</span> <span class='fl'>1</span><span class='op'>)</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> &lt;meta name="viewport" content="width=device-width, initial-scale=1, orientation=auto, maximum-scale=1"/&gt;</span>
+<span class='r-in'></span>
+</pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
