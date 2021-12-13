@@ -31,6 +31,8 @@
 <![endif]-->
 </head>
 <body data-spy="scroll" data-target="#toc">
+    
+
     <div class="container template-home">
       <header><div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -43,7 +45,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="index.html">metathis</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.1.1</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">1.1.1</span>
       </span>
     </div>
 
@@ -65,19 +67,19 @@
   </a>
 </li>
 <li>
-  <a href="https://github.com/gadenbuie/metathis">
+  <a href="https://github.com/gadenbuie/metathis" class="external-link">
     <span class="fab fa-github fa-lg"></span>
      
   </a>
 </li>
 <li>
-  <a href="https://twitter.com/grrrck">
+  <a href="https://twitter.com/grrrck" class="external-link">
     <span class="fab fa-twitter fa-lg"></span>
      
   </a>
 </li>
 <li>
-  <a href="https://garrickadenbuie.com">
+  <a href="https://garrickadenbuie.com" class="external-link">
     <span class="fas fa-home fa-lg"></span>
      
   </a>
@@ -94,45 +96,45 @@
 
       </header><div class="row">
   <div class="contents col-md-9">
-<div id="metathis-" class="section level1">
-<div class="page-header"><h1 class="hasAnchor">
-<a href="#metathis-" class="anchor"></a>metathis <a href="https://pkg.garrickadenbuie.com/metathis/"><img src="reference/figures/logo.png" align="right" height="120"></a>
+<div class="section level1">
+<div class="page-header"><h1 id="metathis-">metathis <a href="https://pkg.garrickadenbuie.com/metathis/"><img src="reference/figures/logo.png" align="right" height="120"></a>
+<a class="anchor" aria-label="anchor" href="#metathis-"></a>
 </h1></div>
 <!-- badges: start -->
 
-<div id="why-metathis" class="section level2">
-<h2 class="hasAnchor">
-<a href="#why-metathis" class="anchor"></a>Why metathis?</h2>
-<p>The goal of <strong>metathis</strong> is to help you add HTML <code>&lt;meta&gt;</code> tags to your <a href="https://rmarkdown.rstudio.com">R Markdown</a> and <a href="https://shiny.rstudio.com">Shiny</a> apps.</p>
+<div class="section level2">
+<h2 id="why-metathis">Why metathis?<a class="anchor" aria-label="anchor" href="#why-metathis"></a>
+</h2>
+<p>The goal of <strong>metathis</strong> is to help you add HTML <code>&lt;meta&gt;</code> tags to your <a href="https://rmarkdown.rstudio.com" class="external-link">R Markdown</a> and <a href="https://shiny.rstudio.com" class="external-link">Shiny</a> apps.</p>
 <p>HTML <code>&lt;meta&gt;</code> tags provide browsers and social media with metadata about HTML pages. Using <code>&lt;meta&gt;</code> tags will help your users find your articles, Shiny apps, and presentations, and will help you make sure they look great in social media timelines.</p>
-<p><strong>metathis</strong> makes the process of adding these tags to your R Markdown pages and Shiny apps easier by using the <a href="https://github.com/rstudio/htmltools">htmltools</a> package to add <code>&lt;meta&gt;</code> tags as a dependency, added directly to the document in an R code chunk or your Shiny app UI rather than requiring you to adjust templates or write additional files.</p>
-<p>If you want great looking social media cards, the <a href="http://pkg.garrickadenbuie.com/metathis/reference/meta_social.html"><code>meta_social()</code></a> function will help you add everything you need for Twitter, Facebook and other social media sites that support the Open Graph protocol.</p>
+<p><strong>metathis</strong> makes the process of adding these tags to your R Markdown pages and Shiny apps easier by using the <a href="https://github.com/rstudio/htmltools" class="external-link">htmltools</a> package to add <code>&lt;meta&gt;</code> tags as a dependency, added directly to the document in an R code chunk or your Shiny app UI rather than requiring you to adjust templates or write additional files.</p>
+<p>If you want great looking social media cards, the <a href="http://pkg.garrickadenbuie.com/metathis/reference/meta_social.html" class="external-link"><code>meta_social()</code></a> function will help you add everything you need for Twitter, Facebook and other social media sites that support the Open Graph protocol.</p>
 </div>
-<div id="installation" class="section level2">
-<h2 class="hasAnchor">
-<a href="#installation" class="anchor"></a>Installation</h2>
-<p>You can install the latest version of metathis from <a href="https://CRAN.R-project.org">CRAN</a> with:</p>
+<div class="section level2">
+<h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
+</h2>
+<p>You can install the latest version of metathis from <a href="https://CRAN.R-project.org" class="external-link">CRAN</a> with:</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># CRAN</span>
-<span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">"metathis"</span><span class="op">)</span></code></pre></div>
-<p>And the development version from <a href="https://github.com/gadenbuie/metathis">Github</a> or <a href="https://gadenbuie.r-universe.dev/ui">r-universe</a> with:</p>
+<span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"metathis"</span><span class="op">)</span></code></pre></div>
+<p>And the development version from <a href="https://github.com/gadenbuie/metathis" class="external-link">Github</a> or <a href="https://gadenbuie.r-universe.dev/ui" class="external-link">r-universe</a> with:</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># r-universe</span>
-<span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">"metathis"</span>, repos <span class="op">=</span> <span class="st">"https://gadenbuie.r-universe.dev"</span><span class="op">)</span>
+<span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"metathis"</span>, repos <span class="op">=</span> <span class="st">"https://gadenbuie.r-universe.dev"</span><span class="op">)</span>
 
 <span class="co"># install.packages("devtools")</span>
 <span class="fu">devtools</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"gadenbuie/metathis@main"</span><span class="op">)</span></code></pre></div>
 </div>
-<div id="works-in" class="section level2">
-<h2 class="hasAnchor">
-<a href="#works-in" class="anchor"></a>Works In</h2>
-<p>✅ <a href="https://rmarkdown.rstudio.com">R Markdown</a> HTML Documents<br>
-✅ <a href="https://shiny.rstudio.com">Shiny</a> Apps<br>
-✅ <a href="https://slides.yihui.org/xaringan">xaringan</a><br>
-✅ <a href="https://github.com/rstudio/pagedown">pagedown</a><br>
-✅ <a href="https://bookdown.org/">bookdown</a><br>
-❌ <a href="https://bookdown.org/yihui/blogdown">blogdown</a><sup>1</sup><br>
-❌ <a href="https://pkgdown.r-lib.org">pkgdown</a></p>
+<div class="section level2">
+<h2 id="works-in">Works In<a class="anchor" aria-label="anchor" href="#works-in"></a>
+</h2>
+<p>✅ <a href="https://rmarkdown.rstudio.com" class="external-link">R Markdown</a> HTML Documents<br>
+✅ <a href="https://shiny.rstudio.com" class="external-link">Shiny</a> Apps<br>
+✅ <a href="https://slides.yihui.org/xaringan" class="external-link">xaringan</a><br>
+✅ <a href="https://github.com/rstudio/pagedown" class="external-link">pagedown</a><br>
+✅ <a href="https://bookdown.org/" class="external-link">bookdown</a><br>
+❌ <a href="https://bookdown.org/yihui/blogdown" class="external-link">blogdown</a><sup>1</sup><br>
+❌ <a href="https://pkgdown.r-lib.org" class="external-link">pkgdown</a></p>
 <p><code>&lt;meta&gt;</code> tags can be added to ✅ packages with a standard R chunk</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1"></a><span class="bn">```{r, echo=FALSE}</span></span>
 <span id="cb3-2"><a href="#cb3-2"></a><span class="bn">meta() %&gt;% </span></span>
@@ -145,29 +147,29 @@
 <span id="cb4-4"><a href="#cb4-4"></a><span class="bn">  write_meta("meta.html")</span></span>
 <span id="cb4-5"><a href="#cb4-5"></a><span class="bn">```</span></span></code></pre></div>
 </div>
-<div id="example" class="section level2">
-<h2 class="hasAnchor">
-<a href="#example" class="anchor"></a>Example</h2>
-<div id="in-r-markdown" class="section level3">
-<h3 class="hasAnchor">
-<a href="#in-r-markdown" class="anchor"></a>In R Markdown</h3>
-<p>This is a basic example that re-creates the <code>&lt;meta&gt;</code> tags for the <a href="https://r4ds.had.co.nz/">R for Data Science</a> book.</p>
+<div class="section level2">
+<h2 id="example">Example<a class="anchor" aria-label="anchor" href="#example"></a>
+</h2>
+<div class="section level3">
+<h3 id="in-r-markdown">In R Markdown<a class="anchor" aria-label="anchor" href="#in-r-markdown"></a>
+</h3>
+<p>This is a basic example that re-creates the <code>&lt;meta&gt;</code> tags for the <a href="https://r4ds.had.co.nz/" class="external-link">R for Data Science</a> book.</p>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://pkg.garrickadenbuie.com/metathis/">metathis</a></span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://pkg.garrickadenbuie.com/metathis/">metathis</a></span><span class="op">)</span></code></pre></div>
 <div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="reference/meta.html">meta</a></span><span class="op">(</span><span class="op">)</span> <span class="op"><a href="reference/%&gt;%.html">%&gt;%</a></span>
+<code class="sourceCode R"><span class="fu"><a href="reference/meta.html">meta</a></span><span class="op">(</span><span class="op">)</span> <span class="op"><a href="reference/pipe.html">%&gt;%</a></span>
   <span class="fu"><a href="reference/meta_general.html">meta_description</a></span><span class="op">(</span>
     <span class="st">"This book will teach you how to do data science with R..."</span>
-  <span class="op">)</span> <span class="op"><a href="reference/%&gt;%.html">%&gt;%</a></span> 
-  <span class="fu"><a href="reference/meta_name.html">meta_name</a></span><span class="op">(</span><span class="st">"github-repo"</span> <span class="op">=</span> <span class="st">"hadley/r4ds"</span><span class="op">)</span> <span class="op"><a href="reference/%&gt;%.html">%&gt;%</a></span> 
-  <span class="fu"><a href="reference/meta_viewport.html">meta_viewport</a></span><span class="op">(</span><span class="op">)</span> <span class="op"><a href="reference/%&gt;%.html">%&gt;%</a></span> 
+  <span class="op">)</span> <span class="op"><a href="reference/pipe.html">%&gt;%</a></span> 
+  <span class="fu"><a href="reference/meta_name.html">meta_name</a></span><span class="op">(</span><span class="st">"github-repo"</span> <span class="op">=</span> <span class="st">"hadley/r4ds"</span><span class="op">)</span> <span class="op"><a href="reference/pipe.html">%&gt;%</a></span> 
+  <span class="fu"><a href="reference/meta_viewport.html">meta_viewport</a></span><span class="op">(</span><span class="op">)</span> <span class="op"><a href="reference/pipe.html">%&gt;%</a></span> 
   <span class="fu"><a href="reference/meta_social.html">meta_social</a></span><span class="op">(</span>
     title <span class="op">=</span> <span class="st">"R for Data Science"</span>,
     url <span class="op">=</span> <span class="st">"https://r4ds.had.co.nz"</span>,
     image <span class="op">=</span> <span class="st">"https://r4ds.had.co.nz/cover.png"</span>,
     image_alt <span class="op">=</span> <span class="st">"The cover of the R4DS book"</span>,
     og_type <span class="op">=</span> <span class="st">"book"</span>,
-    og_author <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"Garrett Grolemund"</span>, <span class="st">"Hadley Wickham"</span><span class="op">)</span>,
+    og_author <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"Garrett Grolemund"</span>, <span class="st">"Hadley Wickham"</span><span class="op">)</span>,
     twitter_card_type <span class="op">=</span> <span class="st">"summary"</span>,
     twitter_creator <span class="op">=</span> <span class="st">"@hadley"</span>
   <span class="op">)</span></code></pre></div>
@@ -192,16 +194,16 @@
 <span id="cb7-19"><a href="#cb7-19"></a><span class="co">#&gt; &lt;meta property="article:author" content="Garrett Grolemund"/&gt;</span></span>
 <span id="cb7-20"><a href="#cb7-20"></a><span class="co">#&gt; &lt;meta property="article:author" content="Hadley Wickham"/&gt;</span></span></code></pre></div>
 </div>
-<div id="in-shiny-apps" class="section level3">
-<h3 class="hasAnchor">
-<a href="#in-shiny-apps" class="anchor"></a>In Shiny Apps</h3>
+<div class="section level3">
+<h3 id="in-shiny-apps">In Shiny Apps<a class="anchor" aria-label="anchor" href="#in-shiny-apps"></a>
+</h3>
 <p>To use <code>metathis</code> in Shiny apps, simply call <code><a href="reference/meta.html">meta()</a></code> and related tags anywhere inside your page UI, for example inside <code>fluidPage()</code>.</p>
 <div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">ui</span> <span class="op">&lt;-</span> <span class="fu">fluidPage</span><span class="op">(</span>
   <span class="co"># Application title</span>
   <span class="fu">titlePanel</span><span class="op">(</span><span class="st">"metathis Example"</span><span class="op">)</span>,
   
-  <span class="fu"><a href="reference/meta.html">meta</a></span><span class="op">(</span><span class="op">)</span> <span class="op"><a href="reference/%&gt;%.html">%&gt;%</a></span>
+  <span class="fu"><a href="reference/meta.html">meta</a></span><span class="op">(</span><span class="op">)</span> <span class="op"><a href="reference/pipe.html">%&gt;%</a></span>
     <span class="fu"><a href="reference/meta_social.html">meta_social</a></span><span class="op">(</span>
       title <span class="op">=</span> <span class="st">"metathis"</span>,
       description <span class="op">=</span> <span class="st">"&lt;meta&gt; and social media cards for web things in R"</span>,
@@ -215,10 +217,10 @@
   <span class="co"># ... your UI ...</span>
 <span class="op">)</span></code></pre></div>
 </div>
-<div id="in-xaringan-slides" class="section level3">
-<h3 class="hasAnchor">
-<a href="#in-xaringan-slides" class="anchor"></a>In xaringan Slides</h3>
-<p>To use <code>metathis</code> in <a href="https://slides.yihui.org/xaringan">xaringan</a> slides, add <code><a href="reference/meta.html">meta()</a></code> and related tags in a chunk anywhere in your slide’s source <code>.Rmd</code> file. This example is from a <a href="https://pkg.garrickadenbuie.com/drake-intro/">presentation on the drake package</a>.</p>
+<div class="section level3">
+<h3 id="in-xaringan-slides">In xaringan Slides<a class="anchor" aria-label="anchor" href="#in-xaringan-slides"></a>
+</h3>
+<p>To use <code>metathis</code> in <a href="https://slides.yihui.org/xaringan" class="external-link">xaringan</a> slides, add <code><a href="reference/meta.html">meta()</a></code> and related tags in a chunk anywhere in your slide’s source <code>.Rmd</code> file. This example is from a <a href="https://pkg.garrickadenbuie.com/drake-intro/" class="external-link">presentation on the drake package</a>.</p>
 <div class="sourceCode" id="cb9"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb9-1"><a href="#cb9-1"></a><span class="bn">```{r meta, echo=FALSE}</span></span>
 <span id="cb9-2"><a href="#cb9-2"></a><span class="bn">library(metathis)</span></span>
 <span id="cb9-3"><a href="#cb9-3"></a><span class="bn">meta() %&gt;%</span></span>
@@ -240,18 +242,18 @@
 <span id="cb9-19"><a href="#cb9-19"></a><span class="bn">```</span></span></code></pre></div>
 </div>
 </div>
-<div id="thanks" class="section level2">
-<h2 class="hasAnchor">
-<a href="#thanks" class="anchor"></a>Thanks</h2>
-<p>Thanks to <a href="https://github.com/joshbuchea">Josh Buchea</a> for providing an <a href="https://github.com/joshbuchea/HEAD">excellent and indispensable resource</a> on <code>&lt;meta&gt;</code> tags and other things that go in the HTML <code>&lt;head&gt;</code> tags.</p>
-<p>Thanks also to <a href="https://github.com/malcolmbarrett">Malcolm Barret</a>. Watching over his shoulder as he developed <a href="https://ymlthis.r-lib.org">ymlthis</a> made putting this package together so much easier.</p>
-<p>Finally, thanks to the <a href="https://github.com/rstudio">RStudio team</a> and others who developed <a href="https://github.com/rstudio/htmltools">htmltools</a> for making HTML in R a breeze.</p>
+<div class="section level2">
+<h2 id="thanks">Thanks<a class="anchor" aria-label="anchor" href="#thanks"></a>
+</h2>
+<p>Thanks to <a href="https://github.com/joshbuchea" class="external-link">Josh Buchea</a> for providing an <a href="https://github.com/joshbuchea/HEAD" class="external-link">excellent and indispensable resource</a> on <code>&lt;meta&gt;</code> tags and other things that go in the HTML <code>&lt;head&gt;</code> tags.</p>
+<p>Thanks also to <a href="https://github.com/malcolmbarrett" class="external-link">Malcolm Barret</a>. Watching over his shoulder as he developed <a href="https://ymlthis.r-lib.org" class="external-link">ymlthis</a> made putting this package together so much easier.</p>
+<p>Finally, thanks to the <a href="https://github.com/rstudio" class="external-link">RStudio team</a> and others who developed <a href="https://github.com/rstudio/htmltools" class="external-link">htmltools</a> for making HTML in R a breeze.</p>
 <hr>
-<div id="notes" class="section level3">
-<h3 class="hasAnchor">
-<a href="#notes" class="anchor"></a>Notes</h3>
-<ol>
-<li>For adding meta tags to blogdown sites, <a href="https://xvrdm.github.io/2017/10/23/socialize-your-blogdown/">Socialize your blogdown by Xavier A</a> is an excellent resource and you can use metathis to help discover the tags you need while following the instructions in the article.</li>
+<div class="section level3">
+<h3 id="notes">Notes<a class="anchor" aria-label="anchor" href="#notes"></a>
+</h3>
+<ol style="list-style-type: decimal">
+<li>For adding meta tags to blogdown sites, <a href="https://xvrdm.github.io/2017/10/23/socialize-your-blogdown/" class="external-link">Socialize your blogdown by Xavier A</a> is an excellent resource and you can use metathis to help discover the tags you need while following the instructions in the article.</li>
 </ol>
 </div>
 </div>
@@ -260,50 +262,60 @@
 
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <div class="links">
-<h2>Links</h2>
+<h2 data-toc-skip>Links</h2>
 <ul class="list-unstyled">
-<li>Download from CRAN at <br><a href="https://cloud.r-project.org/package=metathis">https://​cloud.r-project.org/​package=metathis</a>
-</li>
-<li>Browse source code at <br><a href="https://github.com/gadenbuie/metathis/">https://​github.com/​gadenbuie/​metathis/​</a>
-</li>
-<li>Report a bug at <br><a href="https://github.com/gadenbuie/metathis/issues">https://​github.com/​gadenbuie/​metathis/​issues</a>
-</li>
-</ul>
-</div>
-<div class="license">
-<h2>License</h2>
-<ul class="list-unstyled">
-<li><a href="LICENSE.html">Full license</a></li>
-<li><small><a href="https://opensource.org/licenses/mit-license.php">MIT</a> + file <a href="LICENSE-text.html">LICENSE</a></small></li>
-</ul>
-</div>
-<div class="developers">
-<h2>Developers</h2>
-<ul class="list-unstyled">
-<li>
-<a href="https://www.garrickadenbuie.com">Garrick Aden-Buie</a> <br><small class="roles"> Author, maintainer </small> <a href="https://orcid.org/0000-0002-7111-0077" target="orcid.widget" aria-label="ORCID"><span class="fab fa-orcid orcid" aria-hidden="true"></span></a> </li>
+<li><a href="https://cloud.r-project.org/package=metathis" class="external-link">View on CRAN</a></li>
+<li><a href="https://github.com/gadenbuie/metathis/" class="external-link">Browse source code</a></li>
+<li><a href="https://github.com/gadenbuie/metathis/issues" class="external-link">Report a bug</a></li>
 </ul>
 </div>
 
-  <div class="dev-status">
-<h2>Dev status</h2>
+<div class="license">
+<h2 data-toc-skip>License</h2>
 <ul class="list-unstyled">
-<li><a href="https://CRAN.R-project.org/package=metathis"><img src="https://www.r-pkg.org/badges/version/metathis" alt="CRAN status"></a></li>
-<li><a href="https://lifecycle.r-lib.org/articles/stages.html"><img src="https://img.shields.io/badge/lifecycle-stable-brightgreen.svg" alt="Lifecycle: stable"></a></li>
-<li><a href="https://travis-ci.org/gadenbuie/metathis"><img src="https://travis-ci.org/gadenbuie/metathis.svg?branch=master" alt="travis"></a></li>
-<li><a href="https://codecov.io/github/gadenbuie/metathis"><img src="https://img.shields.io/codecov/c/github/gadenbuie/metathis" alt="Codecov"></a></li>
+<li><a href="LICENSE.html">Full license</a></li>
+<li><small><a href="https://opensource.org/licenses/mit-license.php" class="external-link">MIT</a> + file <a href="LICENSE-text.html">LICENSE</a></small></li>
 </ul>
 </div>
+
+
+<div class="citation">
+<h2 data-toc-skip>Citation</h2>
+<ul class="list-unstyled">
+<li><a href="authors.html#citation">Citing metathis</a></li>
+</ul>
 </div>
+
+<div class="developers">
+<h2 data-toc-skip>Developers</h2>
+<ul class="list-unstyled">
+<li>
+<a href="https://www.garrickadenbuie.com" class="external-link">Garrick Aden-Buie</a> <br><small class="roles"> Author, maintainer </small> <a href="https://orcid.org/0000-0002-7111-0077" target="orcid.widget" aria-label="ORCID" class="external-link"><span class="fab fa-orcid orcid" aria-hidden="true"></span></a> </li>
+</ul>
+</div>
+
+<div class="dev-status">
+<h2 data-toc-skip>Dev status</h2>
+<ul class="list-unstyled">
+<li><a href="https://CRAN.R-project.org/package=metathis" class="external-link"><img src="https://www.r-pkg.org/badges/version/metathis" alt="CRAN status"></a></li>
+<li><a href="https://lifecycle.r-lib.org/articles/stages.html" class="external-link"><img src="https://img.shields.io/badge/lifecycle-stable-brightgreen.svg" alt="Lifecycle: stable"></a></li>
+<li><a href="https://travis-ci.org/gadenbuie/metathis" class="external-link"><img src="https://travis-ci.org/gadenbuie/metathis.svg?branch=master" alt="travis"></a></li>
+<li><a href="https://codecov.io/github/gadenbuie/metathis" class="external-link"><img src="https://img.shields.io/codecov/c/github/gadenbuie/metathis" alt="Codecov"></a></li>
+</ul>
+</div>
+
+  </div>
 </div>
 
 
       <footer><div class="copyright">
-  <p>Developed by <a href="https://www.garrickadenbuie.com">Garrick Aden-Buie</a>.</p>
+  <p></p>
+<p>Developed by <a href="https://www.garrickadenbuie.com" class="external-link">Garrick Aden-Buie</a>.</p>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
+  <p></p>
+<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.1.</p>
 </div>
 
       </footer>
@@ -311,6 +323,8 @@
 
   
 
+
+  
 
   </body>
 </html>

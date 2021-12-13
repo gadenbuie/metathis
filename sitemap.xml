@@ -1,48 +1,66 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://pkg.garrickadenbuie.com/metathis//index.html</loc>
+    <loc>https://pkg.garrickadenbuie.com/metathis/404.html</loc>
   </url>
   <url>
-    <loc>https://pkg.garrickadenbuie.com/metathis//reference/include_meta.html</loc>
+    <loc>https://pkg.garrickadenbuie.com/metathis/LICENSE-text.html</loc>
   </url>
   <url>
-    <loc>https://pkg.garrickadenbuie.com/metathis//reference/meta.html</loc>
+    <loc>https://pkg.garrickadenbuie.com/metathis/LICENSE.html</loc>
   </url>
   <url>
-    <loc>https://pkg.garrickadenbuie.com/metathis//reference/meta_apple_itunes_app.html</loc>
+    <loc>https://pkg.garrickadenbuie.com/metathis/authors.html</loc>
   </url>
   <url>
-    <loc>https://pkg.garrickadenbuie.com/metathis//reference/meta_apple_web_app.html</loc>
+    <loc>https://pkg.garrickadenbuie.com/metathis/index.html</loc>
   </url>
   <url>
-    <loc>https://pkg.garrickadenbuie.com/metathis//reference/meta_general.html</loc>
+    <loc>https://pkg.garrickadenbuie.com/metathis/news/index.html</loc>
   </url>
   <url>
-    <loc>https://pkg.garrickadenbuie.com/metathis//reference/meta_geo.html</loc>
+    <loc>https://pkg.garrickadenbuie.com/metathis/reference/include_meta.html</loc>
   </url>
   <url>
-    <loc>https://pkg.garrickadenbuie.com/metathis//reference/meta_google_scholar.html</loc>
+    <loc>https://pkg.garrickadenbuie.com/metathis/reference/index.html</loc>
   </url>
   <url>
-    <loc>https://pkg.garrickadenbuie.com/metathis//reference/meta_name.html</loc>
+    <loc>https://pkg.garrickadenbuie.com/metathis/reference/meta.html</loc>
   </url>
   <url>
-    <loc>https://pkg.garrickadenbuie.com/metathis//reference/meta_social.html</loc>
+    <loc>https://pkg.garrickadenbuie.com/metathis/reference/meta_apple_itunes_app.html</loc>
   </url>
   <url>
-    <loc>https://pkg.garrickadenbuie.com/metathis//reference/meta_tag.html</loc>
+    <loc>https://pkg.garrickadenbuie.com/metathis/reference/meta_apple_web_app.html</loc>
   </url>
   <url>
-    <loc>https://pkg.garrickadenbuie.com/metathis//reference/meta_viewport.html</loc>
+    <loc>https://pkg.garrickadenbuie.com/metathis/reference/meta_general.html</loc>
   </url>
   <url>
-    <loc>https://pkg.garrickadenbuie.com/metathis//reference/metathis-package.html</loc>
+    <loc>https://pkg.garrickadenbuie.com/metathis/reference/meta_geo.html</loc>
   </url>
   <url>
-    <loc>https://pkg.garrickadenbuie.com/metathis//reference/pipe.html</loc>
+    <loc>https://pkg.garrickadenbuie.com/metathis/reference/meta_google_scholar.html</loc>
   </url>
   <url>
-    <loc>https://pkg.garrickadenbuie.com/metathis//reference/write_meta.html</loc>
+    <loc>https://pkg.garrickadenbuie.com/metathis/reference/meta_name.html</loc>
+  </url>
+  <url>
+    <loc>https://pkg.garrickadenbuie.com/metathis/reference/meta_social.html</loc>
+  </url>
+  <url>
+    <loc>https://pkg.garrickadenbuie.com/metathis/reference/meta_tag.html</loc>
+  </url>
+  <url>
+    <loc>https://pkg.garrickadenbuie.com/metathis/reference/meta_viewport.html</loc>
+  </url>
+  <url>
+    <loc>https://pkg.garrickadenbuie.com/metathis/reference/metathis-package.html</loc>
+  </url>
+  <url>
+    <loc>https://pkg.garrickadenbuie.com/metathis/reference/pipe.html</loc>
+  </url>
+  <url>
+    <loc>https://pkg.garrickadenbuie.com/metathis/reference/write_meta.html</loc>
   </url>
 </urlset>
