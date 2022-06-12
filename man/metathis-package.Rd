@@ -6,13 +6,9 @@
 \alias{metathis-package}
 \title{metathis: HTML Metadata Tags for 'R Markdown' and 'Shiny'}
 \description{
-\if{html}{\figure{logo.png}{options: align='right' alt='logo' width='120'}}
+\if{html}{\figure{logo.png}{options: style='float: right' alt='logo' width='120'}}
 
-Create meta tags for 'R Markdown' HTML documents and 'Shiny'
-    apps for customized social media cards, for accessibility, and quality
-    search engine indexing. 'metathis' currently supports HTML documents
-    created with 'rmarkdown', 'shiny', 'xaringan', 'pagedown', 'bookdown',
-    and 'flexdashboard'.
+Create meta tags for 'R Markdown' HTML documents and 'Shiny' apps for customized social media cards, for accessibility, and quality search engine indexing. 'metathis' currently supports HTML documents created with 'rmarkdown', 'shiny', 'xaringan', 'pagedown', 'bookdown', and 'flexdashboard'.
 }
 \seealso{
 Useful links:

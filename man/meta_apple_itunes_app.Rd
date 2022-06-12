@@ -25,9 +25,11 @@ or other HTML locations.
 Apple Smart Banner Meta Tag
 }
 \section{Example}{
-\preformatted{# <!-- Smart App Banner -->
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{# <!-- Smart App Banner -->
 <meta name="apple-itunes-app" content="app-id=APP_ID,affiliate-data=AFFILIATE_ID,app-argument=SOME_TEXT">
-}
+}\if{html}{\out{</div>}}
 }
 
 \seealso{
