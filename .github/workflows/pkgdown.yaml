@@ -47,12 +47,12 @@ jobs:
           if [[ $GITHUB_REF == refs/tags/v* ]]; then
             # If event is a version tag event, set targetdir to '<tag_name>'
             targetdir=${GITHUB_REF#refs/tags/}
-            if [[ -d docs/dev ]]; then
-              srcdir=docs/dev/
-            fi
           elif [[ $GITHUB_REF == refs/pull/* ]]; then
             # If PR, set targetdir to 'preview/pr<number>'
-            targetdir=pr${{ github.event.pull_request.number }}
+            targetdir=preview/pr${{ github.event.pull_request.number }}
+            if [[ -d docs/dev ]]; then
+              srcdir=docs/dev
+            fi
           fi
           echo "Deploying site from $srcdir to $targetdir on gh-pages"
           echo "srcdir=$srcdir" >> $GITHUB_ENV
