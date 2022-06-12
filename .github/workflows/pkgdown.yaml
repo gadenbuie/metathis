@@ -42,6 +42,7 @@ jobs:
 
       - name: Set site deploy subdirectory
         run: |
+          subdir=.
           if [[ $GITHUB_REF == refs/tags/v* ]]; then
             # If event is a version tag event, set subdir to '<tag_name>'
             subdir=${GITHUB_REF#refs/tags/}
@@ -49,16 +50,13 @@ jobs:
             # If PR, set subdir to 'preview/pr<number>'
             subdir=pr${{ github.event.pull_request.number }}
           fi
-          if [[ -n $subdir ]]; then
-            subdir="."
-          fi
           echo "Deploying site to $subdir on gh-pages"
           echo "subdir=$subdir" >> $GITHUB_ENV
 
       - name: Deploy to GitHub pages 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.4
         with:
-          clean-exclue: |
+          clean-exclude: |
             preview/
             v*/
           branch: gh-pages
