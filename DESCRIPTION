@@ -25,6 +25,7 @@ Suggests:
     rmarkdown,
     shiny,
     testthat (>= 2.1.0)
+Config/Needs/website: gadenbuie/grkgdown
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.2.0

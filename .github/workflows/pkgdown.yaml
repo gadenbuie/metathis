@@ -42,16 +42,21 @@ jobs:
 
       - name: Set site deploy subdirectory
         run: |
-          subdir=.
+          srcdir=docs/
+          targetdir=.
           if [[ $GITHUB_REF == refs/tags/v* ]]; then
-            # If event is a version tag event, set subdir to '<tag_name>'
-            subdir=${GITHUB_REF#refs/tags/}
+            # If event is a version tag event, set targetdir to '<tag_name>'
+            targetdir=${GITHUB_REF#refs/tags/}
           elif [[ $GITHUB_REF == refs/pull/* ]]; then
-            # If PR, set subdir to 'preview/pr<number>'
-            subdir=pr${{ github.event.pull_request.number }}
+            # If PR, set targetdir to 'preview/pr<number>'
+            targetdir=preview/pr${{ github.event.pull_request.number }}
+            if [[ -d docs/dev ]]; then
+              srcdir=docs/dev
+            fi
           fi
-          echo "Deploying site to $subdir on gh-pages"
-          echo "subdir=$subdir" >> $GITHUB_ENV
+          echo "Deploying site from $srcdir to $targetdir on gh-pages"
+          echo "srcdir=$srcdir" >> $GITHUB_ENV
+          echo "targetdir=$targetdir" >> $GITHUB_ENV
 
       - name: Deploy to GitHub pages 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.4
@@ -60,8 +65,8 @@ jobs:
             preview/
             v*/
           branch: gh-pages
-          folder: docs
-          target-folder: ${{ env.subdir }}
+          folder: ${{ env.srcdir }}
+          target-folder: ${{ env.targetdir }}
 
   pkgdown-clean:
     if: ${{ github.event_name == 'pull_request' && github.event.action == 'closed' }}
