@@ -135,16 +135,16 @@
 ❌ <a href="https://bookdown.org/yihui/blogdown" class="external-link">blogdown</a><sup>1</sup><br>
 ❌ <a href="https://pkgdown.r-lib.org" class="external-link">pkgdown</a></p>
 <p><code>&lt;meta&gt;</code> tags can be added to ✅ packages with a standard R chunk</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1"></a><span class="bn">```{r, echo=FALSE}</span></span>
-<span id="cb3-2"><a href="#cb3-2"></a><span class="bn">meta() %&gt;% </span></span>
-<span id="cb3-3"><a href="#cb3-3"></a><span class="bn">  meta_description("My awesome presentation")</span></span>
-<span id="cb3-4"><a href="#cb3-4"></a><span class="bn">```</span></span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r, echo=FALSE}</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="in">meta() %&gt;% </span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="in">  meta_description("My awesome presentation")</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code></pre></div>
 <p>For other packages or situations, you can use <code><a href="reference/include_meta.html">include_meta()</a></code> to explicitly declare the meta tags as an html dependency or use <code><a href="reference/write_meta.html">write_meta()</a></code> to save the <code>&lt;meta&gt;</code> tags to an <code>.html</code> file that can be included via <code>includes: in_header</code>. (In blogdown, consult your blogdown/hugo theme for the correct inclusion method.)</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb4-1"><a href="#cb4-1"></a><span class="bn">```{r blogdown-meta, echo = FALSE}</span></span>
-<span id="cb4-2"><a href="#cb4-2"></a><span class="bn">meta() %&gt;% </span></span>
-<span id="cb4-3"><a href="#cb4-3"></a><span class="bn">  meta_description("A fantastic blog post") %&gt;% </span></span>
-<span id="cb4-4"><a href="#cb4-4"></a><span class="bn">  write_meta("meta.html")</span></span>
-<span id="cb4-5"><a href="#cb4-5"></a><span class="bn">```</span></span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r blogdown-meta, echo = FALSE}</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="in">meta() %&gt;% </span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="in">  meta_description("A fantastic blog post") %&gt;% </span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="in">  write_meta("meta.html")</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code></pre></div>
 </div>
 <div class="section level2">
 <h2 id="example">Example<a class="anchor" aria-label="anchor" href="#example"></a>
@@ -172,26 +172,26 @@
     twitter_card_type <span class="op">=</span> <span class="st">"summary"</span>,
     twitter_creator <span class="op">=</span> <span class="st">"@hadley"</span>
   <span class="op">)</span></code></pre></div>
-<div class="sourceCode" id="cb7"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a><span class="co">#&gt; &lt;meta name="viewport" content="width=device-width, initial-scale=1, orientation=auto"/&gt;</span></span>
-<span id="cb7-2"><a href="#cb7-2"></a><span class="co">#&gt; &lt;meta name="description" content="This book will teach you how to do data science with R..."/&gt;</span></span>
-<span id="cb7-3"><a href="#cb7-3"></a><span class="co">#&gt; &lt;meta name="github-repo" content="hadley/r4ds"/&gt;</span></span>
-<span id="cb7-4"><a href="#cb7-4"></a><span class="co">#&gt; &lt;meta name="twitter:title" content="R for Data Science"/&gt;</span></span>
-<span id="cb7-5"><a href="#cb7-5"></a><span class="co">#&gt; &lt;meta name="twitter:description" content="This book will teach you how to do data science with R..."/&gt;</span></span>
-<span id="cb7-6"><a href="#cb7-6"></a><span class="co">#&gt; &lt;meta name="twitter:url" content="https://r4ds.had.co.nz"/&gt;</span></span>
-<span id="cb7-7"><a href="#cb7-7"></a><span class="co">#&gt; &lt;meta name="twitter:image" content="https://r4ds.had.co.nz/cover.png"/&gt;</span></span>
-<span id="cb7-8"><a href="#cb7-8"></a><span class="co">#&gt; &lt;meta name="twitter:image:alt" content="The cover of the R4DS book"/&gt;</span></span>
-<span id="cb7-9"><a href="#cb7-9"></a><span class="co">#&gt; &lt;meta name="twitter:card" content="summary"/&gt;</span></span>
-<span id="cb7-10"><a href="#cb7-10"></a><span class="co">#&gt; &lt;meta name="twitter:creator" content="@hadley"/&gt;</span></span>
-<span id="cb7-11"><a href="#cb7-11"></a><span class="co">#&gt; &lt;meta name="twitter:site" content="@hadley"/&gt;</span></span>
-<span id="cb7-12"><a href="#cb7-12"></a><span class="co">#&gt; &lt;meta property="og:title" content="R for Data Science"/&gt;</span></span>
-<span id="cb7-13"><a href="#cb7-13"></a><span class="co">#&gt; &lt;meta property="og:description" content="This book will teach you how to do data science with R..."/&gt;</span></span>
-<span id="cb7-14"><a href="#cb7-14"></a><span class="co">#&gt; &lt;meta property="og:url" content="https://r4ds.had.co.nz"/&gt;</span></span>
-<span id="cb7-15"><a href="#cb7-15"></a><span class="co">#&gt; &lt;meta property="og:image" content="https://r4ds.had.co.nz/cover.png"/&gt;</span></span>
-<span id="cb7-16"><a href="#cb7-16"></a><span class="co">#&gt; &lt;meta property="og:image:alt" content="The cover of the R4DS book"/&gt;</span></span>
-<span id="cb7-17"><a href="#cb7-17"></a><span class="co">#&gt; &lt;meta property="og:type" content="book"/&gt;</span></span>
-<span id="cb7-18"><a href="#cb7-18"></a><span class="co">#&gt; &lt;meta property="og:locale" content="en_US"/&gt;</span></span>
-<span id="cb7-19"><a href="#cb7-19"></a><span class="co">#&gt; &lt;meta property="article:author" content="Garrett Grolemund"/&gt;</span></span>
-<span id="cb7-20"><a href="#cb7-20"></a><span class="co">#&gt; &lt;meta property="article:author" content="Hadley Wickham"/&gt;</span></span></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; &lt;meta name="viewport" content="width=device-width, initial-scale=1, orientation=auto"/&gt;</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; &lt;meta name="description" content="This book will teach you how to do data science with R..."/&gt;</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; &lt;meta name="github-repo" content="hadley/r4ds"/&gt;</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; &lt;meta name="twitter:title" content="R for Data Science"/&gt;</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; &lt;meta name="twitter:description" content="This book will teach you how to do data science with R..."/&gt;</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; &lt;meta name="twitter:url" content="https://r4ds.had.co.nz"/&gt;</span></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; &lt;meta name="twitter:image" content="https://r4ds.had.co.nz/cover.png"/&gt;</span></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; &lt;meta name="twitter:image:alt" content="The cover of the R4DS book"/&gt;</span></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; &lt;meta name="twitter:card" content="summary"/&gt;</span></span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; &lt;meta name="twitter:creator" content="@hadley"/&gt;</span></span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; &lt;meta name="twitter:site" content="@hadley"/&gt;</span></span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; &lt;meta property="og:title" content="R for Data Science"/&gt;</span></span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; &lt;meta property="og:description" content="This book will teach you how to do data science with R..."/&gt;</span></span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; &lt;meta property="og:url" content="https://r4ds.had.co.nz"/&gt;</span></span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; &lt;meta property="og:image" content="https://r4ds.had.co.nz/cover.png"/&gt;</span></span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; &lt;meta property="og:image:alt" content="The cover of the R4DS book"/&gt;</span></span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; &lt;meta property="og:type" content="book"/&gt;</span></span>
+<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; &lt;meta property="og:locale" content="en_US"/&gt;</span></span>
+<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; &lt;meta property="article:author" content="Garrett Grolemund"/&gt;</span></span>
+<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; &lt;meta property="article:author" content="Hadley Wickham"/&gt;</span></span></code></pre></div>
 </div>
 <div class="section level3">
 <h3 id="in-shiny-apps">In Shiny Apps<a class="anchor" aria-label="anchor" href="#in-shiny-apps"></a>
@@ -220,25 +220,25 @@
 <h3 id="in-xaringan-slides">In xaringan Slides<a class="anchor" aria-label="anchor" href="#in-xaringan-slides"></a>
 </h3>
 <p>To use <code>metathis</code> in <a href="https://slides.yihui.org/xaringan" class="external-link">xaringan</a> slides, add <code><a href="reference/meta.html">meta()</a></code> and related tags in a chunk anywhere in your slide’s source <code>.Rmd</code> file. This example is from a <a href="https://pkg.garrickadenbuie.com/drake-intro/" class="external-link">presentation on the drake package</a>.</p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb9-1"><a href="#cb9-1"></a><span class="bn">```{r meta, echo=FALSE}</span></span>
-<span id="cb9-2"><a href="#cb9-2"></a><span class="bn">library(metathis)</span></span>
-<span id="cb9-3"><a href="#cb9-3"></a><span class="bn">meta() %&gt;%</span></span>
-<span id="cb9-4"><a href="#cb9-4"></a><span class="bn">  meta_general(</span></span>
-<span id="cb9-5"><a href="#cb9-5"></a><span class="bn">    description = "A gentle introduction to reproducible data workflows with the {drake} package.",</span></span>
-<span id="cb9-6"><a href="#cb9-6"></a><span class="bn">    generator = "xaringan and remark.js"</span></span>
-<span id="cb9-7"><a href="#cb9-7"></a><span class="bn">  ) %&gt;% </span></span>
-<span id="cb9-8"><a href="#cb9-8"></a><span class="bn">  meta_name("github-repo" = "gadenbuie/drake-intro") %&gt;% </span></span>
-<span id="cb9-9"><a href="#cb9-9"></a><span class="bn">  meta_social(</span></span>
-<span id="cb9-10"><a href="#cb9-10"></a><span class="bn">    title = "Reproducible Data Workflows With Drake",</span></span>
-<span id="cb9-11"><a href="#cb9-11"></a><span class="bn">    url = "https://pkg.garrickadenbuie.com/drake-intro",</span></span>
-<span id="cb9-12"><a href="#cb9-12"></a><span class="bn">    image = "https://pkg.garrickadenbuie.com/drake-intro/assets/images/drake-intro-cover.jpg",</span></span>
-<span id="cb9-13"><a href="#cb9-13"></a><span class="bn">    image_alt = "The first slide of the Reproducible Data Workflows with drake presentation, featuring the drake hex logo and neatly ordered row of items on a desk (eraser, pencil, coffee cup, paperclips).",</span></span>
-<span id="cb9-14"><a href="#cb9-14"></a><span class="bn">    og_type = "website",</span></span>
-<span id="cb9-15"><a href="#cb9-15"></a><span class="bn">    og_author = "Garrick Aden-Buie",</span></span>
-<span id="cb9-16"><a href="#cb9-16"></a><span class="bn">    twitter_card_type = "summary_large_image",</span></span>
-<span id="cb9-17"><a href="#cb9-17"></a><span class="bn">    twitter_creator = "@grrrck"</span></span>
-<span id="cb9-18"><a href="#cb9-18"></a><span class="bn">  )</span></span>
-<span id="cb9-19"><a href="#cb9-19"></a><span class="bn">```</span></span></code></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r meta, echo=FALSE}</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="in">library(metathis)</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="in">meta() %&gt;%</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="in">  meta_general(</span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="in">    description = "A gentle introduction to reproducible data workflows with the {drake} package.",</span></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a><span class="in">    generator = "xaringan and remark.js"</span></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a><span class="in">  ) %&gt;% </span></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a><span class="in">  meta_name("github-repo" = "gadenbuie/drake-intro") %&gt;% </span></span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a><span class="in">  meta_social(</span></span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a><span class="in">    title = "Reproducible Data Workflows With Drake",</span></span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a><span class="in">    url = "https://pkg.garrickadenbuie.com/drake-intro",</span></span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a><span class="in">    image = "https://pkg.garrickadenbuie.com/drake-intro/assets/images/drake-intro-cover.jpg",</span></span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a><span class="in">    image_alt = "The first slide of the Reproducible Data Workflows with drake presentation, featuring the drake hex logo and neatly ordered row of items on a desk (eraser, pencil, coffee cup, paperclips).",</span></span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a><span class="in">    og_type = "website",</span></span>
+<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a><span class="in">    og_author = "Garrick Aden-Buie",</span></span>
+<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a><span class="in">    twitter_card_type = "summary_large_image",</span></span>
+<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a><span class="in">    twitter_creator = "@grrrck"</span></span>
+<span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a><span class="in">  )</span></span>
+<span id="cb9-19"><a href="#cb9-19" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code></pre></div>
 </div>
 </div>
 <div class="section level2">
@@ -292,8 +292,9 @@
 <h2 data-toc-skip>Dev status</h2>
 <ul class="list-unstyled">
 <li><a href="https://CRAN.R-project.org/package=metathis" class="external-link"><img src="https://www.r-pkg.org/badges/version/metathis" alt="CRAN status"></a></li>
+<li><a href="https://gadenbuie.r-universe.dev/ui#package:metathis" class="external-link"><img src="https://gadenbuie.r-universe.dev/badges/metathis" alt="metathis status badge"></a></li>
 <li><a href="https://lifecycle.r-lib.org/articles/stages.html" class="external-link"><img src="https://img.shields.io/badge/lifecycle-stable-brightgreen.svg" alt="Lifecycle: stable"></a></li>
-<li><a href="https://travis-ci.org/gadenbuie/metathis" class="external-link"><img src="https://travis-ci.org/gadenbuie/metathis.svg?branch=master" alt="travis"></a></li>
+<li><a href="https://github.com/gadenbuie/metathis/actions/workflows/R-CMD-check.yaml" class="external-link"><img src="https://github.com/gadenbuie/metathis/actions/workflows/R-CMD-check.yaml/badge.svg" alt="R-CMD-check"></a></li>
 <li><a href="https://codecov.io/github/gadenbuie/metathis" class="external-link"><img src="https://img.shields.io/codecov/c/github/gadenbuie/metathis" alt="Codecov"></a></li>
 </ul>
 </div>
@@ -309,7 +310,7 @@
 
 <div class="pkgdown-footer-right">
   <p></p>
-<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.4.</p>
+<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.3.</p>
 </div>
 
     </footer>
