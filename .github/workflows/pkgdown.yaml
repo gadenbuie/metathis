@@ -41,7 +41,6 @@ jobs:
         shell: Rscript {0}
 
       - name: Set site deploy subdirectory
-        if: github.event_name == 'pull_request'
         run: |
           if [[ $GITHUB_REF == refs/tags/v* ]]; then
             # If event is a version tag event, set subdir to '<tag_name>'
