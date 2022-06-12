@@ -1,8 +1,8 @@
 pandoc: 2.7.3
-pkgdown: 2.0.3
+pkgdown: 2.0.4
 pkgdown_sha: ~
 articles: {}
-last_built: 2022-06-06T04:39Z
+last_built: 2022-06-12T01:40Z
 urls:
   reference: https://pkg.garrickadenbuie.com/metathis/reference
   article: https://pkg.garrickadenbuie.com/metathis/articles
