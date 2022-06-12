@@ -51,17 +51,19 @@ jobs:
 
       - name: Set site deploy subdirectory
         run: |
-          srcdir=docs/
-          targetdir=.
+          if [[ -d docs/dev ]]; then
+            srcdir=docs/dev
+            targetdir=dev
+          else
+            srcdir=docs/
+            targetdir=.
+          fi
           if [[ $GITHUB_REF == refs/tags/v* ]]; then
             # If event is a version tag event, set targetdir to '<tag_name>'
             targetdir=${GITHUB_REF#refs/tags/}
           elif [[ $GITHUB_REF == refs/pull/* ]]; then
             # If PR, set targetdir to 'preview/pr<number>'
             targetdir=preview/pr${{ github.event.pull_request.number }}
-            if [[ -d docs/dev ]]; then
-              srcdir=docs/dev
-            fi
           fi
           echo "Deploying site from $srcdir to $targetdir on gh-pages"
           echo "srcdir=$srcdir" >> $GITHUB_ENV
@@ -73,6 +75,7 @@ jobs:
           clean-exclude: |
             preview/
             v*/
+            dev/
           branch: gh-pages
           folder: ${{ env.srcdir }}
           target-folder: ${{ env.targetdir }}
