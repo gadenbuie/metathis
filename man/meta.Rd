@@ -27,11 +27,11 @@ an object is a \emph{metathis} object, or coerce a list of \code{meta} tags to b
 }
 \section{Functions}{
 \itemize{
-\item \code{is_meta}: Test if an objects is a \emph{metathis} object
+\item \code{is_meta()}: Test if an objects is a \emph{metathis} object
 
-\item \code{as_meta}: Convert a list of meta tags into a \emph{metathis} object.
+\item \code{as_meta()}: Convert a list of meta tags into a \emph{metathis} object.
+
 }}
-
 \examples{
 meta() \%>\%
   meta_viewport() \%>\%
