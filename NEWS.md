@@ -1,4 +1,10 @@
-# metathis (development version)
+<!-- NEWS.md is maintained by https://cynkra.github.io/fledge, do not edit -->
+
+# metathis 1.1.2
+
+* Fix link to `<meta>` tag docs on MDN (@IndrajeetPatil, #25)
+
+* Rebuild documentation for CRAN
 
 # metathis 1.1.1
 
