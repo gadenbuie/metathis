@@ -19,7 +19,9 @@ on:
       - 'man/**'
       - 'pkgdown/**'
       - 'vignettes/**'
-  workflow_dispatch:
+      - 'NEWS.md'
+      - 'README.md'
+    workflow_dispatch:
 
 name: pkgdown
 
