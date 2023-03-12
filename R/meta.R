@@ -164,7 +164,8 @@ print.meta <- function(x, ...) {
 }
 
 #' @export
-knit_print.meta <- function(.meta, ...) {
+knit_print.meta <- function(x, ...) {
+  .meta <- x
   assert_is_meta(.meta)
 
   # nocov start
