@@ -4,7 +4,6 @@
 #'
 #' @references
 #'   [MDN: Viewport Meta Tag](https://developer.mozilla.org/en-US/docs/Web/HTML/Viewport_meta_tag),
-#'   [W3C Viewport Meta Element Specification](https://drafts.csswg.org/css-device-adapt/#viewport-meta)
 #'
 #' @template describe-meta
 #' @param width Sets the width of initial viewport. `width` sets `min_width` and

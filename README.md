@@ -8,7 +8,7 @@
 [![CRAN
 status](https://www.r-pkg.org/badges/version/metathis)](https://CRAN.R-project.org/package=metathis)
 [![metathis status
-badge](https://gadenbuie.r-universe.dev/badges/metathis)](https://gadenbuie.r-universe.dev/ui#package:metathis)
+badge](https://gadenbuie.r-universe.dev/badges/metathis)](https://gadenbuie.r-universe.dev/metathis)
 [![Lifecycle:
 stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://lifecycle.r-lib.org/articles/stages.html)
 [![R-CMD-check](https://github.com/gadenbuie/metathis/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/gadenbuie/metathis/actions/workflows/R-CMD-check.yaml)
@@ -50,7 +50,7 @@ install.packages("metathis")
 
 And the development version from
 [Github](https://github.com/gadenbuie/metathis) or
-[r-universe](https://gadenbuie.r-universe.dev/ui) with:
+[r-universe](https://gadenbuie.r-universe.dev/builds) with:
 
 ``` r
 # r-universe

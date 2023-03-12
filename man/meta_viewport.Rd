@@ -70,7 +70,6 @@ meta() \%>\%
 }
 \references{
 \href{https://developer.mozilla.org/en-US/docs/Web/HTML/Viewport_meta_tag}{MDN: Viewport Meta Tag},
-\href{https://drafts.csswg.org/css-device-adapt/#viewport-meta}{W3C Viewport Meta Element Specification}
 }
 \seealso{
 Other meta: 
