@@ -85,7 +85,7 @@ A \code{meta} object, or a set of \verb{<meta>} HTML tags inside an HTML
 or other HTML locations.
 }
 \description{
-Add biobliographic metadata to pages in the format expected by Google
+Add bibliographic metadata to pages in the format expected by Google
 Scholar. Please reference the
 \href{https://scholar.google.com/intl/en/scholar/inclusion.html#indexing}{Google Scholar Inclusion}
 page for the most up-to-date information and instructions. Note that this

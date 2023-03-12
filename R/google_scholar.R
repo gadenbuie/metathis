@@ -1,6 +1,6 @@
 #' Add Google Scholar Metadata
 #'
-#' Add biobliographic metadata to pages in the format expected by Google
+#' Add bibliographic metadata to pages in the format expected by Google
 #' Scholar. Please reference the
 #' [Google Scholar Inclusion](https://scholar.google.com/intl/en/scholar/inclusion.html#indexing)
 #' page for the most up-to-date information and instructions. Note that this
