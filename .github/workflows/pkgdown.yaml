@@ -2,10 +2,14 @@
 # Need help debugging build failures? Start at https://github.com/r-lib/actions#where-to-find-help
 on:
   push:
-    tags: 'v*'
-    branches: [main, master]
+    tags:
+      - 'v[0-9]+.[0-9]+.[0-9]+'         # build on version tags
+      - '!v[0-9]+.[0-9]+.[0-9]+.[0-9]+' # but not if version involves a dev component
+    branches:
+      - main
   pull_request:
-    branches: [main, master]
+    branches:
+      - main
     types:
       - opened
       - reopened
@@ -46,8 +50,13 @@ jobs:
           needs: website
 
       - name: Build site
-        run: pkgdown::build_site_github_pages(new_process = FALSE, install = FALSE)
         shell: Rscript {0}
+        run: |
+          pkgdown::build_site_github_pages(new_process = FALSE, install = FALSE)
+          pkg <- pkgdown::as_pkgdown(".")
+
+          # Report base site URL
+          cat(sprintf('baseurl=%s', pkg$meta$url), file = Sys.getenv("GITHUB_ENV"), append = TRUE)
 
       - name: Set site deploy subdirectory
         run: |
@@ -80,6 +89,20 @@ jobs:
           folder: ${{ env.srcdir }}
           target-folder: ${{ env.targetdir }}
 
+      - name: Notify pkgdown deployment
+        if: github.event_name == 'pull_request'
+        uses: hasura/comment-progress@v2.2.0
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          repository: ${{ github.repository }}
+          number: ${{ github.event.number }}
+          id: pkgdown-deploy
+          append: false
+          message: >
+            :book: ${{ env.baseurl }}/${{ env.targetdir }}
+            Preview documentation for this PR (at commit ${{ github.event.pull_request.head.sha }})
+
+
   pkgdown-clean:
     if: ${{ github.event_name == 'pull_request' && github.event.action == 'closed' }}
     runs-on: ubuntu-latest
@@ -105,3 +128,12 @@ jobs:
             echo 'No preview to remove'
           fi
 
+      - name: Notify pkgdown cleanup
+        uses: hasura/comment-progress@v2.2.0
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          repository: ${{ github.repository }}
+          number: ${{ github.event.number }}
+          id: pkgdown-deploy
+          message: |
+            _:closed_book: Preview documentation for this PR has been cleaned up._
