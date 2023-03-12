@@ -164,7 +164,8 @@ print.meta <- function(x, ...) {
 }
 
 #' @export
-knit_print.meta <- function(.meta, ...) {
+knit_print.meta <- function(x, ...) {
+  .meta <- x
   assert_is_meta(.meta)
 
   # nocov start
@@ -218,7 +219,7 @@ metaDependency <- function(.meta) {
 
   htmltools::htmlDependency(
     paste0("metathis", "-", random_id()),
-    version = metathis_version,
+    version = METATHIS_VERSION,
     src = src,
     all_files = FALSE,
     head = .meta %>% paste()
