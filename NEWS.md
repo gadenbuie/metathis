@@ -1,5 +1,7 @@
 <!-- NEWS.md is maintained by https://fledge.cynkra.com, contributors should not edit this file -->
 
+# metathis (development version)
+
 # metathis 1.1.3
 
 - Fix S3 method signatures to resolve recent CRAN warnings (#30).

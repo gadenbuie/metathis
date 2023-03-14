@@ -1,6 +1,6 @@
 Package: metathis
 Title: HTML Metadata Tags for 'R Markdown' and 'Shiny'
-Version: 1.1.3
+Version: 1.1.3.9000
 Authors@R: 
     person(given = "Garrick",
            family = "Aden-Buie",
