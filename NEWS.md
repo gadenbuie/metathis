@@ -1,5 +1,8 @@
 <!-- NEWS.md is maintained by https://fledge.cynkra.com, contributors should not edit this file -->
 
+# metathis (development version)
+
+
 # metathis 1.1.4
 
 - Fixed a usage of numeric package version as requested by CRAN.
