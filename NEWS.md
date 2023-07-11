@@ -1,6 +1,11 @@
 <!-- NEWS.md is maintained by https://fledge.cynkra.com, contributors should not edit this file -->
 
-# metathis (development version)
+# metathis 1.1.4
+
+- Fixed a usage of numeric package version as requested by CRAN.
+
+- Removed a link in the docs to the now-defunct Twitter Card validator.
+
 
 # metathis 1.1.3
 
@@ -22,7 +27,7 @@
 
 - Added `meta_google_scholar()` to help create the `<meta>` tags expected by
   [Google Scholar](https://scholar.google.com/intl/en/scholar/inclusion.html#indexing) (#5).
-  
+
 - metathis no longer creates an empty folder in the directory where dependencies
   sourced via htmltools are saved when using non-stand-alone documents.
 
