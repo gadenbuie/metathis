@@ -38,7 +38,6 @@
 #'   - [Google Structured Data Testing Tool](https://search.google.com/structured-data/testing-tool)
 #'   - [Facebook Sharing Debugger](https://developers.facebook.com/tools/debug/)
 #'   - [Twitter Card Documentation](https://developer.twitter.com/en/docs/twitter-for-websites/cards/guides/getting-started)
-#'   - [Twitter Card Validator](https://cards-dev.twitter.com/validator)
 #'
 #' @template describe-meta-return
 #' @examples
