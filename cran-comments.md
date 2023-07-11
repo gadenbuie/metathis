@@ -2,4 +2,5 @@
 
 0 errors | 0 warnings | 0 note
 
-This is a maintenance release to correct issues with S3 function signatures as requested by CRAN.
+This is a maintenance release to correct
+a numeric package version as requested by CRAN.
