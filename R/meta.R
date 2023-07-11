@@ -211,7 +211,7 @@ prepend_to_meta <- function(.meta, .list = NULL) {
 metaDependency <- function(.meta) {
   assert_is_meta(.meta)
 
-  src <- if (has_package_version("rmarkdown", 2.9)) {
+  src <- if (has_package_version("rmarkdown", "2.9")) {
     c(href = "/")
   } else {
     system.file(package = "metathis")
