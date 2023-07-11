@@ -12,14 +12,14 @@ badge](https://gadenbuie.r-universe.dev/badges/metathis)](https://gadenbuie.r-un
 [![Lifecycle:
 stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://lifecycle.r-lib.org/articles/stages.html)
 [![R-CMD-check](https://github.com/gadenbuie/metathis/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/gadenbuie/metathis/actions/workflows/R-CMD-check.yaml)
-[![Codecov](https://img.shields.io/codecov/c/github/gadenbuie/metathis)](https://codecov.io/github/gadenbuie/metathis)
+[![Codecov](https://img.shields.io/codecov/c/github/gadenbuie/metathis)](https://app.codecov.io/github/gadenbuie/metathis)
 <!-- badges: end -->
 
 ## Why metathis?
 
 The goal of **metathis** is to help you add HTML `<meta>` tags to your
 [R Markdown](https://rmarkdown.rstudio.com) and
-[Shiny](https://shiny.rstudio.com) apps.
+[Shiny](https://shiny.posit.co/) apps.
 
 HTML `<meta>` tags provide browsers and social media with metadata about
 HTML pages. Using `<meta>` tags will help your users find your articles,
@@ -63,7 +63,7 @@ devtools::install_github("gadenbuie/metathis@main")
 ## Works In
 
 ✅ [R Markdown](https://rmarkdown.rstudio.com) HTML Documents  
-✅ [Shiny](https://shiny.rstudio.com) Apps  
+✅ [Shiny](https://shiny.posit.co/) Apps  
 ✅ [xaringan](https://slides.yihui.org/xaringan)  
 ✅ [pagedown](https://github.com/rstudio/pagedown)  
 ✅ [bookdown](https://bookdown.org/)  

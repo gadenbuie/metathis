@@ -21,12 +21,12 @@ knitr::opts_chunk$set(
 [![metathis status badge](https://gadenbuie.r-universe.dev/badges/metathis)](https://gadenbuie.r-universe.dev/metathis)
 [![Lifecycle: stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://lifecycle.r-lib.org/articles/stages.html)
 [![R-CMD-check](https://github.com/gadenbuie/metathis/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/gadenbuie/metathis/actions/workflows/R-CMD-check.yaml)
-[![Codecov](https://img.shields.io/codecov/c/github/gadenbuie/metathis)](https://codecov.io/github/gadenbuie/metathis)
+[![Codecov](https://img.shields.io/codecov/c/github/gadenbuie/metathis)](https://app.codecov.io/github/gadenbuie/metathis)
 <!-- badges: end -->
 
 [rmarkdown]: https://rmarkdown.rstudio.com
 [blogdown]: https://bookdown.org/yihui/blogdown
-[Shiny]: https://shiny.rstudio.com
+[Shiny]: https://shiny.posit.co/
 [r4ds]: https://r4ds.had.co.nz/
 [xaringan]: https://slides.yihui.org/xaringan
 [bookdown]: https://bookdown.org/
