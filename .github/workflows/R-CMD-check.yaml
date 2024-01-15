@@ -54,5 +54,5 @@ jobs:
       - name: Update status dashboard
         uses: gadenbuie/status/actions/status-update-rcmdcheck@main
         with:
-          github-token-repo-scope: ${{ secrets.TIC_UPDATE }}
+          github-token-repo-scope: ${{ secrets.GADENBUIE_STATUS }}
           status-repo: gadenbuie/status
