@@ -27,11 +27,7 @@ names_replace_underscore <- function(.list, replace = "-") {
 }
 
 duplicate_vector_entries <- function(.list) {
-  if (utils::packageVersion("purrr") >= "1.0.0") {
-    levels <- purrr::map_dbl(.list, purrr::pluck_depth)
-  } else {
-    levels <- purrr::map_dbl(.list, purrr::vec_depth)
-  }
+  levels <- purrr::map_dbl(.list, purrr::pluck_depth)
 
   if (!any(levels > 1)) {
     return(.list)
