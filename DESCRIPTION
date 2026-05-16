@@ -20,7 +20,7 @@ Imports:
     htmltools,
     knitr,
     magrittr,
-    purrr
+    purrr (>= 1.0.0)
 Suggests: 
     rmarkdown,
     shiny,
