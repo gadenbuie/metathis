@@ -26,7 +26,7 @@
 #' @param twitter_site `@username`` for the website used in the card footer.
 #'   `twitter_creator` is used by default.
 #' @param facebook_app_id The Facebook app ID. See the
-#'   [Facebook Open Graph Markup](https://developers.facebook.com/docs/sharing/webmasters#markup)
+#'   [Facebook Open Graph Markup](https://developers.facebook.com/documentation/sharing/webmasters#markup)
 #'   page for more information.
 #' @param disable_pinterest If `TRUE`, adds a metadata tag disabling pins from
 #'   your website. See the
