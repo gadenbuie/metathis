@@ -1,6 +1,6 @@
 ## R CMD check results
 
-0 errors | 0 warnings | 0 note
+0 errors | 0 warnings | 0 notes
 
-This is a maintenance release to correct
-a numeric package version as requested by CRAN.
+This is a patch release to avoid `purrr::prepend()`, which is defunct in
+the next version of purrr, as requested by the purrr maintainers (#37).
