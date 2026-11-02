@@ -46,6 +46,7 @@ HTML locations.
 ## See also
 
 Other meta:
+[`meta()`](https://pkg.garrickadenbuie.com/metathis/dev/reference/meta.md),
 [`meta_apple_web_app()`](https://pkg.garrickadenbuie.com/metathis/dev/reference/meta_apple_web_app.md),
 [`meta_general()`](https://pkg.garrickadenbuie.com/metathis/dev/reference/meta_general.md),
 [`meta_geo()`](https://pkg.garrickadenbuie.com/metathis/dev/reference/meta_geo.md),
@@ -53,5 +54,4 @@ Other meta:
 [`meta_name()`](https://pkg.garrickadenbuie.com/metathis/dev/reference/meta_name.md),
 [`meta_social()`](https://pkg.garrickadenbuie.com/metathis/dev/reference/meta_social.md),
 [`meta_tag()`](https://pkg.garrickadenbuie.com/metathis/dev/reference/meta_tag.md),
-[`meta_viewport()`](https://pkg.garrickadenbuie.com/metathis/dev/reference/meta_viewport.md),
-[`meta()`](https://pkg.garrickadenbuie.com/metathis/dev/reference/meta.md)
+[`meta_viewport()`](https://pkg.garrickadenbuie.com/metathis/dev/reference/meta_viewport.md)
