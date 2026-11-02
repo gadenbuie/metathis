@@ -130,7 +130,7 @@ meta_google_scholar <- function(
   names(scholar) <- paste0("citation_", names(scholar))
 
   for (aut in rev(author)) {
-    scholar <- purrr::prepend(scholar, list(citation_author = aut))
+    scholar <- append(scholar, list(citation_author = aut), after = 0)
   }
   idx_title <- which(names(scholar) == "citation_title")
   scholar <- c(scholar[idx_title], scholar[-idx_title])

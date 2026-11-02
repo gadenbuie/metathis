@@ -204,7 +204,7 @@ append_to_meta <- function(.meta, .list = NULL) {
 
 prepend_to_meta <- function(.meta, .list = NULL) {
   assert_is_meta(.meta)
-  .meta[[1]]$children <- purrr::prepend(.meta[[1]]$children, .list)
+  .meta[[1]]$children <- append(.meta[[1]]$children, .list, after = 0)
   .meta
 }
 
