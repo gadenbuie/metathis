@@ -72,15 +72,15 @@ meta() \%>\%
 \href{https://developer.mozilla.org/en-US/docs/Web/HTML/Viewport_meta_tag}{MDN: Viewport Meta Tag},
 }
 \seealso{
-Other meta: 
-\code{\link{meta_apple_itunes_app}()},
-\code{\link{meta_apple_web_app}()},
-\code{\link{meta_general}()},
-\code{\link{meta_geo}()},
-\code{\link{meta_google_scholar}()},
-\code{\link{meta_name}()},
-\code{\link{meta_social}()},
-\code{\link{meta_tag}()},
-\code{\link{meta}()}
+Other meta:
+\code{\link[=meta]{meta()}},
+\code{\link[=meta_apple_itunes_app]{meta_apple_itunes_app()}},
+\code{\link[=meta_apple_web_app]{meta_apple_web_app()}},
+\code{\link[=meta_general]{meta_general()}},
+\code{\link[=meta_geo]{meta_geo()}},
+\code{\link[=meta_google_scholar]{meta_google_scholar()}},
+\code{\link[=meta_name]{meta_name()}},
+\code{\link[=meta_social]{meta_social()}},
+\code{\link[=meta_tag]{meta_tag()}}
 }
 \concept{meta}

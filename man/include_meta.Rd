@@ -27,7 +27,7 @@ meta() \%>\%
 
 }
 \seealso{
-Other meta_actions: 
-\code{\link{write_meta}()}
+Other meta_actions:
+\code{\link[=write_meta]{write_meta()}}
 }
 \concept{meta_actions}

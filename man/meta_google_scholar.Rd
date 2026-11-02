@@ -120,15 +120,15 @@ meta_google_scholar(
 \url{https://scholar.google.com/intl/en/scholar/inclusion.html#indexing}
 }
 \seealso{
-Other meta: 
-\code{\link{meta_apple_itunes_app}()},
-\code{\link{meta_apple_web_app}()},
-\code{\link{meta_general}()},
-\code{\link{meta_geo}()},
-\code{\link{meta_name}()},
-\code{\link{meta_social}()},
-\code{\link{meta_tag}()},
-\code{\link{meta_viewport}()},
-\code{\link{meta}()}
+Other meta:
+\code{\link[=meta]{meta()}},
+\code{\link[=meta_apple_itunes_app]{meta_apple_itunes_app()}},
+\code{\link[=meta_apple_web_app]{meta_apple_web_app()}},
+\code{\link[=meta_general]{meta_general()}},
+\code{\link[=meta_geo]{meta_geo()}},
+\code{\link[=meta_name]{meta_name()}},
+\code{\link[=meta_social]{meta_social()}},
+\code{\link[=meta_tag]{meta_tag()}},
+\code{\link[=meta_viewport]{meta_viewport()}}
 }
 \concept{meta}

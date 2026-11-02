@@ -6,7 +6,7 @@
 \alias{metathis-package}
 \title{metathis: HTML Metadata Tags for 'R Markdown' and 'Shiny'}
 \description{
-\if{html}{\figure{logo.png}{options: style='float: right' alt='logo' width='120'}}
+\if{html}{\figure{logo.svg}{options: style='float: right' alt='logo' width='120'}}
 
 Create meta tags for 'R Markdown' HTML documents and 'Shiny' apps for customized social media cards, for accessibility, and quality search engine indexing. 'metathis' currently supports HTML documents created with 'rmarkdown', 'shiny', 'xaringan', 'pagedown', 'bookdown', and 'flexdashboard'.
 }
@@ -21,6 +21,11 @@ Useful links:
 }
 \author{
 \strong{Maintainer}: Garrick Aden-Buie \email{garrick@adenbuie.com} (\href{https://orcid.org/0000-0002-7111-0077}{ORCID})
+
+Authors:
+\itemize{
+  \item Garrick Aden-Buie \email{garrick@adenbuie.com} (\href{https://orcid.org/0000-0002-7111-0077}{ORCID})
+}
 
 }
 \keyword{internal}

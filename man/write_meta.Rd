@@ -36,7 +36,7 @@ readLines(meta_html_snippet, warn = FALSE)
 
 }
 \seealso{
-Other meta_actions: 
-\code{\link{include_meta}()}
+Other meta_actions:
+\code{\link[=include_meta]{include_meta()}}
 }
 \concept{meta_actions}
