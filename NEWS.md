@@ -1,3 +1,5 @@
+# metathis 1.1.5
+
 <!-- NEWS.md is maintained by https://fledge.cynkra.com, contributors should not edit this file -->
 
 # metathis (development version)
