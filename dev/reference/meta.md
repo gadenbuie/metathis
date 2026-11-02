@@ -53,10 +53,6 @@ Other meta:
 meta() %>%
   meta_viewport() %>%
   is_meta()
-#> Warning: `prepend()` was deprecated in purrr 1.0.0.
-#> ℹ Please use append(after = 0) instead.
-#> ℹ The deprecated feature was likely used in the metathis package.
-#>   Please report the issue at <https://github.com/gadenbuie/metathis/issues>.
 #> [1] TRUE
 
 list_of_meta_tags <- list(
