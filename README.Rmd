@@ -25,7 +25,7 @@ knitr::opts_chunk$set(
 <!-- badges: end -->
 
 [rmarkdown]: https://rmarkdown.rstudio.com
-[blogdown]: https://bookdown.org/yihui/blogdown
+[blogdown]: https://pkg.yihui.org/blogdown/
 [Shiny]: https://shiny.posit.co/
 [r4ds]: https://r4ds.had.co.nz/
 [xaringan]: https://slides.yihui.org/xaringan

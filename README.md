@@ -62,12 +62,12 @@ devtools::install_github("gadenbuie/metathis@main")
 
 ## Works In
 
-✅ [R Markdown](https://rmarkdown.rstudio.com) HTML Documents  
-✅ [Shiny](https://shiny.posit.co/) Apps  
-✅ [xaringan](https://slides.yihui.org/xaringan)  
-✅ [pagedown](https://github.com/rstudio/pagedown)  
-✅ [bookdown](https://bookdown.org/)  
-❌ [blogdown](https://bookdown.org/yihui/blogdown)<sup>1</sup>  
+✅ [R Markdown](https://rmarkdown.rstudio.com) HTML Documents\
+✅ [Shiny](https://shiny.posit.co/) Apps\
+✅ [xaringan](https://slides.yihui.org/xaringan)\
+✅ [pagedown](https://github.com/rstudio/pagedown)\
+✅ [bookdown](https://bookdown.org/)\
+❌ [blogdown](https://pkg.yihui.org/blogdown/)<sup>1</sup>\
 ❌ [pkgdown](https://pkgdown.r-lib.org)
 
 `<meta>` tags can be added to ✅ packages with a standard R chunk
