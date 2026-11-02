@@ -103,7 +103,7 @@ meta_social(
 - facebook_app_id:
 
   The Facebook app ID. See the [Facebook Open Graph
-  Markup](https://developers.facebook.com/docs/sharing/webmasters#markup)
+  Markup](https://developers.facebook.com/documentation/sharing/webmasters#markup)
   page for more information.
 
 - disable_pinterest:
