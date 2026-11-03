@@ -1,3 +1,5 @@
+# metathis (development version)
+
 # metathis 1.1.5
 - Avoided `purrr::prepend()`, which is defunct in the next version of purrr, by
   using `append()` from base R instead (#37, @hadley).
