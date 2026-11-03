@@ -11,13 +11,13 @@ Source:
 [`DESCRIPTION`](https://github.com/gadenbuie/metathis/blob/main/DESCRIPTION)
 
 Aden-Buie G (2026). *metathis: HTML Metadata Tags for 'R Markdown' and
-'Shiny'*. R package version 1.1.4.9000,
+'Shiny'*. R package version 1.1.5.9000,
 <https://pkg.garrickadenbuie.com/metathis/>.
 
     @Manual{,
       title = {metathis: HTML Metadata Tags for 'R Markdown' and 'Shiny'},
       author = {Garrick Aden-Buie},
       year = {2026},
-      note = {R package version 1.1.4.9000},
+      note = {R package version 1.1.5.9000},
       url = {https://pkg.garrickadenbuie.com/metathis/},
     }

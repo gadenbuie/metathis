@@ -2,6 +2,17 @@
 
 ## metathis (development version)
 
+## metathis 1.1.5
+
+CRAN release: 2026-11-02
+
+- Avoided
+  [`purrr::prepend()`](https://purrr.tidyverse.org/reference/prepend.html),
+  which is defunct in the next version of purrr, by using
+  [`append()`](https://rdrr.io/r/base/append.html) from base R instead
+  ([\#37](https://github.com/gadenbuie/metathis/issues/37),
+  [@hadley](https://github.com/hadley)).
+
 ## metathis 1.1.4
 
 CRAN release: 2023-07-11
