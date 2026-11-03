@@ -63,7 +63,7 @@ a vector of character strings.}
 \item{og_site_name}{The name of the site hosting the content}
 
 \item{facebook_app_id}{The Facebook app ID. See the
-\href{https://developers.facebook.com/docs/sharing/webmasters#markup}{Facebook Open Graph Markup}
+\href{https://developers.facebook.com/documentation/sharing/webmasters#markup}{Facebook Open Graph Markup}
 page for more information.}
 
 \item{disable_pinterest}{If \code{TRUE}, adds a metadata tag disabling pins from

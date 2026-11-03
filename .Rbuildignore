@@ -14,3 +14,5 @@
 ^\.github$
 ^docs$
 ^CRAN-SUBMISSION$
+^_dev$
+^\.pi-loop\.json\.lock$
